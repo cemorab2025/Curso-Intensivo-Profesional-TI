@@ -310,7 +310,7 @@
         "correctAnswerExample": "El profesional de TI de la UNAL debe ayudar a estructurar los 'criterios de ponderación' de un Concurso de Méritos para una consultoría de ISO 27001: 'Experiencia específica: 40%', 'Metodología propuesta: 30%', 'Hoja de vida del equipo: 30%'."
     },
     {
-        "question": "Según la Ley 80 de 1993, ¿qué implica el 'Principio de Economía'?",
+        "question": "¿Según la Ley 80 de 1993, qué implica el 'Principio de Economía'?",
         "options": [
             {
                 "text": "Adjudicar siempre el contrato al proponente con la oferta económica más baja.",
@@ -402,7 +402,6 @@
         "correctAnswerExplanation": "El 'Análisis del Sector' es fundamental para el Principio de Planeación. Evita que la entidad pida cosas imposibles (ej. un software que no existe) o pague sobrecostos (ej. pagar $100M por un firewall que en el mercado vale $40M).",
         "correctAnswerExample": "Si el 'Análisis del Sector' de la UNAL para un software de IA revela que *solo hay un proveedor* en el mundo que lo hace (proveedor único), esto justifica usar la modalidad de 'Contratación Directa' (Causal de Proveedor Único)."
     },
-
     {
         "question": "¿Qué es una 'Inhabilidad' para contratar con el Estado (Ley 1474)?",
         "options": [
@@ -559,3 +558,4 @@
         "correctAnswerExample": "Un contrato de TI en la UNAL puede que no se llame 'Licitación Pública' (Ley 80), sino 'Invitación Pública' (Estatuto UNAL), pero el *fondo* es el mismo: un pliego claro, evaluación objetiva y transparencia en SECOP."
     }
 ]
+
