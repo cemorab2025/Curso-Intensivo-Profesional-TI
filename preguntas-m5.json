@@ -275,3 +275,7 @@
                 "example": "Un docente en el SIA cambia una nota de 4.5 a 5.0. El sistema ejecuta: `UPDATE Calificaciones SET nota = 5.0 WHERE id_estudiante = 123 AND id_curso = 101`."
             }
         ]
+        "correctAnswerExplanation": "SQL (Guía, 2.3) se divide en: 1. DDL (Definición): CREATE, ALTER, DROP (afectan la *estructura*). 2. DML (Manipulación): SELECT, INSERT, UPDATE, DELETE (afectan los *datos* dentro de la estructura). 3. DCL (Control): GRANT, REVOKE (gestionan *permisos*).",
+        "correctAnswerExample": "El profesional de TI (Función 1: Soporte) usa DML (`SELECT`) para diagnosticar un problema (ej. `SELECT * FROM Logs WHERE error_code = 500`). El DBA (Administrador) usa DDL (`ALTER`) para arreglar la estructura de la base de datos."
+    }
+]
