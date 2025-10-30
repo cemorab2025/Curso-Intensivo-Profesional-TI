@@ -274,6 +274,4 @@
                 "feedback": "¡Correcto! (Guía, 2.3). El comando 'UPDATE' (DML) es el comando estándar de SQL para modificar datos en filas que ya existen, usando 'SET' para asignar el nuevo valor y 'WHERE' para especificar *cuál* fila cambiar.",
                 "example": "Un docente en el SIA cambia una nota de 4.5 a 5.0. El sistema ejecuta: `UPDATE Calificaciones SET nota = 5.0 WHERE id_estudiante = 123 AND id_curso = 101`."
             }
-        ],
-        "correctAnswerExplanation": "Los 4 comandos básicos de DML (Guía, 2.3) son: 1. `INSERT`: Crear. 2. `SELECT`: Leer. 3. `UPDATE`: Modificar. 4. `DELETE`: Borrar. Para modificar un registro existente, siempre se usa `UPDATE... SET... WHERE...`.",
-        "correctAnswerExample": "¡Cuidado! Si el profesional de TI (Funci...
+        ]
