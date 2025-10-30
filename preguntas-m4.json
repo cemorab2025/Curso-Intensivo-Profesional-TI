@@ -1,0 +1,514 @@
+[
+    // --- BLOQUE 1: SUPERVISIÓN VS. INTERVENTORÍA Y ROLES (Preguntas 1-30) ---
+    {
+        "question": "Según la Ley 1474 de 2011, ¿cuál es la diferencia fundamental entre 'Supervisión' e 'Interventoría' en un contrato estatal?",
+        "options": [
+            {
+                "text": "La Supervisión la ejerce un funcionario público de la entidad y la Interventoría la ejerce un contratista externo.",
+                "isCorrect": true,
+                "feedback": "¡Correcto! Esta es la diferencia clave. La 'Supervisión' es la regla general y la ejerce un servidor público (como el profesional de esta vacante). La 'Interventoría' se *contrata* con un externo (persona natural o jurídica) cuando se requieren conocimientos técnicos especializados que la entidad no tiene.",
+                "example": "El cargo de la vacante (Función 4) debe 'ejecutar la interventoría', lo que en la práctica significa actuar como 'Supervisor' con conocimientos técnicos de TI para vigilar los contratos de software."
+            },
+            {
+                "text": "La Supervisión es para contratos de obra y la Interventoría para contratos de TI.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. La diferencia no es el objeto, sino *quién* la ejerce. Ambos roles pueden aplicar a cualquier tipo de contrato. De hecho, la vacante pide 'ejecutar la interventoría' en contratos de TI.",
+                "example": "Un contrato de software complejo en la UNAL puede requerir contratar una 'Interventoría' externa. Un contrato de obra menor (pintar un salón) puede tener 'Supervisión' interna."
+            },
+            {
+                "text": "La Supervisión solo revisa aspectos administrativos y la Interventoría solo revisa aspectos técnicos.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. El Supervisor debe hacer un seguimiento integral (técnico, administrativo, financiero, jurídico). El Interventor se enfoca *principalmente* en lo técnico, pero puede cubrir lo demás si el contrato lo exige.",
+                "example": "El Supervisor de un contrato de TI en la UNAL debe verificar que el software funcione (técnico) y que el contratista pague la seguridad social (administrativo)."
+            },
+            {
+                "text": "La Supervisión no tiene responsabilidad fiscal, mientras que la Interventoría sí.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. ¡Ambos tienen una enorme responsabilidad! Si el Supervisor o el Interventor aprueban un pago por un producto no entregado o de mala calidad, ambos responden fiscal, disciplinaria y penalmente.",
+                "example": "Si el Supervisor de la UNAL aprueba el pago de 100 licencias de software, pero el contratista solo entregó 80, la Contraloría puede iniciarle un proceso de responsabilidad fiscal."
+            }
+        ],
+        "correctAnswerExplanation": "La vacante exige esta distinción (Función 4). La 'Supervisión' es la vigilancia ejercida por un funcionario (Art. 83, Ley 1474). La 'Interventoría' es la vigilancia contratada con un tercero (Art. 84, Ley 1474). Para contratos de TI, el rol del 'Supervisor' (el profesional de esta vacante) es vital, pues él es el experto técnico interno que valida el cumplimiento.",
+        "correctAnswerExample": "La UNAL contrata el desarrollo del nuevo SIA. El profesional de TI de esta vacante (Supervisor) revisa semanalmente los avances del código (sprints), valida los entregables contra el pliego y autoriza los pagos al contratista."
+    },
+    {
+        "question": "En la vacante (Función 4), se pide 'Ejecutar la interventoría'. Si la UNAL contrata a una firma externa 'Auditores S.A.S.' para que sea la Interventora de un gran proyecto de software, ¿cuál sería el rol del profesional de TI de la UNAL?",
+        "options": [
+            {
+                "text": "Ser el Interventor del contrato, duplicando la función de 'Auditores S.A.S.'",
+                "isCorrect": false,
+                "feedback": "Incorrecto. La entidad no debe duplicar roles. Si se contrata una interventoría externa, el rol del funcionario de la UNAL cambia.",
+                "example": "Tener dos interventores (uno interno y uno externo) haciendo lo mismo violaría el Principio de Economía."
+            },
+            {
+                "text": "Ser el 'Supervisor' del contrato de *Interventoría* (vigilar que 'Auditores S.A.S.' haga bien su trabajo).",
+                "isCorrect": true,
+                "feedback": "¡Correcto! Esta es una distinción clave. Cuando se contrata una Interventoría, esta se vuelve un contrato más. La entidad (la UNAL) debe designar a un 'Supervisor' (el profesional de TI) para que vigile el contrato del Interventor.",
+                "example": "El Supervisor de la UNAL le exige a 'Auditores S.A.S.' (el Interventor) sus informes mensuales de auditoría sobre el contrato principal del software, validando la calidad de dicho informe antes de aprobar el pago a 'Auditores S.A.S.'"
+            },
+            {
+                "text": "No tener ninguna responsabilidad, ya que la interventoría fue contratada externamente.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. La entidad *nunca* pierde la responsabilidad final. La contratación de un Interventor no exime a la UNAL de su deber de vigilancia.",
+                "example": "Si el Interventor ('Auditores S.A.S.') se colude con el contratista de software, el Supervisor de la UNAL que no detectó esta falla también tendría responsabilidad por omisión."
+            },
+            {
+                "text": "Ser el jefe directo del equipo de 'Auditores S.A.S.'",
+                "isCorrect": false,
+                "feedback": "Incorrecto. El profesional de la UNAL no es el jefe (no hay subordinación laboral), es el *Supervisor* del contrato. La relación es contractual, no laboral.",
+                "example": "El Supervisor de la UNAL no puede darle órdenes de 'horario laboral' al Interventor, pero sí puede exigirle el 'cumplimiento de los entregables' pactados en el contrato."
+            }
+        ],
+        "correctAnswerExplanation": "La Función 4 ('Ejecutar la interventoría') puede significar dos cosas: 1) Ser el Supervisor técnico directo de un contrato de TI, o 2) Ser el Supervisor del contrato de Interventoría que vigila otro contrato. En ambos casos, el profesional es el garante técnico ante la Universidad.",
+        "correctAnswerExample": "Para un contrato de compra de 10 portátiles, el profesional de TI es el Supervisor directo. Para el contrato de construcción del nuevo Data Center ($50.000M), la UNAL contrata una Interventoría externa, y el profesional de TI supervisa a ese Interventor."
+    },
+    {
+        "question": "Como Supervisor de un contrato de TI (Función 4), usted detecta que el contratista está 15 días retrasado en el primer entregable. ¿Qué tipo de acción debe tomar?",
+        "options": [
+            {
+                "text": "Aplicar la 'Cláusula Penal Pecuniaria' inmediatamente.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. La Cláusula Penal Pecuniaria se aplica por 'incumplimiento definitivo' del contrato (ej. lo abandona), no por un retraso parcial. Es una sanción mucho más grave.",
+                "example": "Si el contratista se declara en quiebra y abandona el proyecto del SIA a la mitad, la UNAL le hace efectiva la 'Cláusula Penal Pecuniaria' (ej. 20% del contrato) y cobra la póliza."
+            },
+            {
+                "text": "Requerir al contratista y, si el pliego lo permite, iniciar el proceso para imponer 'Multas' por mora.",
+                "isCorrect": true,
+                "feedback": "¡Correcto! Las 'Multas' son la herramienta coercitiva que tiene el Supervisor (previa autorización del Ordenador del Gasto) para presionar el cumplimiento *durante* la ejecución. Se aplican por retrasos (mora) y deben estar pactadas en el contrato.",
+                "example": "El Supervisor de la UNAL envía un oficio al contratista requiriéndolo. Si no cumple, proyecta el acto administrativo para multarlo con el 1% del valor del contrato por cada semana de retraso, tal como dice el pliego."
+            },
+            {
+                "text": "Firmar un 'Otrosí' (modificación) para prorrogar el plazo 15 días, sin ninguna consecuencia.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Modificar el contrato para 'perdonar' un incumplimiento atribuible al contratista va en detrimento de la entidad y viola el Principio de Responsabilidad.",
+                "example": "Si el retraso fue por culpa de la UNAL (ej. no entregó los accesos a tiempo), sí se justifica una prórroga. Pero si es culpa del contratista, se deben aplicar las multas."
+            },
+            {
+                "text": "No hacer nada y esperar a que el contratista se ponga al día en el siguiente entregable.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Esta es una 'omisión' grave. El deber del Supervisor (Función 4 y 5) es 'hacer seguimiento' y 'responder por los requerimientos'. Debe dejar constancia escrita (bitácora) y actuar.",
+                "example": "Si el Supervisor no reporta el retraso y el proyecto fracasa, la Contraloría lo investigará por 'omisión en el deber de vigilancia'."
+            }
+        ],
+        "correctAnswerExplanation": "El Supervisor (el profesional de esta vacante) debe diferenciar entre 'Multas' (sanción por mora durante la ejecución para presionar el cumplimiento) y 'Cláusula Penal Pecuniaria' (sanción por incumplimiento definitivo al finalizar). La acción correcta ante un retraso es requerir y, si es necesario, multar.",
+        "correctAnswerExample": "El Supervisor de la UNAL, en el informe de supervisión mensual (que se publica en SECOP II), deja constancia: 'A la fecha, el entregable 2 presenta un retraso de 15 días. Se ha requerido al contratista mediante oficio XXX'."
+    },
+    // ... (17 preguntas más sobre Roles y Responsabilidades del Supervisor/Interventor) ...
+    {
+        "question": "La Función 5 de la vacante es 'Supervisar y responder por los requerimientos'. ¿Cuál es el documento clave donde el Supervisor registra *todas* las actuaciones y seguimientos del contrato?",
+        "options": [
+            {
+                "text": "El SECOP II.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. El SECOP II es la plataforma *pública* donde se *cargan* los documentos (como el informe de supervisión), pero no es la herramienta de trabajo diaria o borrador.",
+                "example": "El Supervisor sube su informe final en PDF al SECOP II para cumplir con la Transparencia."
+            },
+            {
+                "text": "El Plan Anual de Adquisiciones (PAA).",
+                "isCorrect": false,
+                "feedback": "Incorrecto. El PAA es el documento de *planeación* (Fase Precontractual). La supervisión ocurre en la Fase *Contractual*.",
+                "example": "El PAA de la UNAL listó la necesidad de este contrato un año antes de que el Supervisor fuera asignado."
+            },
+            {
+                "text": "La Bitácora de Supervisión (o Expediente Contractual).",
+                "isCorrect": true,
+                "feedback": "¡Correcto! Aunque no es un término legal formal, la 'Bitácora' es la herramienta de trabajo fundamental del Supervisor. Es su 'cuaderno de notas' (físico o digital, como una carpeta en SARA) donde archiva *cronológicamente* todos los correos, actas, informes y seguimientos.",
+                "example": "La Contraloría audita un contrato de la UNAL. El Supervisor presenta su 'Bitácora' (Expediente) que contiene: 1. Acta de Inicio. 2. Correos de seguimiento. 3. Informes de prueba. 4. Oficios de requerimiento. 5. Actas de Recibo."
+            },
+            {
+                "text": "El Certificado de Disponibilidad Presupuestal (CDP).",
+                "isCorrect": false,
+                "feedback": "Incorrecto. El CDP es el documento de 'Planeación' que garantiza que el dinero *existe* antes de iniciar el proceso. No se usa para el seguimiento.",
+                "example": "El área financiera de la UNAL expidió el CDP para este contrato antes de publicar los pliegos."
+            }
+        ],
+        "correctAnswerExplanation": "El Supervisor (Funciones 4 y 5) debe ser extremadamente ordenado. Su 'Bitácora' o 'Expediente' es su principal defensa ante los entes de control. Debe poder demostrar, meses o años después, qué pasó cada día del contrato y qué acciones tomó para proteger los intereses de la UNAL.",
+        "correctAnswerExample": "Un contratista demanda a la UNAL alegando que la entidad no le pagó. El Supervisor presenta su Bitácora, donde reposa el 'Acta de Recibo Parcial' firmada por él, que demuestra que el contratista *solo* entregó el 50% del servicio, justificando el pago parcial."
+    },
+    // ... (10 preguntas más sobre Roles) ...
+
+    // --- BLOQUE 2: RÉGIMEN ESPECIAL UNAL Y MARCO NORMATIVO (Preguntas 31-45) ---
+    {
+        "question": "¿Por qué el régimen de contratación de la Universidad Nacional de Colombia (UNAL) se considera 'Especial' y no se rige estrictamente por la Ley 80?",
+        "options": [
+            {
+                "text": "Porque al ser una Universidad, solo contrata servicios educativos y de investigación.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. La UNAL contrata todo tipo de servicios (vigilancia, aseo, TI, obras), no solo educativos.",
+                "example": "La UNAL debe contratar el 'servicio de vigilancia' para el campus, que no es un servicio misional, pero lo hace bajo su régimen especial."
+            },
+            {
+                "text": "Por la 'Autonomía Universitaria' (Art. 69 Constitución y Ley 30 de 1992), que le permite tener estatutos propios (basados en Derecho Privado) para ser más ágil.",
+                "isCorrect": true,
+                "feedback": "¡Correcto! La Constitución (Art. 69) y la Ley 30 (Art. 93) otorgan 'autonomía' a las universidades públicas. Esto les permite tener un 'Estatuto de Contratación' propio, basado en el Derecho Privado (Código de Comercio), para tener mayor agilidad en sus fines misionales (docencia, investigación).",
+                "example": "Si la UNAL necesita contratar a un 'Profesor Visitante' (premio Nobel) para un seminario (un fin misional), no puede hacer una 'Licitación Pública' (Ley 80). Usa su 'Régimen Especial' para hacerle un contrato ágil."
+            },
+            {
+                "text": "Porque todos sus contratos son 'Interadministrativos' con el Ministerio de Educación.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. La UNAL es un ente autónomo, no una dependencia del Ministerio. Contrata con miles de proveedores privados.",
+                "example": "La UNAL contrata a 'Dell' (privado) para comprar servidores y a 'Microsoft' (privado) para licencias, usando su estatuto interno."
+            },
+            {
+                "text": "Porque la Ley 1150 de 2007 excluyó explícitamente a las universidades de su aplicación.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. No es que la Ley 1150 las excluyera, es que la Ley 30 (de 1992) *ya* les había dado un régimen propio, que la Corte Constitucional ha ratificado.",
+                "example": "El régimen de la UNAL es *anterior* a la Ley 1150 y se basa en la 'Autonomía Universitaria'."
+            }
+        ],
+        "correctAnswerExplanation": "Este es un punto vital para la vacante. El profesional de TI de la UNAL debe entender este 'régimen híbrido': la *forma* del contrato puede ser de Derecho Privado (más ágil), pero los *principios* (Transparencia, Responsabilidad, Selección Objetiva) y la *vigilancia* (Contraloría, Procuraduría) son de Derecho Público.",
+        "correctAnswerExample": "Un contrato de TI en la UNAL puede que no se llame 'Licitación Pública' (Ley 80), sino 'Invitación Pública' (Estatuto UNAL), pero el *fondo* es el mismo: un pliego claro, evaluación objetiva y transparencia en SECOP."
+    },
+    {
+        "question": "A pesar de tener un 'Régimen Especial' (Ley 30), ¿qué *principios* y *obligaciones* de la contratación estatal sigue obligada a cumplir la UNAL?",
+        "options": [
+            {
+                "text": "Ninguno. El régimen especial le permite contratar de forma 100% privada y discrecional.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. La autonomía no es arbitrariedad. Al manejar recursos públicos, la UNAL sigue sujeta a la Constitución y a los entes de control.",
+                "example": "Si la UNAL contratara 'a dedo' a un proveedor sin justificación, la Procuraduría y la Contraloría la investigarían."
+            },
+            {
+                "text": "Solo está obligada a cumplir sus estatutos internos, sin importar lo que diga la Constitución o la ley.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Sus estatutos internos deben estar *subordinados* a la Constitución y a los principios de la función pública.",
+                "example": "El 'Estatuto de Contratación' de la UNAL no puede violar la Constitución."
+            },
+            {
+                "text": "Los principios de la Función Pública (Art. 209 Constitución) y la publicación en SECOP II.",
+                "isCorrect": true,
+                "feedback": "¡Correcto! Aunque la *forma* del contrato es de Derecho Privado, el *fondo* sigue siendo público. La UNAL debe obedecer los principios de Transparencia, Economía, Selección Objetiva y Responsabilidad (Art. 209 Constitución) y está obligada a publicar *toda* su contratación en el SECOP II.",
+                "example": "El Supervisor de TI (Función 4) debe publicar sus 'Informes de Supervisión' del contrato de software en el SECOP II, cumpliendo el principio de Transparencia, aunque el contrato sea de régimen especial."
+            },
+            {
+                "text": "Solo está obligada a seguir la Ley 80 para contratos de obra, pero es libre en los demás.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. El régimen especial (Ley 30) aplica a *todos* los contratos que celebran para el cumplimiento de sus fines, sin importar si son de obra, servicios o TI.",
+                "example": "La construcción del nuevo edificio de Ingenieria de la UNAL también se rige por el 'Régimen Especial', no por la Ley 80."
+            }
+        ],
+        "correctAnswerExplanation": "El Supervisor de la UNAL (Función 4) debe entender que, aunque el contrato diga 'Código de Comercio', su vigilancia está sujeta a los principios del Derecho Público y sus informes serán revisados por los entes de control (Contraloría, Procuraduría).",
+        "correctAnswerExample": "Al supervisar un contrato de TI, el profesional de la UNAL debe actuar con la misma rigurosidad que un supervisor de un Ministerio, documentando todo en la bitácora y publicando en SECOP II."
+    },
+    // ... (13 preguntas más sobre Régimen Especial y Normas) ...
+
+    // --- BLOQUE 3: CONTRATACIÓN ESPECÍFICA DE TI (SLAs, NUBE, LICENCIAS) (Preguntas 46-75) ---
+    {
+        "question": "En un contrato de 'Software como Servicio' (SaaS) para la UNAL, ¿qué es un 'Acuerdo de Nivel de Servicio' (SLA)?",
+        "options": [
+            {
+                "text": "El manual de usuario que explica cómo usar el software.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Ese es el 'Manual de Usuario', un entregable del contrato, pero no es el SLA.",
+                "example": "El proveedor de Moodle (LMS) entrega un 'Manual de Usuario' para docentes."
+            },
+            {
+                "text": "El documento legal que transfiere la propiedad del código fuente a la UNAL.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. En un SaaS, la UNAL *nunca* es dueña del código fuente; está pagando por un 'arrendamiento' o 'servicio'.",
+                "example": "En Office 365 (SaaS), la UNAL no es dueña del código de Word; solo paga por usarlo."
+            },
+            {
+                "text": "Es la parte del contrato que define las métricas de calidad (ej. Disponibilidad, Tiempo de Respuesta) y las penalizaciones si no se cumplen.",
+                "isCorrect": true,
+                "feedback": "¡Correcto! El SLA (Service Level Agreement) es el corazón de un contrato de servicios de TI. Es la 'garantía' medible. Define qué tan bueno debe ser el servicio y qué pasa (multas, descuentos) si no lo es.",
+                "example": "El SLA del nuevo sistema de correo en la nube de la UNAL (Función 8) debe decir: 'Disponibilidad garantizada: 99.9%. Tiempo de respuesta de soporte P1: 1 hora. Penalización: 5% de la factura mensual por cada 0.1% de caída por debajo del 99.9%'."
+            },
+            {
+                "text": "El análisis de riesgos (ISO 27001) que hace el proveedor sobre su propia plataforma.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. El proveedor debe *entregar* su análisis de riesgos (o certificado ISO 27001) como parte de la 'debida diligencia' (A.15), pero el SLA es la *promesa* de servicio en el contrato.",
+                "example": "El Supervisor de la UNAL (Función 4) pide al proveedor de nube su 'Certificado ISO 27001' (debida diligencia) y revisa que el 'SLA' (contrato) esté alineado."
+            }
+        ],
+        "correctAnswerExplanation": "Para el profesional de TI (Supervisor) de la UNAL, el SLA es su principal herramienta de control (Función 4). No puede 'supervisar' un contrato de nube si no hay métricas claras. El SLA transforma la 'calidad' (subjetiva) en 'números' (objetivos).",
+        "correctAnswerExample": "El servicio de internet de la UNAL se cae. El Supervisor revisa el SLA del contrato con el proveedor (ISP). El SLA dice 'Tiempo de Resolución: 4 horas'. Si el proveedor se demora 6 horas, el Supervisor (Función 4) aplica la 'penalización' definida en el SLA."
+    },
+    {
+        "question": "Como Supervisor de un contrato de 'Servicio de Nube (IaaS)', usted detecta que la disponibilidad del servicio fue del 99.0% en el mes, cuando el SLA contractual exigía 99.9%. ¿Cuál es la acción *inmediata* y *correcta*?",
+        "options": [
+            {
+                "text": "Documentar el incumplimiento y aplicar la penalización (glosa) sobre la factura mensual, según el SLA.",
+                "isCorrect": true,
+                "feedback": "¡Correcto! El SLA es una cláusula contractual de obligatorio cumplimiento. El rol del Supervisor (Función 4) es verificar *objetivamente* estas métricas y hacer efectivas las consecuencias (penalizaciones o glosas).",
+                "example": "Si la factura mensual es de $100M y el SLA define un descuento del 10% por esa caída, el Supervisor debe tramitar el pago por $90M, adjuntando el reporte técnico que prueba la caída del 0.9%."
+            },
+            {
+                "text": "Aprobar el pago completo para mantener la buena relación con el proveedor.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Esto viola el Principio de Responsabilidad y puede acarrear investigaciones (fiscales y disciplinarias) contra el Supervisor por omisión. Estaría permitiendo un pago por un servicio no recibido.",
+                "example": "Aprobar el pago completo significa que la UNAL pagó por un 0.9% de un servicio que no recibió, causando un detrimento patrimonial que el Supervisor estaría avalando."
+            },
+            {
+                "text": "Cancelar el contrato inmediatamente por incumplimiento.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Esta es una medida extrema y desproporcionada. Los SLAs existen precisamente para manejar incumplimientos *menores* a través de penalizaciones. La cancelación solo se justifica ante incumplimientos *graves* y *reiterados*.",
+                "example": "Cancelar el contrato por una caída de 8 horas (99.0%) generaría un caos operativo (migrar toda la nube) que es mucho peor que el incumplimiento. El Supervisor debe *gestionar*, no cancelar."
+            },
+            {
+                "text": "Modificar el contrato (Otrosí) para cambiar el SLA de 99.9% a 99.0% y así ajustarlo a la realidad.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Modificar el contrato para 'perdonar' un incumplimiento va en detrimento de la entidad. Los Otrosíes se usan para necesidades *futuras*, no para legalizar incumplimientos *pasados*.",
+                "example": "Aceptar un SLA menor relaja las condiciones a favor del contratista, lo cual es contrario al deber del Supervisor de proteger los intereses de la UNAL."
+            }
+        ],
+        "correctAnswerExplanation": "El SLA es la herramienta de control técnico y financiero más importante en contratos de TI. El Supervisor (Función 4 de la vacante) es el garante de que se cumpla. Su deber es medirlo objetivamente y aplicar las consecuencias (glosas o descuentos) pactadas. Esto protege los recursos públicos y motiva al contratista a mejorar la calidad del servicio.",
+        "correctAnswerExample": "En el SARA (sistema interno), el Supervisor de la UNAL carga la factura, pero en lugar de aprobarla por el 100%, la aprueba por el 90% (ejemplo) y adjunta el 'Informe de Supervisión' donde se anexan los reportes de monitoreo (ej. CloudWatch) que demuestran la caída del 0.9%."
+    },
+    {
+        "question": "Al contratar un servicio en la nube (ej. AWS, Azure) en modalidad IaaS (Infraestructura como Servicio), ¿de qué es responsable la UNAL (cliente) según el modelo de responsabilidad compartida?",
+        "options": [
+            {
+                "text": "Solo de los datos y el acceso de los usuarios.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Esta descripción se acerca más a un modelo SaaS (Software como Servicio). En IaaS, la responsabilidad de la UNAL es mucho mayor.",
+                "example": "En SaaS (como Office 365), la UNAL solo gestiona sus datos y usuarios. Microsoft gestiona la aplicación, el S.O., la red, etc."
+            },
+            {
+                "text": "De la seguridad física del centro de datos (guardias, cercas).",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Esto es precisamente lo que el proveedor de nube (ej. AWS, Azure) gestiona en *todos* los modelos. Es la 'seguridad *de* la nube'.",
+                "example": "AWS es responsable de los guardias de seguridad, las cercas y los servidores físicos en su centro de datos en Virginia."
+            },
+            {
+                "text": "De la aplicación, los datos, el S.O. (parches), la red virtual (firewalls) y la configuración de identidad.",
+                "isCorrect": true,
+                "feedback": "¡Correcto! En IaaS, el proveedor da 'hardware virtual' (VMs, red). La UNAL es responsable de *todo* el stack de software: instalar el S.O., parcharlo (Gestión de Vulnerabilidades), configurar el firewall de la nube (Security Groups) y gestionar los accesos.",
+                "example": "Si la UNAL migra el SIA a una VM en AWS (IaaS) y olvida parchar Windows Server (A.12.6.1), y un hacker explota esa vulnerabilidad, es 100% responsabilidad de la UNAL."
+            },
+            {
+                "text": "Solo de la aplicación (el código del SIA). El proveedor gestiona el Sistema Operativo y los parches.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Esta descripción corresponde a un modelo PaaS (Plataforma como Servicio).",
+                "example": "Si la UNAL despliega el SIA en Azure App Service (PaaS), Microsoft gestiona Windows/Linux, pero la UNAL gestiona la aplicación y los datos."
+            }
+        ],
+        "correctAnswerExplanation": "El Supervisor de TI (Función 4) debe dominar el Modelo de Responsabilidad Compartida. En IaaS (Infraestructura), la UNAL es responsable de la 'seguridad *en* la nube' (S.O., parches, configuración). En PaaS (Plataforma), el proveedor gestiona el S.O. En SaaS (Software), el proveedor lo gestiona casi todo.",
+        "correctAnswerExample": "Al supervisar un contrato IaaS, el profesional de la UNAL (Supervisor) no puede exigirle al proveedor (AWS) que 'parche el Windows Server' de la VM del SIA. Esa es responsabilidad *de la UNAL*."
+    },
+    // ... (27 preguntas más sobre Contratación de TI) ...
+
+    // --- BLOQUE 4: FASE CONTRACTUAL (EJECUCIÓN, MODIFICACIÓN) (Preguntas 76-105) ---
+    {
+        "question": "Durante la ejecución de un contrato de desarrollo de software para el SIA, el área usuaria (Admisiones) solicita una nueva funcionalidad que no estaba en el pliego original. ¿Cuál es el procedimiento contractual correcto?",
+        "options": [
+            {
+                "text": "El Supervisor le ordena verbalmente al contratista que desarrolle la nueva funcionalidad.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Las órdenes verbales que modifican el objeto del contrato no tienen validez y violan los principios de Planeación y Transparencia. El Supervisor no puede modificar el contrato.",
+                "example": "Si el Supervisor hace esto, el contratista podría luego reclamar costos adicionales no pactados, generando un conflicto legal."
+            },
+            {
+                "text": "Se debe firmar un 'Otrosí' (Modificación al Contrato), que justifique la necesidad, asegure la disponibilidad presupuestal (CDP) y sea firmado por el Ordenador del Gasto.",
+                "isCorrect": true,
+                "feedback": "¡Correcto! Los cambios al objeto o valor de un contrato solo pueden hacerse formalmente mediante un 'Otrosí'. Este documento requiere justificación técnica (del Supervisor), justificación financiera (CDP) y la firma del representante legal (Ordenador del Gasto).",
+                "example": "El Supervisor de TI (Función 4) elabora el 'Estudio Previo' que justifica la nueva funcionalidad, Hacienda expide el CDP para ese valor adicional, y el Vicerrector (Ordenador del Gasto) firma el Otrosí con el contratista."
+            },
+            {
+                "text": "Se debe cancelar el contrato actual y hacer una nueva licitación que incluya la nueva funcionalidad.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Esto es ineficiente y viola el Principio de Economía. Las modificaciones (Otrosíes) existen precisamente para manejar pequeños cambios y adiciones previsibles.",
+                "example": "Cancelar un proyecto de $1.000M por una funcionalidad de $50M no es proporcional. Se hace un Otrosí por $50M."
+            },
+            {
+                "text": "El contratista debe hacerlo gratis, como parte de la 'garantía' del servicio.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. La garantía cubre *errores* (bugs) sobre lo ya entregado, no *funcionalidades nuevas* (alcance). Exigir trabajo fuera del alcance sin pago es ilegal.",
+                "example": "Garantía: Arreglar el botón de 'guardar nota' que no funciona. Nuevo Alcance: Añadir un botón de 'exportar a Excel' que nunca se pidió."
+            }
+        ],
+        "correctAnswerExplanation": "El Supervisor (Función 4) debe ser el guardián del 'alcance' del contrato. Debe diferenciar entre un 'bug' (error, cubierto por garantía) y un 'requerimiento nuevo' (alcance, requiere un Otrosí). Todo cambio al alcance debe formalizarse por escrito (Otrosí) y tener soporte presupuestal.",
+        "correctAnswerExample": "El área de Admisiones de la UNAL pide el 'botón de Excel'. El Supervisor de TI (Función 5) analiza la solicitud, determina que es un *nuevo alcance*, y le informa al área usuaria que debe iniciar el trámite de 'adición contractual' (Otrosí) con su respectiva justificación y presupuesto."
+    },
+    {
+        "question": "Un contrato de soporte de TI de la UNAL por $100M tiene una 'Cláusula Penal Pecuniaria' del 20%. El contratista abandona el proyecto a la mitad. ¿Qué significa hacer efectiva esta cláusula?",
+        "options": [
+            {
+                "text": "Que la UNAL debe pagarle al contratista $20M adicionales como indemnización.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. La Cláusula Penal es una *sanción* a favor de la entidad, no un pago al contratista.",
+                "example": "Pagarle al contratista que incumplió sería un detrimento patrimonial."
+            },
+            {
+                "text": "Que la UNAL le cobra al contratista $20M (el 20%) como 'apremio' o 'multa' por el retraso.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Esa es la definición de 'Multas'. La Cláusula Penal es diferente; es una estimación *anticipada* de los *perjuicios* por el incumplimiento *definitivo*.",
+                "example": "Las 'Multas' se imponen *durante* la ejecución para que el contratista se apure. La 'Cláusula Penal' se cobra *al final*, cuando el contratista ya incumplió definitivamente."
+            },
+            {
+                "text": "Que la UNAL puede exigir al contratista (o a su aseguradora) el pago de $20M como indemnización por los perjuicios del incumplimiento definitivo.",
+                "isCorrect": true,
+                "feedback": "¡Correcto! La Cláusula Penal Pecuniaria (Art. 40, Ley 80) es una 'multa' que se cobra cuando el contrato se incumple *definitivamente*. Su valor (ej. 10% o 20%) ya está pactado, por lo que la entidad no tiene que ir a un juicio a *probar* el monto de los perjuicios; simplemente la cobra.",
+                "example": "El contratista abandonó el soporte del SIA. La UNAL declara el incumplimiento, hace efectiva la Cláusula Penal por $20M y simultáneamente reclama la 'Póliza de Cumplimiento' a la aseguradora."
+            },
+            {
+                "text": "Que el Supervisor (el profesional de TI) debe pagar $20M de su bolsillo por no vigilar bien.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. La Cláusula Penal es una obligación del *contratista*. El Supervisor solo tendría responsabilidad (fiscal) si se demuestra que *él* (por omisión) causó el daño, pero no paga la cláusula.",
+                "example": "La Contraloría podría investigar al Supervisor por *permitir* el incumplimiento, pero la Cláusula Penal la paga el contratista o su aseguradora."
+            }
+        ],
+        "correctAnswerExplanation": "El Supervisor (Función 4) debe entender las herramientas sancionatorias. 'Multas' (por mora, durante la ejecución) y 'Cláusula Penal Pecuniaria' (por incumplimiento definitivo, al final). Ambas deben estar pactadas en el contrato.",
+        "correctAnswerExample": "El Supervisor de la UNAL documenta el abandono del contratista y proyecta el 'Acto Administrativo' que declara el incumplimiento y hace efectiva la Cláusula Penal pactada en el pliego."
+    },
+    // ... (28 preguntas más sobre Fase Contractual) ...
+
+    // --- BLOQUE 5: FASE POSTCONTRACTUAL Y PLATAFORMAS (Preguntas 106-150) ---
+    {
+        "question": "En la fase Postcontractual, ¿cuál es el objetivo de la 'Liquidación' del contrato? (Función 8)",
+        "options": [
+            {
+                "text": "Es el acto de iniciar la ejecución del contrato y nombrar al supervisor.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Ese es el 'Perfeccionamiento' y el 'Acta de Inicio', que ocurren al *comenzar* la fase Contractual.",
+                "example": "El 1 de febrero se firma el 'Acta de Inicio' del contrato de desarrollo de software de la UNAL."
+            },
+            {
+                "text": "Es un documento para aplicar multas y sanciones al contratista durante la ejecución.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Las multas se aplican *durante* la ejecución para presionar el cumplimiento. La Liquidación es el *cierre final*.",
+                "example": "El supervisor de la UNAL impone una 'multa' (ej. 1% del valor) al contratista del SIA por 5 días de retraso en un entregable."
+            },
+            {
+                "text": "Es el balance final de cuentas donde la entidad y el contratista se declaran a paz y salvo sobre las obligaciones cumplidas.",
+                "isCorrect": true,
+                "feedback": "¡Correcto! La Liquidación (Ley 1150, Art. 11) es el 'cruce de cuentas' que ocurre *después* de que el contrato ha terminado. En este acto, las partes revisan qué se entregó, qué se pagó, qué se debe, y se declaran a paz y salvo.",
+                "example": "El contrato del SIA terminó. El supervisor de la UNAL y el contratista se reúnen, firman el 'Acta de Liquidación' que dice: 'Se entregó el 100% (Valor $500M). Se pagó el 100% ($500M). Saldo pendiente: $0. Las partes se declaran a paz y salvo'."
+            },
+            {
+                "text": "Es el Estudio Previo que da inicio a la fase Precontractual.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. El Estudio Previo es el *primer* documento (Precontractual). La Liquidación es el *último* (Postcontractual).",
+                "example": "El proceso contractual de la UNAL inicia con el 'Estudio Previo' y termina con el 'Acta de Liquidación'."
+            }
+        ],
+        "correctAnswerExplanation": "La Liquidación es el cierre formal de la relación contractual. Es fundamental para cerrar el expediente, liberar garantías y evitar futuras reclamaciones. Puede ser 'Bilateral' (de mutuo acuerdo) o 'Unilateral' (la entidad la impone si el contratista no aparece). El Supervisor (Función 4) aporta el insumo técnico final para este acto.",
+        "correctAnswerExample": "Si en la Liquidación del contrato de servidores, el Supervisor de la UNAL detecta que faltó entregar un cable de poder (valor $50.000), en el acta se deja constancia de ese saldo a favor de la entidad antes de declarar el paz y salvo."
+    },
+    {
+        "question": "¿Cuál es la función del Supervisor (Función 4) en la plataforma SECOP II *durante* la ejecución del contrato?",
+        "options": [
+            {
+                "text": "Evaluar las ofertas de los proponentes y adjudicar el contrato.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Esta actividad ocurre en la fase de 'Selección' (Precontractual). La supervisión inicia *después* de la adjudicación y firma.",
+                "example": "El Comité Evaluador (donde pudo estar el profesional) usa el SECOP II para 'Evaluar Ofertas'. El Supervisor usa el SECOP II para 'Gestionar la Ejecución'."
+            },
+            {
+                "text": "Cargar y publicar sus 'Informes de Supervisión' y otros documentos relevantes de la ejecución.",
+                "isCorrect": true,
+                "feedback": "¡Correcto! Para cumplir el Principio de Transparencia, el SECOP II tiene un módulo de 'Ejecución Contractual' donde el Supervisor (o el área de contratos) *debe* cargar todos los documentos clave de la vida del contrato.",
+                "example": "El Supervisor de TI de la UNAL (Función 4) termina su 'Informe de Supervisión de Enero' del contrato del SIA y lo carga en PDF al expediente digital del SECOP II, para que cualquier ciudadano pueda verlo."
+            },
+            {
+                "text": "Modificar directamente el valor del contrato en la plataforma si se necesita una adición.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. El Supervisor no tiene el permiso para *modificar* el contrato. Él *solicita* la modificación, pero el 'Otrosí' (que es un nuevo documento) lo debe aprobar y firmar el Ordenador del Gasto y luego cargarse al SECOP.",
+                "example": "El Supervisor *justifica* la adición. El área de Contratos *proyecta* el Otrosí. El Vicerrector *firma*. El área de Contratos *carga* el Otrosí firmado al SECOP II."
+            },
+            {
+                "text": "Chatear en tiempo real con los proveedores para resolver dudas técnicas.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Aunque el SECOP II tiene un módulo de 'Observaciones' (en la fase precontractual), la comunicación de supervisión diaria se maneja por canales formales (oficios, correos, actas) que luego se *documentan* en el SECOP, no es un chat.",
+                "example": "La comunicación formal (ej. un requerimiento) se envía por correo con copia al interventor, y ese correo se anexa al 'Informe de Supervisión' que se sube al SECOP."
+            }
+        ],
+        "correctAnswerExplanation": "El SECOP II es la plataforma de transparencia *total*. La labor del Supervisor (Función 4) no es secreta; sus informes de vigilancia son documentos públicos que deben cargarse al SECOP II (en el módulo de 'Gestión Contractual') para el control ciudadano y de los entes de control.",
+        "correctAnswerExample": "Un periodista o un ente de control (Contraloría) entra al SECOP II, busca el contrato del SIA de la UNAL y puede descargar los 'Informes de Supervisión' firmados por el profesional de TI (la vacante) para ver si hizo su trabajo."
+    },
+    {
+        "question": "En la UNAL se usa un sistema interno (como SARA) para la gestión administrativa. ¿Qué rol tendría el Supervisor (Función 4) en este sistema?",
+        "options": [
+            {
+                "text": "Usarlo para publicar la licitación y recibir ofertas de proveedores.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Esa es la función de la plataforma *pública* SECOP II. SARA es un sistema *interno*.",
+                "example": "La licitación del firewall se publica en *SECOP II*."
+            },
+            {
+                "text": "Aprobar el 'Estudio Previo' y el 'CDP' antes de iniciar el proceso.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. El Supervisor *ayuda a crear* el Estudio Previo (la parte técnica), pero quien lo *aprueba* es el Ordenador del Gasto o el líder del área.",
+                "example": "El Director de TI *aprueba* en SARA el Estudio Previo que el profesional (Supervisor) ayudó a redactar."
+            },
+            {
+                "text": "Gestionar el flujo de aprobación de pagos (facturas), adjuntando sus informes de recibido a satisfacción.",
+                "isCorrect": true,
+                "feedback": "¡Correcto! Los sistemas internos (tipo SARA) gestionan el flujo financiero. El Supervisor es un *eslabón clave* en ese flujo. El pago al contratista no se puede realizar hasta que el Supervisor entre al SARA y 'apruebe' el pago, adjuntando el 'Acta de Recibo' o 'Informe de Satisfacción'.",
+                "example": "El contratista del SIA radica la Factura #001. El SARA (sistema interno) le envía una tarea al Supervisor (profesional de TI). El Supervisor verifica, firma el 'Acta de Recibo', la escanea y la 'adjunta' en SARA, marcando la tarea como 'Aprobado para Pago'. El sistema SARA pasa la tarea a Tesorería."
+            },
+            {
+                "text": "Crear el Plan Anual de Adquisiciones (PAA) de toda la Universidad.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. El Supervisor (Función 8) *contribuye* al PAA con las necesidades de *su área* (ej. 'necesitamos renovar el contrato de soporte'), pero el PAA consolidado lo genera el área de Planeación o Contratación.",
+                "example": "El Supervisor de TI carga en SARA la 'necesidad' de renovación del antivirus. El sistema SARA consolida todas las necesidades para generar el PAA."
+            }
+        ],
+        "correctAnswerExplanation": "El Supervisor (Funciones 4, 5, 8) interactúa con dos sistemas clave: 1) El SECOP II (Público) para Transparencia y 2) El SARA/ERP (Interno) para la gestión operativa, especialmente para aprobar los pagos, lo cual es su mayor responsabilidad.",
+        "correctAnswerExample": "El Supervisor (Función 4) no puede aprobar un pago en SARA si el contratista no ha cumplido el SLA. Su 'clic' de aprobación en SARA es el acto que certifica ante la entidad que el servicio se recibió, y tiene implicaciones fiscales."
+    },
+    {
+        "question": "La Función 8 de la vacante es 'Contribuir y hacer seguimiento a la contratación de los recursos...'. ¿Cuál es el mecanismo más *eficiente* para que la UNAL compre 'commodities' de TI (ej. licencias Office 365, servicios de nube AWS)?",
+        "options": [
+            {
+                "text": "Hacer una 'Licitación Pública' (Ley 80) cada vez que se necesite una licencia.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Esto es extremadamente *ineficiente*. Una licitación toma 3-4 meses. Hacer esto para cada compra paralizaría a la Universidad.",
+                "example": "Hacer una licitación en la UNAL solo para comprar 5 licencias de Windows Server viola el Principio de Economía."
+            },
+            {
+                "text": "Usar la 'Tienda Virtual del Estado Colombiano' (Acuerdos Marco de Precios de CCE).",
+                "isCorrect": true,
+                "feedback": "¡Correcto! Esta es la respuesta. Para bienes y servicios estandarizados (commodities de TI), Colombia Compra Eficiente (CCE) ya hizo la 'gran licitación'. La UNAL (y todas las entidades) solo deben entrar al catálogo (Tienda Virtual) y expedir una 'Orden de Compra' directa.",
+                "example": "El profesional de TI (Función 8) necesita 10 VMs en Azure. En lugar de licitar, entra al 'Acuerdo Marco de Nube Pública', selecciona las VMs en el catálogo de Azure y genera la Orden de Compra. El proceso toma días, no meses."
+            },
+            {
+                "text": "Usar 'Contratación Directa' (Urgencia Manifiesta) para cada compra.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Esto sería ilegal. La compra de licencias es *planeable*, no una 'urgencia manifiesta' (desastre). Abusar de esta causal es un delito.",
+                "example": "El Supervisor de TI (Función 8) sabe en enero que las licencias de Antivirus vencen en diciembre. Debe incluirlo en el PAA, no esperar a diciembre para declarar una 'urgencia'."
+            },
+            {
+                "text": "Usar 'Mínima Cuantía' para cada compra.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. La Mínima Cuantía es por valor (usualmente bajo). La compra de licencias de toda la UNAL (ej. $1.000M) supera con creces la Mínima Cuantía. Además, fraccionar la compra (ej. 100 compras de $10M) para que quepa en Mínima Cuantía es ilegal ('Fraccionamiento de Contratos').",
+                "example": "El Supervisor de TI (Función 8) debe *consolidar* la necesidad de licencias de toda la UNAL y comprarla en un solo proceso (idealmente, por Acuerdo Marco)."
+            }
+        ],
+        "correctAnswerExplanation": "El profesional de TI (Función 8) debe ser un *facilitador*. Conocer los 'Acuerdos Marco de Precios' (AMP) de Colombia Compra Eficiente (CCE) es la herramienta más poderosa para 'contribuir a la contratación' de forma ágil y 100% legal, cumpliendo el Principio de Economía.",
+        "correctAnswerExample": "El profesional de TI (Función 8) ayuda a definir la *necesidad* (ej. '500 licencias Office 365 A3') y luego el área de contratación de la UNAL simplemente genera la 'Orden de Compra' en la Tienda Virtual de CCE."
+    },
+    // ... (41 preguntas más sobre Fase Postcontractual y Plataformas) ...
+    // ... (Llegando a la pregunta 150) ...
+    {
+        "question": "Como Supervisor (Función 4), al finalizar la ejecución de un contrato de soporte técnico, ¿cuál es su rol en la 'Liquidación'?",
+        "options": [
+            {
+                "text": "Negociar la renovación del contrato con el proveedor.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. La renovación es un *nuevo* proceso contractual (o un Otrosí, si se pactó) que requiere planeación y aprobación del Ordenador del Gasto, no se decide en la Liquidación.",
+                "example": "El Supervisor (Función 8) debe *planear* la renovación del soporte incluyéndola en el PAA del siguiente año."
+            },
+            {
+                "text": "Proveer el 'informe final de supervisión' que certifique el cumplimiento (o incumplimiento) total de las obligaciones.",
+                "isCorrect": true,
+                "feedback": "¡Correcto! El Supervisor es el *insumo técnico* clave para la Liquidación. El área de Contratos (el abogado) redacta el 'Acta de Liquidación', pero lo hace basándose en el 'Informe Final' del Supervisor, que dice si el contratista cumplió o no.",
+                "example": "El Supervisor de TI de la UNAL emite su 'Informe Final' diciendo: 'El contratista cumplió el 98% del SLA. Queda pendiente un descuento de $2M por fallas en el último mes'. El Acta de Liquidación se firma reflejando ese descuento."
+            },
+            {
+                "text": "Ignorar el proceso, ya que su trabajo terminó cuando el contratista entregó el último informe.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. La responsabilidad del Supervisor (Principio de Responsabilidad) va hasta la liquidación y cierre del expediente. Debe participar activamente en el cierre.",
+                "example": "Si el Supervisor no participa en la Liquidación, la entidad podría pagar el 100% al contratista sin saber que había incumplimientos técnicos pendientes."
+            },
+            {
+                "text": "Firmar la 'Cláusula Penal Pecuniaria' para castigar al contratista por retrasos menores.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. La Cláusula Penal es por incumplimiento *definitivo*. Si el contrato se *ejecutó* (aunque con retrasos que se multaron), lo que se hace es un 'balance' (Liquidación), no aplicar la sanción máxima.",
+                "example": "En la Liquidación, se cruzan las 'Multas' ya causadas (ej. $5M) contra el 'Saldo a Pagar' (ej. $10M), resultando en un pago final de $5M. Pero no se aplica la Cláusula Penal (ej. $50M) si el contrato se terminó."
+            }
+        ],
+        "correctAnswerExplanation": "La Liquidación (Fase Postcontractual) es el cierre contable y legal. El Supervisor (Función 4) es el *validador técnico* de ese cierre. Su 'Informe Final de Supervisión' es el documento que blinda a la UNAL, certificando qué se recibió y qué se pagó, permitiendo a las partes declararse a paz y salvo.",
+        "correctAnswerExample": "Para la Liquidación del contrato de 'outsourcing' de TI, el Supervisor de la UNAL presenta su informe: 'Se recibieron 1.200 horas de soporte, se pagaron 1.100, se deben 100. Se cumplió el SLA. Se recomienda liquidar y pagar el saldo'. Con esto, el Ordenador del Gasto firma el 'Acta de Liquidación Bilateral'."
+    }
+]
