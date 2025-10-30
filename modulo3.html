@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título del Módulo -->
+    <title>Módulo 3: Contratación Pública (Base)</title>
+    <!-- Carga de Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Carga de la fuente Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #1f2937; /* gray-800 */
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #3b82f6; /* blue-500 */
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #2563eb; /* blue-600 */
+        }
+        .option-btn {
+            transition: all 0.3s ease;
+        }
+        .option-btn:hover:not(:disabled) {
+            transform: translateY(-2px);
+            background-color: #374151; /* gray-700 */
+        }
+        .option-btn.correct {
+            background-color: #22c55e; /* green-500 */
+            border-color: #16a34a; /* green-600 */
+            color: white;
+        }
+        .option-btn.incorrect {
+            background-color: #ef4444; /* red-500 */
+            border-color: #dc2626; /* red-600 */
+            color: white;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-200 antialiased">
+
+    <!-- Header -->
+    <header class="bg-gray-800 shadow-lg sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div>
+                <!-- Título del Módulo -->
+                <a href="index.html" class="text-xl md:text-2xl font-bold text-white">
+                    <span class="text-blue-400">Módulo 3:</span> Contratación Pública (Base)
+                </a>
+            </div>
+            <div>
+                <!-- Enlace al portal principal -->
+                <a href="https://cemorab2025.github.io/Curso-Intensivo-Profesional-TI/" class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
+                    &larr; Volver al Portal
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Contenedor del Cuestionario -->
+    <main class="container mx-auto px-6 py-12 md:py-16">
+
+        <!-- Contenedor del Quiz -->
+        <div id="quiz-container" class="max-w-4xl mx-auto bg-gray-800 p-6 md:p-10 rounded-xl shadow-2xl">
+            <!-- Barra de Progreso y Puntaje -->
+            <div class="flex justify-between items-center mb-6">
+                <div>
+                    <span id="progress-text" class="text-lg font-semibold text-blue-400">Pregunta 1 de 30</span>
+                    <p class="text-sm text-gray-400" id="attempt-text">Intento: 1</p>
+                </div>
+                <div class="text-right">
+                    <span class="text-lg font-semibold text-white">Puntaje</span>
+                    <p id="score-text" class="text-2xl font-bold text-green-400">0</p>
+                </div>
+            </div>
+            
+            <!-- Progreso Visual -->
+            <div class="w-full bg-gray-700 rounded-full h-2.5 mb-8">
+                <div id="progress-bar" class="bg-blue-600 h-2.5 rounded-full" style="width: 0%"></div>
+            </div>
+
+            <!-- Pregunta -->
+            <h2 id="question-text" class="text-2xl md:text-3xl font-bold text-white mb-8" style="min-height: 100px;">
+                Cargando pregunta...
+            </h2>
+
+            <!-- Opciones -->
+            <div id="options-container" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <!-- Opciones se generan dinámicamente -->
+            </div>
+
+            <!-- Botón de Siguiente -->
+            <button id="next-btn" class="w-full mt-8 px-6 py-4 bg-blue-600 text-white text-lg font-semibold rounded-lg hover:bg-blue-700 transition-colors hidden">
+                Siguiente Pregunta
+            </button>
+            
+            <!-- Contenedor de Feedback (Estructura detallada) -->
+            <div id="feedback-container" class="mt-6 p-6 rounded-lg hidden">
+                <h3 id="feedback-title" class="text-2xl font-bold mb-4"></h3>
+                
+                <!-- Feedback para la opción seleccionada por el usuario -->
+                <h4 class="text-xl font-semibold text-blue-300 mb-2">Retroalimentación de tu respuesta:</h4>
+                <p id="feedback-text" class="text-base mb-2"></p>
+                <p id="feedback-example-text" class="text-base italic bg-gray-900 p-3 rounded-md"></p>
+                
+                <!-- Explicación de la respuesta correcta (se muestra si el usuario se equivoca) -->
+                <div id="correct-answer-container" class="mt-4 pt-4 border-t border-gray-600 hidden">
+                    <h4 class="text-xl font-semibold text-green-300 mb-2">Explicación de la Respuesta Correcta</h4>
+                    <p id="correct-answer-text" class="text-base mb-2"></p>
+                    <p id="correct-answer-example-text" class="text-base italic bg-gray-900 p-3 rounded-md"></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contenedor de Resultados -->
+        <div id="results-container" class="max-w-3xl mx-auto bg-gray-800 p-10 rounded-xl shadow-2xl text-center hidden">
+            <h2 class="text-4xl font-extrabold text-white mb-4">¡Cuestionario Completo!</h2>
+            <p class="text-xl text-gray-300 mb-6" id="results-attempt-text">Resultados de tu Intento 1</p>
+            <div class="bg-gray-900 rounded-lg p-8 my-8">
+                <p class="text-lg text-blue-400">Tu puntaje final es:</p>
+                <p id="score-final" class="text-7xl font-bold text-green-400 my-4">25 / 30</p>
+                <p id="results-message" class="text-lg text-gray-200">¡Excelente trabajo! Has dominado los fundamentos.</p>
+            </div>
+            <div class="flex flex-col md:flex-row justify-center gap-4">
+                <button id="retry-btn" class="w-full md:w-auto px-8 py-3 bg-blue-600 text-white text-lg font-semibold rounded-lg hover:bg-blue-700 transition-transform transform hover:scale-105">
+                    Siguiente Intento
+                </button>
+                <!-- Enlace al portal principal -->
+                <a href="https://cemorab2025.github.io/Curso-Intensivo-Profesional-TI/" class="w-full md:w-auto block px-8 py-3 bg-gray-700 text-white text-lg font-semibold rounded-lg hover:bg-gray-600 transition-colors">
+                    Volver al Portal
+                </a>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 border-t border-gray-700 py-8 mt-16">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-gray-400">
+                Plataforma de estudio para la Vacante BG-2025-30201-31-Ab
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // --- LÓGICA DEL CUESTIONARIO ---
+
+        let allQuestions = []; // Se define vacío. Se cargará con fetch.
+        let currentQuestionIndex = 0;
+        let score = 0;
+        let attemptNumber = 1;
+        let questionsForThisAttempt = [];
+
+        // Elementos del DOM
+        const progressTextEl = document.getElementById('progress-text');
+        const attemptTextEl = document.getElementById('attempt-text');
+        const scoreTextEl = document.getElementById('score-text');
+        const progressBarEl = document.getElementById('progress-bar');
+        const questionTextEl = document.getElementById('question-text');
+        const optionsContainerEl = document.getElementById('options-container');
+        const nextBtnEl = document.getElementById('next-btn');
+        
+        // Elementos de Feedback
+        const feedbackContainerEl = document.getElementById('feedback-container');
+        const feedbackTitleEl = document.getElementById('feedback-title');
+        const feedbackTextEl = document.getElementById('feedback-text');
+        const feedbackExampleTextEl = document.getElementById('feedback-example-text');
+        
+        const correctAnswerContainerEl = document.getElementById('correct-answer-container');
+        const correctAnswerTextEl = document.getElementById('correct-answer-text');
+        const correctAnswerExampleTextEl = document.getElementById('correct-answer-example-text');
+
+        // Elementos de Resultados
+        const quizContainerEl = document.getElementById('quiz-container');
+        const resultsContainerEl = document.getElementById('results-container');
+        const scoreFinalEl = document.getElementById('score-final');
+        const resultsMessageEl = document.getElementById('results-message');
+        const resultsAttemptTextEl = document.getElementById('results-attempt-text');
+        const retryBtnEl = document.getElementById('retry-btn');
+
+        // Función para barajar un array (Fisher-Yates)
+        function shuffle(array) {
+            let currentIndex = array.length, randomIndex;
+            while (currentIndex !== 0) {
+                randomIndex = Math.floor(Math.random() * currentIndex);
+                currentIndex--;
+                [array[currentIndex], array[randomIndex]] = [array[randomIndex], array[currentIndex]];
+            }
+            return array;
+        }
+
+        // 1. Cargar el banco de preguntas según el intento (Lógica MODIFICADA)
+        function loadQuestionBank() {
+            // Usar una clave de localStorage específica para el Módulo 3
+            // ***** CAMBIO CLAVE *****
+            attemptNumber = parseInt(localStorage.getItem('quizAttempt_M3') || '1');
+            attemptTextEl.textContent = `Intento: ${attemptNumber}`;
+            
+            const totalQuestionsInBank = allQuestions.length; // 150
+            const questionsPerAttempt = 30; // Mostrar 30 preguntas por intento
+
+            if (totalQuestionsInBank < 150) {
+                console.warn(`El banco de preguntas solo tiene ${totalQuestionsInBank} preguntas. Se mostrarán todas.`);
+                questionsForThisAttempt = shuffle([...allQuestions]).slice(0, questionsPerAttempt);
+                return;
+            }
+
+            if (attemptNumber === 1) {
+                // Intento 1: Preguntas 1-30 (Índices 0-29)
+                questionsForThisAttempt = allQuestions.slice(0, 30);
+            } else if (attemptNumber === 2) {
+                // Intento 2: Preguntas 31-60 (Índices 30-59)
+                questionsForThisAttempt = allQuestions.slice(30, 60);
+            } else if (attemptNumber === 3) {
+                // Intento 3: Preguntas 61-90 (Índices 60-89)
+                questionsForThisAttempt = allQuestions.slice(60, 90);
+            } else if (attemptNumber === 4) {
+                // Intento 4: Preguntas 91-120 (Índices 90-119)
+                questionsForThisAttempt = allQuestions.slice(90, 120);
+            } else if (attemptNumber === 5) {
+                // Intento 5: Preguntas 121-150 (Índices 120-149)
+                questionsForThisAttempt = allQuestions.slice(120, 150);
+            } else {
+                // Intento 6 en adelante: 30 preguntas aleatorias de todo el banco
+                attemptTextEl.textContent = `Intento: ${attemptNumber} (Modo Aleatorio)`;
+                questionsForThisAttempt = shuffle([...allQuestions]).slice(0, questionsPerAttempt);
+            }
+        }
+
+        // 2. Mostrar la pregunta actual
+        function displayQuestion() {
+            // Resetear UI
+            feedbackContainerEl.classList.add('hidden');
+            correctAnswerContainerEl.classList.add('hidden'); 
+            nextBtnEl.classList.add('hidden');
+            optionsContainerEl.innerHTML = ''; 
+
+            if (currentQuestionIndex >= questionsForThisAttempt.length) {
+                showResults();
+                return;
+            }
+
+            const question = questionsForThisAttempt[currentQuestionIndex];
+            // Manejo de error si la pregunta no está bien formada
+            if (!question || !question.options) {
+                console.error("Pregunta mal formada:", question);
+                // Saltar a la siguiente pregunta
+                currentQuestionIndex++;
+                displayQuestion();
+                return;
+            }
+
+            const questionNumber = currentQuestionIndex + 1;
+            const totalQuestions = questionsForThisAttempt.length;
+
+            // Actualizar textos y progreso
+            questionTextEl.textContent = question.question;
+            progressTextEl.textContent = `Pregunta ${questionNumber} de ${totalQuestions}`;
+            progressBarEl.style.width = `${(questionNumber / totalQuestions) * 100}%`;
+
+            // Crear botones de opción (barajados)
+            const shuffledOptions = shuffle([...question.options]);
+            shuffledOptions.forEach(option => {
+                const button = document.createElement('button');
+                button.innerHTML = option.text; 
+                button.classList.add('option-btn', 'w-full', 'p-5', 'text-left', 'text-lg', 'bg-gray-700', 'rounded-lg', 'border-2', 'border-gray-600');
+                
+                button.onclick = (event) => selectAnswer(event, option, question);
+                optionsContainerEl.appendChild(button);
+            });
+        }
+
+        // 3. Manejar la selección de respuesta
+        function selectAnswer(event, selectedOption, question) {
+            // Deshabilitar todos los botones
+            Array.from(optionsContainerEl.children).forEach(btn => {
+                btn.disabled = true;
+                btn.classList.add('opacity-50');
+            });
+
+            // Mostrar feedback
+            feedbackContainerEl.classList.remove('hidden');
+            
+            // 1. Mostrar feedback de la opción seleccionada
+            feedbackTextEl.textContent = selectedOption.feedback;
+            feedbackExampleTextEl.textContent = `Ejemplo: ${selectedOption.example}`;
+
+
+            if (selectedOption.isCorrect) {
+                // --- Respuesta Correcta ---
+                score++;
+                scoreTextEl.textContent = score;
+                feedbackTitleEl.textContent = "¡Correcto!";
+                feedbackContainerEl.classList.remove('bg-red-900', 'border-red-700');
+                feedbackContainerEl.classList.add('bg-green-900', 'border', 'border-green-700');
+                event.target.classList.add('correct');
+
+            } else {
+                // --- Respuesta Incorrecta ---
+                feedbackTitleEl.textContent = "Respuesta Incorrecta";
+                feedbackContainerEl.classList.remove('bg-green-900', 'border-green-700');
+                feedbackContainerEl.classList.add('bg-red-900', 'border', 'border-red-700');
+                event.target.classList.add('incorrect');
+
+                // 2. Resaltar la correcta
+                const correctOptionData = question.options.find(opt => opt.isCorrect);
+                Array.from(optionsContainerEl.children).forEach(btn => {
+                    if (btn.innerHTML === correctOptionData.text) {
+                        btn.classList.add('correct');
+                        btn.classList.remove('opacity-50');
+                    }
+                });
+
+                // 3. Mostrar la explicación de la respuesta correcta
+                correctAnswerContainerEl.classList.remove('hidden');
+                correctAnswerTextEl.textContent = question.correctAnswerExplanation;
+                correctAnswerExampleTextEl.textContent = `Ejemplo: ${question.correctAnswerExample}`;
+            }
+
+            // Mostrar botón de siguiente
+            nextBtnEl.classList.remove('hidden');
+        }
+
+        // 4. Ir a la siguiente pregunta
+        function nextQuestion() {
+            currentQuestionIndex++;
+            displayQuestion();
+        }
+
+        // 5. Mostrar resultados finales
+        function showResults() {
+            quizContainerEl.classList.add('hidden');
+            resultsContainerEl.classList.remove('hidden');
+
+            const totalQuestions = questionsForThisAttempt.length;
+            scoreFinalEl.textContent = `${score} / ${totalQuestions}`;
+            resultsAttemptTextEl.textContent = `Resultados de tu Intento ${attemptNumber}`;
+            retryBtnEl.textContent = "Siguiente Intento"; 
+
+            // Mensaje de resultado
+            const percentage = (score / totalQuestions) * 100;
+            if (percentage >= 90) {
+                resultsMessageEl.textContent = "¡Excelente! Dominio total del módulo. ¡Estás listo!";
+            } else if (percentage >= 70) {
+                resultsMessageEl.textContent = "¡Muy bien! Tienes bases sólidas. Repasa los puntos donde fallaste.";
+            } else {
+                resultsMessageEl.textContent = "Buen esfuerzo. Sigue practicando. La retroalimentación es clave. ¡Inténtalo de nuevo!";
+            }
+
+            // Preparar el siguiente intento
+            // ***** CAMBIO CLAVE *****
+            localStorage.setItem('quizAttempt_M3', (attemptNumber + 1).toString());
+        }
+
+        // 6. Reiniciar el quiz (para el siguiente intento)
+        function retryQuiz() {
+            window.location.reload();
+        }
+
+        // --- INICIALIZACIÓN ---
+        document.addEventListener('DOMContentLoaded', async () => {
+            try {
+                // 1. Cargar el archivo JSON externo
+                // ***** CAMBIO CLAVE *****
+                const response = await fetch('./preguntas-m3.json'); 
+                if (!response.ok) {
+                    throw new Error(`Error HTTP! estado: ${response.status}`);
+                }
+                allQuestions = await response.json(); 
+
+                // 2. Una vez cargados los datos, iniciar la lógica del quiz
+                loadQuestionBank();
+                displayQuestion();
+
+            } catch (error) {
+                // Manejar errores de carga
+                console.error("Error fatal al cargar las preguntas:", error);
+                quizContainerEl.innerHTML = `
+                    <div class="text-center p-10 bg-red-900 border border-red-700 rounded-lg">
+                        <h2 class="text-3xl font-bold text-white mb-4">Error Crítico</h2>
+                        <p class="text-xl text-gray-200 mb-6">No se pudo cargar el banco de preguntas.</p>
+                        <p class="text-lg text-gray-300">Por favor, asegúrate de que el archivo <strong>preguntas-m3.json</strong> se encuentre en el mismo directorio que este archivo HTML.</p>
+                    </div>
+                `;
+            }
+        });
+
+        nextBtnEl.addEventListener('click', nextQuestion);
+        retryBtnEl.addEventListener('click', retryQuiz);
+    </script>
+</body>
+</html>
