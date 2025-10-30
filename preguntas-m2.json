@@ -1,0 +1,1404 @@
+[
+    {
+        "question": "¿Cuál es el propósito principal de la Declaración de Aplicabilidad (SoA) en un SGSI basado en ISO 27001?",
+        "options": [
+            {
+                "text": "Es un plan de proyecto detallado para la implementación del SGSI.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. El plan de proyecto es un documento separado. El SoA tiene un propósito legal y de auditoría más específico.",
+                "example": "Un plan de proyecto tendría fechas, responsables y recursos, como un cronograma de 'Implementación de Firewall' asignado al equipo de redes."
+            },
+            {
+                "text": "Es el documento legal que justifica la selección de controles del Anexo A y documenta su estado de implementación.",
+                "isCorrect": true,
+                "feedback": "¡Correcto! El SoA es un documento maestro y obligatorio. Lista los 114 (o 93 en la versión 2022) controles del Anexo A, justifica por qué cada uno es aplicable o no, y declara si está implementado o no.",
+                "example": "En una auditoría para la UNAL, el auditor pediría el SoA y seleccionaría el control 'A.9.1.1 Política de Control de Acceso' para verificar que la justificación y el estado de implementación coinciden con la realidad."
+            },
+            {
+                "text": "Es un informe de auditoría interna que lista todas las no conformidades encontradas.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. El informe de auditoría interna es un *resultado* de la fase de 'Verificación' (Check) del PDCA. El SoA se crea en la fase de 'Planificación' (Plan) y se actualiza en la 'Implementación' (Do).",
+                "example": "Un informe de auditoría diría: 'No conformidad encontrada en A.9.4.1, ya que 5 usuarios desvinculados aún tienen acceso al SIA'."
+            },
+            {
+                "text": "Es un inventario detallado de todos los activos de información de la organización.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. El inventario de activos (Control A.8.1.1) es un *insumo* crucial para crear el SoA, pero no es el SoA en sí mismo. El SoA se enfoca en los *controles* que protegen esos activos.",
+                "example": "El inventario de activos listaría: 'Activo: Base de Datos de Estudiantes SIA, Propietario: Vicerrectoría Académica, Custodio: Oficina de TI'."
+            }
+        ],
+        "correctAnswerExplanation": "La Declaración de Aplicabilidad (Statement of Applicability - SoA) es el documento central que vincula la evaluación de riesgos con la implementación de controles. Es un requisito mandatorio de la norma ISO 27001 y es el principal documento que revisa un auditor externo para entender el alcance y la justificación de las decisiones de seguridad de la organización.",
+        "correctAnswerExample": "Si la UNAL decide que el control 'A.14.2.8 Seguridad en el Desarrollo Externalizado' no es aplicable, el SoA debe justificarlo, por ejemplo, 'No aplicable, ya que la UNAL desarrolla todo su software misional (como el SIA) de forma interna y no externaliza el desarrollo'."
+    },
+    {
+        "question": "En el ciclo PDCA (Plan-Do-Check-Act) de un SGSI, ¿en qué fase se realiza la auditoría interna y la revisión por la dirección?",
+        "options": [
+            {
+                "text": "Plan (Planificar)",
+                "isCorrect": false,
+                "feedback": "Incorrecto. En la fase 'Plan' se define el alcance, la política de seguridad, se realiza la evaluación de riesgos y se crea el SoA.",
+                "example": "En la fase 'Plan', el CISO de la UNAL presenta la evaluación de riesgos del SIA a la rectoría."
+            },
+            {
+                "text": "Do (Hacer)",
+                "isCorrect": false,
+                "feedback": "Incorrecto. En la fase 'Do' se *implementan* los controles definidos en el SoA y se ejecutan los procesos de seguridad.",
+                "example": "En la fase 'Do', el equipo de TI instala el nuevo firewall (NGFW) y configura las políticas de control de acceso en el Directorio Activo."
+            },
+            {
+                "text": "Check (Verificar)",
+                "isCorrect": true,
+                "feedback": "¡Correcto! La fase 'Check' (Verificar) está diseñada para monitorear y medir el desempeño del SGSI. La auditoría interna y la revisión por la dirección son las dos herramientas clave de esta fase.",
+                "example": "En la fase 'Check', el equipo de Control Interno de la UNAL audita el proceso de gestión de acceso y presenta un informe de hallazgos a la alta dirección (la revisión por la dirección)."
+            },
+            {
+                "text": "Act (Actuar)",
+                "isCorrect": false,
+                "feedback": "Incorrecto. En la fase 'Act' (Actuar) se toman acciones para la mejora continua, basándose en los resultados de la fase 'Check'.",
+                "example": "En la fase 'Act', tras la auditoría (Check), se implementa una acción correctiva para automatizar la desactivación de usuarios desvinculados."
+            }
+        ],
+        "correctAnswerExplanation": "El ciclo PDCA es el motor de la mejora continua en ISO 27001. La fase 'Check' (Verificar) es fundamental para la gobernanza, ya que es el momento en que la organización se autoevalúa (Auditoría Interna) y la alta dirección revisa el desempeño (Revisión por la Dirección) para asegurar que el SGSI es eficaz y está alineado con los objetivos.",
+        "correctAnswerExample": "Un auditor interno de la UNAL (fase Check) descubre que la política de teletrabajo (creada en 'Plan' e implementada en 'Do') no se está cumpliendo. Informa esto a la dirección, que decide (fase 'Act') iniciar un plan de capacitación obligatorio."
+    },
+    {
+        "question": "¿Quién es el 'Propietario del Activo' (Asset Owner) según ISO 27001?",
+        "options": [
+            {
+                "text": "El equipo de TI que administra el servidor donde reside el activo.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Este rol es el 'Custodio del Activo'. El custodio mantiene el sistema, pero no toma decisiones de negocio sobre él.",
+                "example": "El administrador de bases de datos de la UNAL es el 'Custodio' de la base de datos del SIA, responsable de sus backups y rendimiento."
+            },
+            {
+                "text": "El gerente o directivo de negocio que es responsable de la clasificación y protección de ese activo de información.",
+                "isCorrect": true,
+                "feedback": "¡Correcto! El 'Propietario del Activo' es un rol de negocio, no técnico. Es la persona con la responsabilidad gerencial sobre el ciclo de vida del activo, quien decide quién puede acceder a él y qué nivel de protección requiere.",
+                "example": "La 'Propietaria' del activo 'Información de Calificaciones' en la UNAL es la Vicerrectora Académica. Ella decide la política de acceso, no el equipo de TI."
+            },
+            {
+                "text": "El Oficial de Seguridad de la Información (CISO) de la organización.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. El CISO es responsable del *programa* de seguridad general (el SGSI), pero no es el propietario de todos los activos de negocio. El CISO *asesora* a los propietarios.",
+                "example": "El CISO de la UNAL define la *política* de clasificación de datos, pero es el Propietario (ej. el Gerente Financiero) quien *aplica* esa política a sus activos (ej. 'Nómina es Confidencial')."
+            },
+            {
+                "text": "El usuario final que crea y utiliza el dato en su día a día.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Este es el 'Usuario del Activo'. El usuario debe cumplir las políticas, pero no es el responsable último de la protección del activo.",
+                "example": "Un docente que ingresa notas en el SIA es un 'Usuario' del activo 'Información de Calificaciones'."
+            }
+        ],
+        "correctAnswerExplanation": "La correcta asignación de roles es clave en ISO 27001 (A.8.1.2). El 'Propietario del Activo' (Owner) es un rol de GOBERNANZA (negocio) que toma decisiones sobre el riesgo y la clasificación. El 'Custodio' (Custodian) es un rol de GESTIÓN (técnico) que implementa los controles solicitados por el propietario.",
+        "correctAnswerExample": "Para el activo 'Planes de Investigación Estratégica' de la UNAL, el Propietario es el Vicerrector de Investigación, y el Custodio es el administrador del repositorio digital (SharePoint/Alfresco) donde se almacenan."
+    },
+    {
+        "question": "¿Cuál es el objetivo de un Análisis de Impacto al Negocio (BIA)?",
+        "options": [
+            {
+                "text": "Identificar las vulnerabilidades técnicas en los servidores y aplicaciones.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Eso es un 'Análisis de Vulnerabilidades' o 'Pentesting'. El BIA no es un análisis técnico, es un análisis de negocio.",
+                "example": "Un 'Análisis de Vulnerabilidades' reporta: 'El servidor SIA tiene el puerto RDP 3389 abierto a internet'."
+            },
+            {
+                "text": "Determinar los procesos de negocio críticos y las métricas RTO y RPO para cada uno.",
+                "isCorrect": true,
+                "feedback": "¡Correcto! El BIA (Business Impact Analysis) es el pilar de un Plan de Continuidad (BCP). Entrevista a los dueños de los procesos de negocio (no a TI) para identificar qué procesos son críticos (ej. 'Inscripciones', 'Nómina') y define cuánto tiempo pueden estar caídos (RTO) y cuántos datos pueden perder (RPO).",
+                "example": "El BIA de la UNAL concluye que el proceso 'Inscripción de Materias' es crítico, con un RTO de 4 horas y un RPO de 15 minutos."
+            },
+            {
+                "text": "Crear el inventario de todos los activos de información de la organización.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Ese es el 'Inventario de Activos' (ISO 27001 A.8.1.1). Es un paso previo, pero el BIA se enfoca en el *impacto* de la caída de los *procesos* que usan esos activos.",
+                "example": "El 'Inventario de Activos' lista 'Servidor SIA'. El BIA determina el 'Impacto' de que ese servidor falle."
+            },
+            {
+                "text": "Seleccionar los controles del Anexo A de ISO 27001 que se van a implementar.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. La selección de controles se basa en la 'Evaluación de Riesgos' (Risk Assessment). El BIA es un *insumo* clave para la evaluación de riesgos, ya que define el 'Impacto'.",
+                "example": "El BIA dice que el impacto de la caída del SIA es 'Catastrófico'. Por lo tanto, la 'Evaluación de Riesgos' prioriza los controles de disponibilidad (ej. A.17.2 Redundancia) para ese activo."
+            }
+        ],
+        "correctAnswerExplanation": "El BIA es el documento que traduce la operación de la organización a métricas de tiempo y datos. Es el 'QUÉ' y 'CUÁNTO' proteger. El Plan de Recuperación ante Desastres (DRP) es el 'CÓMO' (el plan técnico) se van a cumplir las métricas (RTO/RPO) definidas en el BIA.",
+        "correctAnswerExample": "El BIA de la UNAL define: 'Proceso: Liquidación de Nómina. RTO: 24 horas. RPO: 1 día'. Basado en esto, TI diseña un DRP que garantiza la restauración del sistema de nómina en un sitio alterno en menos de 24 horas, usando los backups del día anterior."
+    },
+    {
+        "question": "Un auditor está revisando el cumplimiento del control A.9.2.6 ('Baja o salida de usuarios') de ISO 27001. ¿Qué evidencia buscaría?",
+        "options": [
+            {
+                "text": "Que exista una política de contraseñas seguras y MFA.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Esta evidencia corresponde a los controles A.9.4 ('Gestión de contraseñas') y A.9.4.4 ('Uso de autenticación robusta').",
+                "example": "El auditor revisaría la configuración del Directorio Activo para ver si *obliga* a usar contraseñas de 12 caracteres."
+            },
+            {
+                "text": "Que se realicen copias de seguridad diarias de las cuentas de usuario.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Esta evidencia corresponde al control A.12.3 ('Copias de respaldo'). El control A.9.2.6 es sobre *eliminar* acceso, no respaldarlo.",
+                "example": "El auditor revisaría los logs del software de backup (ej. Veeam) para confirmar que la copia de seguridad de los servidores de AD se completó con éxito."
+            },
+            {
+                "text": "Un listado de usuarios de RRHH y su cruce contra el Directorio Activo para verificar que los usuarios retirados estén deshabilitados.",
+                "isCorrect": true,
+                "feedback": "¡Correcto! Esta es la evidencia de auditoría clásica. El auditor toma la 'fuente de verdad' (la lista de RRHH de 'retirados en los últimos 6 meses') y la compara con la 'implementación técnica' (las cuentas de usuario activas en el Directorio Activo y el SIA). Cualquier coincidencia es una 'No Conformidad'.",
+                "example": "El auditor de la UNAL pide: 'Muéstreme el reporte de desvinculaciones de mayo' y 'Muéstreme las cuentas activas en el SIA'. Luego cruza los nombres y cédulas."
+            },
+            {
+                "text": "Los registros de capacitación y concienciación en seguridad firmados por los usuarios al salir.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. La capacitación (A.7.2.2) y la firma de acuerdos (A.7.1.2) se realizan al *ingresar*. Al salir, lo crítico es la *revocación* del acceso.",
+                "example": "El auditor revisaría la carpeta de ingreso del empleado para ver su 'acuerdo de confidencialidad' firmado."
+            }
+        ],
+        "correctAnswerExplanation": "El control A.9.2.6 (en ISO 27001:2013) o 5.18 (en ISO 27001:2022) es uno de los más auditados. Exige un proceso *formal* para revocar los derechos de acceso de manera oportuna. La mejor evidencia es demostrar que el proceso funciona, comparando las bajas de RRHH con las cuentas activas en los sistemas críticos.",
+        "correctAnswerExample": "Un hallazgo de auditoría común: 'No Conformidad Mayor: El usuario 'jgarcia' (desvinculado el 15 de marzo, según RRHH) aún mantiene una cuenta activa con privilegios de administrador en el servidor de archivos (según Directorio Activo)."
+    },
+    {
+        "question": "La política de 'Escritorio Limpio y Pantalla Limpia' (A.11.2.9) de ISO 27001 busca mitigar principalmente el riesgo de:",
+        "options": [
+            {
+                "text": "Ataques de ransomware que cifran los archivos del escritorio.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. El ransomware cifra los archivos independientemente de si están visibles en el escritorio o guardados en 'Mis Documentos'. Este control es sobre *información visible*.",
+                "example": "El ransomware 'WannaCry' cifraría 'MiTesis.docx' sin importar si estaba en el escritorio o en C:\\Tesis."
+            },
+            {
+                "text": "Acceso no autorizado a información sensible por personas que pasan cerca (ej. visitantes, personal de limpieza, colegas).",
+                "isCorrect": true,
+                "feedback": "¡Correcto! Este es un control físico/administrativo. 'Escritorio Limpio' (sin post-its con contraseñas, sin informes confidenciales impresos) y 'Pantalla Limpia' (bloquear el PC [Win+L] al levantarse) mitigan el riesgo de 'shoulder surfing' y acceso físico no autorizado.",
+                "example": "Un docente de la UNAL se levanta a tomar un café y deja el SIA abierto con las notas de un curso. Un estudiante pasa, ve la pantalla y toma una foto. Esto es una violación de 'Pantalla Limpia'."
+            },
+            {
+                "text": "Fallos eléctricos que puedan dañar el equipo de cómputo.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Este riesgo se mitiga con controles como una UPS (A.11.2.2 - 'Soporte de suministros'). 'Escritorio Limpio' no tiene relación con la electricidad.",
+                "example": "Una UPS da 15 minutos de energía al PC del administrativo de nómina para que guarde su trabajo durante un apagón."
+            },
+            {
+                "text": "Pérdida de datos por no guardar los documentos de trabajo frecuentemente.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Aunque bloquear la pantalla (Pantalla Limpia) implica que has terminado tu tarea inmediata, el control no se enfoca en 'guardar', sino en 'ocultar' la información al ausentarse.",
+                "example": "El autoguardado de Office 365 mitiga el riesgo de no guardar, pero no mitiga el riesgo de que alguien vea tu pantalla abierta."
+            }
+        ],
+        "correctAnswerExplanation": "El control A.11.2.9 (o 7.7 en 2022) es fundamental en oficinas de planta abierta y áreas de acceso público. 'Escritorio Limpio' previene que documentos físicos sensibles (como un listado de cédulas de estudiantes) sean robados o vistos. 'Pantalla Limpia' previene que información digital en la pantalla sea vista cuando el usuario no está presente.",
+        "correctAnswerExample": "Política de la UNAL: 'Todo el personal debe bloquear su estación de trabajo (presionando Ctrl+Alt+Supr o Win+L) cada vez que se aleje de su escritorio, sin importar qué tan breve sea la ausencia'."
+    },
+    {
+        "question": "¿Cuál es la diferencia clave entre la 'Mejora Continua' (Cláusula 10) y las 'Acciones Correctivas' (Cláusula 10.1)?",
+        "options": [
+            {
+                "text": "La 'Mejora Continua' es proactiva y busca optimizar el SGSI, mientras que la 'Acción Correctiva' es reactiva y busca eliminar la *causa* de una no conformidad.",
+                "isCorrect": true,
+                "feedback": "¡Correcto! La 'Mejora Continua' es la filosofía general del PDCA. Las 'Acciones Correctivas' son el proceso formal que se dispara *reactivamente* cuando se detecta una no conformidad (ej. en una auditoría). La acción correctiva se enfoca en la *causa raíz*.",
+                "example": "'Mejora Continua' en la UNAL: 'El proceso de respuesta a incidentes funciona bien, pero vamos a reducir el RTO de 4 a 3 horas'. 'Acción Correctiva': 'La auditoría encontró usuarios activos (No Conformidad), la *causa raíz* es un proceso manual. La *acción* es automatizarlo'."
+            },
+            {
+                "text": "La 'Acción Correctiva' la realiza el equipo de TI, mientras que la 'Mejora Continua' la realiza la alta dirección.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Ambos procesos involucran a toda la organización. La alta dirección *impulsa* la mejora continua, y el equipo de TI *ejecuta* muchas de las acciones correctivas, pero no es una división excluyente.",
+                "example": "El equipo de TI puede proponer una 'Mejora Continua' (ej. nuevo software de backup). La alta dirección debe ejecutar una 'Acción Correctiva' (ej. asignar recursos) si la auditoría detecta una falla."
+            },
+            {
+                "text": "La 'Mejora Continua' se aplica solo a los controles técnicos (Anexo A) y la 'Acción Correctiva' a las cláusulas de gestión (4-10).",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Es al revés. Las 'Acciones Correctivas' se aplican a *cualquier* no conformidad, ya sea de una cláusula (ej. 'No se hizo la revisión por la dirección') o de un control (ej. 'Firewall mal configurado'). La 'Mejora Continua' aplica a *todo* el SGSI.",
+                "example": "Se aplica una 'Acción Correctiva' al control A.12.3 (Backups) porque fallaron. Se aplica 'Mejora Continua' a la Cláusula 7.3 (Concienciación) creando un nuevo curso de phishing."
+            },
+            {
+                "text": "No hay diferencia, son el mismo concepto en la norma ISO 27001.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Son conceptos distintos y tienen cláusulas separadas (10.1 para Acciones Correctivas y 10.2 para Mejora Continua en la versión 2013, o 10.1 y 10.2 en la 2022).",
+                "example": "La Acción Correctiva soluciona un problema que *ocurrió*. La Mejora Continua busca optimizar un proceso que *ya funciona*."
+            }
+        ],
+        "correctAnswerExplanation": "Este es un punto clave de la gestión ISO. Una 'Corrección' (o 'Remediación') arregla el *síntoma* (ej. deshabilitar la cuenta del usuario retirado). Una 'Acción Correctiva' arregla la *causa raíz* (ej. implementar un script que sincronice RRHH con el Directorio Activo). La 'Mejora Continua' es la optimización proactiva del SGSI en general.",
+        "correctAnswerExample": "Incidente: 'Servidor del SIA caído'. Corrección: 'Reiniciar el servidor'. Acción Correctiva: 'Analizar logs, encontrar que se quedó sin disco, implementar monitoreo de disco y alertas'. Mejora Continua: 'Migrar el SIA a un cluster de alta disponibilidad para que no dependa de un solo servidor'."
+    },
+    {
+        "question": "¿Qué es la 'Gestión de Activos' (A.8) en el contexto de ISO 27001?",
+        "options": [
+            {
+                "text": "El proceso de comprar computadores y servidores al menor costo posible.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Eso es 'Adquisiciones' o 'Gestión de Compras'. La Gestión de Activos de ISO 27001 no se enfoca en el costo, sino en el *valor* y la *protección*.",
+                "example": "El departamento de Compras de la UNAL realiza una licitación para 100 portátiles."
+            },
+            {
+                "text": "El proceso contable de depreciación del hardware de TI.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Eso es 'Gestión de Activos Fijos' desde una perspectiva financiera/contable.",
+                "example": "El departamento de Contabilidad de la UNAL registra que los servidores del SIA tienen una depreciación a 5 años."
+            },
+            {
+                "text": "La gestión del software instalado en los equipos, asegurando que tengan licencia.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Eso es 'Gestión de Activos de Software' (SAM), que es una *parte* del control A.8.1.1, pero no es el todo. La Gestión de Activos de ISO 27001 se centra en la *información*.",
+                "example": "El equipo de TI pasa un inventario de software y detecta 5 copias de 'Microsoft Project' sin licencia en la facultad de Ingeniería."
+            },
+            {
+                "text": "Identificar todos los activos de información, asignarles un propietario, y clasificarlos según su confidencialidad, integridad y disponibilidad.",
+                "isCorrect": true,
+                "feedback": "¡Correcto! La Gestión de Activos (A.8 en 2013, A.5.9-5.13 en 2022) es la base de un SGSI. Incluye crear un 'Inventario de Activos' (A.8.1.1), asignar un 'Propietario' (A.8.1.2) y definir una 'Clasificación de la Información' (A.8.2.1).",
+                "example": "La UNAL documenta: Activo: 'Base de Datos de Calificaciones del SIA'. Propietario: 'Vicerrectoría Académica'. Clasificación: 'Confidencialidad: Alta, Integridad: Crítica, Disponibilidad: Alta'."
+            }
+        ],
+        "correctAnswerExplanation": "No puedes proteger lo que no sabes que tienes, quién es su responsable, o cuánto vale. La Gestión de Activos es el primer paso práctico del SGSI. El inventario define el 'qué', la propiedad define el 'quién' (responsable de negocio), y la clasificación define el 'cómo' (qué nivel de protección se le debe aplicar).",
+        "correctAnswerExample": "Basado en la clasificación 'Confidencialidad: Alta' de la base de datos del SIA (definida en A.8.2.1), el equipo de TI debe aplicar controles de cifrado (A.10.1) y control de acceso robusto (A.9.4)."
+    },
+    {
+        "question": "En ISO 27001, ¿cuál es el objetivo del control 'Segregación de Funciones' (A.9.1.2)?",
+        "options": [
+            {
+                "text": "Separar la red de invitados (WiFi-Visitantes) de la red administrativa interna (UNAL-Admin).",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Eso es 'Segregación de Redes' (A.13.1.3), un control técnico para limitar la propagación de ataques.",
+                "example": "Se configura una VLAN y reglas de firewall para que la red 'UNAL-Visitantes' solo tenga salida a Internet y no pueda ver los servidores internos."
+            },
+            {
+                "text": "Asegurar que ningún usuario individual tenga control total sobre un proceso crítico, dividiendo las responsabilidades.",
+                "isCorrect": true,
+                "feedback": "¡Correcto! La Segregación de Funciones (SoD) es un control de gestión clave para prevenir el fraude y el error. Se asegura de que las tareas incompatibles (ej. crear un pago y aprobar un pago) sean realizadas por personas diferentes.",
+                "example": "En el sistema financiero de la UNAL, un administrativo puede *crear* una orden de pago (ej. a un proveedor), pero solo el *Tesorero* (otra persona) tiene el permiso para *aprobar* y *ejecutar* esa transferencia."
+            },
+            {
+                "text": "Separar los entornos de Desarrollo, Pruebas (QA) y Producción.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Eso es 'Separación de Entornos' (A.14.2.6), un control clave del ciclo de desarrollo seguro (SSDLC) para evitar que el código de prueba afecte la producción.",
+                "example": "Un desarrollador del SIA prueba un nuevo módulo en el servidor 'sia-dev.unal.edu.co' antes de pasarlo a 'sia-qa.unal.edu.co' para pruebas formales. Nunca programa en el servidor 'sia.unal.edu.co' (Producción)."
+            },
+            {
+                "text": "Asignar roles de 'Propietario del Activo' y 'Custodio del Activo' a personas diferentes.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Si bien esto es una buena práctica y una *forma* de segregación, el principio de SoD (A.9.1.2) es más amplio y se enfoca en los *procesos* de negocio, no solo en la gestión de activos.",
+                "example": "El Vicerrector (Propietario) no debe tener permisos de Administrador de Base de Datos (Custodio) sobre el SIA."
+            }
+        ],
+        "correctAnswerExplanation": "La Segregación de Funciones (SoD) es un control preventivo fundamental. Su lógica es 'dos llaves son mejor que una'. Al dividir un proceso crítico (como pagar nómina, modificar notas, crear usuarios) entre dos o más personas, se reduce drásticamente el riesgo de que una sola persona cometa un fraude o un error catastrófico sin ser detectada.",
+        "correctAnswerExample": "Un ejemplo de *falla* de SoD sería si un desarrollador del SIA (que escribe el código) también tiene permisos para subir ese código directamente a Producción y, además, tiene acceso de administrador a la base de datos de notas. Podría modificar el código para cambiar su propia nota, subirlo a producción y luego borrar los logs."
+    },
+    {
+        "question": "¿Qué establece la cláusula A.7 de ISO 27001 sobre la 'Seguridad de los Recursos Humanos'?",
+        "options": [
+            {
+                "text": "Que todo el personal de TI debe tener certificaciones técnicas como CCNA o MCSA.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. La norma no exige certificaciones específicas. Exige que el personal sea *competente* para su rol, pero la forma de medirlo la define la organización.",
+                "example": "La UNAL puede definir que para el rol de 'Administrador de Red' se requiere 'experiencia de 5 años' *o* una certificación 'CCNA'."
+            },
+            {
+                "text": "Que los procesos de seguridad deben cubrir todo el ciclo de vida del empleado: Antes, Durante y Después de su vinculación.",
+                "isCorrect": true,
+                "feedback": "¡Correcto! La cláusula A.7 (o 6.1 a 6.8 en 2022) es clara: la seguridad de RRHH no es solo un evento de 'inducción'. Incluye la 'Verificación de antecedentes' (Antes), la 'Capacitación y concienciación' (Durante) y el 'Proceso de desvinculación' (Después).",
+                "example": "Antes: RRHH de la UNAL verifica los antecedentes del nuevo administrador del SIA. Durante: Se le capacita en la política de protección de datos. Después: Se revoca su acceso al SIA el mismo día que finaliza su contrato."
+            },
+            {
+                "text": "Que se debe implementar un sistema biométrico para el control de asistencia de todos los empleados.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Este es un control *físico* (A.11) muy específico. A.7 es sobre los *procesos* de gestión de las personas, no sobre las herramientas de hardware.",
+                "example": "El uso de un biométrico para acceder al Data Center es un control de A.11, no de A.7."
+            },
+            {
+                "text": "Que la alta dirección debe firmar un documento comprometiéndose con el SGSI.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. El compromiso de la dirección es fundamental, pero está definido en la 'Cláusula 5: Liderazgo', no en A.7 (Seguridad de RRHH).",
+                "example": "La rectoría de la UNAL publica la 'Política General del SGSI' (Cláusula 5.2) firmada, demostrando su compromiso."
+            }
+        ],
+        "correctAnswerExplanation": "La cláusula A.7 reconoce que las personas son, a la vez, el activo más valioso y el eslabón más débil de la seguridad. Por lo tanto, se deben gestionar los riesgos asociados a las personas en todas las etapas de su relación con la organización, desde la selección hasta la desvinculación.",
+        "correctAnswerExample": "Un fallo en A.7 'Antes' es contratar a un administrador de TI sin verificar antecedentes penales. Un fallo en A.7 'Durante' es no capacitar a los docentes sobre phishing. Un fallo en A.7 'Después' es no revocarle el acceso a un docente que se retira."
+    },
+    {
+        "question": "¿Cuál es el propósito del control A.10 'Criptografía' en ISO 27001?",
+        "options": [
+            {
+                "text": "Garantizar la disponibilidad de los datos mediante copias de seguridad.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Las copias de seguridad (A.12.3) garantizan la Disponibilidad, pero no necesariamente usan criptografía (aunque deberían).",
+                "example": "Un backup en cinta *sin cifrar* cumple el control A.12.3 pero falla el control A.10.1 si la cinta se pierde."
+            },
+            {
+                "text": "Asegurar que los usuarios sean quienes dicen ser antes de acceder al sistema.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Eso es 'Autenticación', parte del control A.9 'Control de Acceso'.",
+                "example": "Usar MFA para entrar al SIA es un control de A.9 (Acceso), aunque técnicamente use algoritmos criptográficos (como TOTP)."
+            },
+            {
+                "text": "Proveer una guía sobre el uso efectivo y adecuado del cifrado para proteger la Confidencialidad e Integridad de la información.",
+                "isCorrect": true,
+                "feedback": "¡Correcto! El control A.10 no dice *qué* algoritmo usar, sino que la organización debe tener una *política* sobre el uso del cifrado (A.10.1.1) y sobre la *gestión de claves* (A.10.1.2) para proteger los datos.",
+                "example": "La 'Política de Criptografía' de la UNAL (basada en A.10) debe definir: 'Todos los portátiles de personal administrativo deben usar cifrado de disco (BitLocker) y toda conexión a sistemas misionales debe usar TLS 1.2 o superior'."
+            },
+            {
+                "text": "Registrar todos los eventos (logs) que ocurren en un sistema para futuras auditorías.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Eso es 'Registro y Monitoreo de Eventos' (A.12.4). Los logs son para auditoría, el cifrado es para protección de datos.",
+                "example": "El servidor del SIA genera un log por cada intento de login (A.12.4). Ese log debe ser protegido (A.12.4.3) y, preferiblemente, enviado a un SIEM."
+            }
+        ],
+        "correctAnswerExplanation": "La criptografía (A.10) es el principal control técnico para asegurar la Confidencialidad (evitando que alguien lea los datos si los roba) y la Integridad (evitando que alguien los modifique sin ser detectado). La norma exige que su uso sea *gestionado* a través de una política y un manejo seguro de las claves.",
+        "correctAnswerExample": "Si un funcionario de la UNAL pierde un portátil en un taxi, el hecho de que el disco esté cifrado con BitLocker (cumpliendo la política de A.10) es la diferencia entre un incidente menor ('pérdida de hardware') y un desastre de fuga de datos ('violación de Ley 1581')."
+    },
+    {
+        "question": "Un auditor externo revisa el SGSI de la UNAL y no encuentra evidencia de que la alta dirección (Rectoría) haya revisado el desempeño del sistema en el último año. ¿Contra qué cláusula principal de ISO 27001 se reportaría esta 'No Conformidad'?",
+        "options": [
+            {
+                "text": "Cláusula 4: Contexto de la Organización.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. La Cláusula 4 se refiere a *entender* la organización y las necesidades de las partes interesadas (ej. MinEducación, estudiantes).",
+                "example": "Evidencia de la Cláusula 4: Un documento 'Análisis PESTEL de la UNAL' y una 'Matriz de Partes Interesadas'."
+            },
+            {
+                "text": "Cláusula 9.3: Revisión por la Dirección.",
+                "isCorrect": true,
+                "feedback": "¡Correcto! La Cláusula 9 ('Evaluación del Desempeño') exige explícitamente en su subcláusula 9.3 que 'La alta dirección debe revisar el SGSI a intervalos planificados'. La falta de esta reunión (o su acta) es una No Conformidad Mayor.",
+                "example": "El auditor pide 'el acta de Revisión por la Dirección del SGSI de este año'. Si el CISO no la tiene, es un hallazgo crítico, pues demuestra falta de Liderazgo (Cláusula 5) y Verificación (Cláusula 9)."
+            },
+            {
+                "text": "Cláusula 8: Operación.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. La Cláusula 8 se refiere a la *ejecución* de los procesos, como la evaluación de riesgos (8.2) y el tratamiento de riesgos (8.3).",
+                "example": "Evidencia de la Cláusula 8: El informe de la 'Evaluación de Riesgos del SIA' completado y el 'SoA' actualizado."
+            },
+            {
+                "text": "Cláusula 10: Mejora.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. La Cláusula 10 (Mejora) se enfoca en gestionar las no conformidades y la mejora continua, *basándose* en los resultados de la Cláusula 9.",
+                "example": "Evidencia de la Cláusula 10: Un 'Plan de Acción Correctiva' derivado de la auditoría interna (que es parte de la Cláusula 9)."
+            }
+        ],
+        "correctAnswerExplanation": "La 'Revisión por la Dirección' (9.3) es, junto con la 'Auditoría Interna' (9.2), uno de los dos pilares de la fase 'Check' del PDCA. Es la reunión formal donde la alta dirección evalúa si el SGSI es 'adecuado, conveniente y eficaz'. Sin esta revisión, el ciclo de mejora se rompe y el SGSI pierde su gobernanza.",
+        "correctAnswerExample": "La 'Revisión por la Dirección' en la UNAL debe tener una agenda formal que incluya: 1. Estado de acciones de revisiones previas. 2. Resultados de auditorías. 3. Métricas de desempeño (KPIs). 4. Estado de los riesgos. 5. Oportunidades de mejora. 6. Asignación de recursos."
+    },
+    {
+        "question": "En el contexto de la 'Gestión de la Continuidad del Negocio' (A.17), ¿cuál es el propósito de un DRP (Plan de Recuperación ante Desastres)?",
+        "options": [
+            {
+                "text": "Es un plan para continuar las operaciones críticas del negocio en una sede alterna, a menudo con capacidad reducida.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Esta es la definición del 'Plan de Continuidad del Negocio' (BCP), que es el plan general de negocio. El DRP es una parte de él.",
+                "example": "El BCP de la UNAL define: 'Si se inunda la Sede Bogotá, el proceso de Nómina se ejecutará manualmente desde la Sede Manizales'."
+            },
+            {
+                "text": "Es el plan *técnico* y detallado para restaurar la infraestructura y los servicios de TI (hardware, software, datos) después de una interrupción.",
+                "isCorrect": true,
+                "feedback": "¡Correcto! El BCP es el plan de *negocio* (procesos, personas), mientras que el DRP es el plan de *tecnología* (servidores, redes, datos). El DRP es el 'cómo' técnico para cumplir el RTO que el BCP exige.",
+                "example": "El BCP de la UNAL dice 'El SIA debe estar en línea en 4 horas (RTO)'. El DRP de TI detalla: 'Paso 1: Activar el 'Site' de AWS. Paso 2: Restaurar el backup de la base de datos (1h). Paso 3: Encender las VMs de aplicación (30m). Paso 4: Cambiar los apuntamientos DNS (15m)...'"
+            },
+            {
+                "text": "Es el plan para gestionar la comunicación con los medios y las partes interesadas durante una crisis.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Ese es el 'Plan de Gestión de Crisis' o 'Plan de Comunicaciones', que es *otro* componente del BCP.",
+                "example": "El 'Plan de Comunicaciones' de la UNAL tiene plantillas de comunicados pre-aprobadas para 'Caída del SIA' o 'Fuga de Datos'."
+            },
+            {
+                "text": "Es el plan para responder a un ciberataque, conteniéndolo y erradicándolo.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Ese es el 'Plan de Respuesta a Incidentes' (IRP), que se enfoca en ataques maliciosos. El DRP se enfoca en *desastres* (ej. incendio, terremoto, inundación, ransomware que destruye todo).",
+                "example": "El IRP se activa para un hacker. El DRP se activa para un incendio en el Data Center."
+            }
+        ],
+        "correctAnswerExplanation": "Es vital diferenciar: BCP (Business Continuity Plan) es el plan estratégico del *negocio* para mantener las operaciones. DRP (Disaster Recovery Plan) es el sub-plan *técnico* de TI para recuperar la tecnología. IRP (Incident Response Plan) es el plan para manejar *ciberataques*.",
+        "correctAnswerExample": "Si un hacker ataca el SIA, se activa el IRP. Si un incendio quema el Data Center del SIA, se activa el BCP (el negocio decide qué hacer) y el DRP (TI ejecuta la recuperación en el sitio alterno)."
+    },
+    {
+        "question": "El control A.13 'Seguridad de las Comunicaciones' de ISO 27001 se enfoca en:",
+        "options": [
+            {
+                "text": "Asegurar que solo personal autorizado pueda hablar con los medios de comunicación.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Eso es 'Política de Comunicaciones' o 'Relaciones Públicas', no un control técnico de ISO 27001.",
+                "example": "La Oficina de Prensa de la UNAL es el único vocero autorizado."
+            },
+            {
+                "text": "Proteger la información en las redes y asegurar la infraestructura que las soporta.",
+                "isCorrect": true,
+                "feedback": "¡Correcto! A.13 se centra en los controles de red, como la 'Segregación de Redes' (A.13.1.3), la seguridad de los 'Servicios de Red' (A.13.1.2) y la 'Transferencia de Información' segura (A.13.2.1).",
+                "example": "Implementar una VLAN de 'Servidores' separada de la VLAN de 'Estudiantes' en la UNAL, con un firewall en medio, es una implementación directa de A.13."
+            },
+            {
+                "text": "Establecer acuerdos de confidencialidad (NDA) con proveedores y empleados.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Los NDA son parte de A.7 ('Seguridad de RRHH') para empleados y A.15 ('Relaciones con Proveedores') para terceros.",
+                "example": "Antes de contratar al proveedor de 'Pentesting', el área legal de la UNAL le hace firmar un NDA (A.15)."
+            },
+            {
+                "text": "La capacitación de los usuarios sobre cómo comunicarse de forma segura (ej. no enviar contraseñas por email).",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Eso es 'Concienciación en Seguridad' (A.7.2.2). A.13 es sobre la *infraestructura* de red.",
+                "example": "La campaña de phishing simulado en la UNAL es parte del programa de A.7.2.2."
+            }
+        ],
+        "correctAnswerExplanation": "A.13 'Seguridad de las Comunicaciones' se refiere a la protección de la 'información en tránsito' (en la red). Sus controles clave incluyen la gestión de la seguridad de la red (firewalls, IDS), la segregación de redes (VLANs, microsegmentación) y las políticas para la transferencia segura de información (ej. prohibir FTP, exigir SFTP, uso de cifrado).",
+        "correctAnswerExample": "Una política de A.13 en la UNAL diría: 'Toda transferencia de archivos que contenga datos personales (Ley 1581) entre la UNAL y un proveedor externo (ej. MinEducación) debe realizarse usando un canal cifrado, como SFTP o una API protegida con TLS 1.2+'."
+    },
+    {
+        "question": "En el contexto de la Cláusula 6 'Planificación' de ISO 27001, ¿qué es el 'Apetito de Riesgo'?",
+        "options": [
+            {
+                "text": "Es el nivel de riesgo que la organización está dispuesta a aceptar *después* de aplicar los controles (Riesgo Residual).",
+                "isCorrect": false,
+                "feedback": "Casi. El Riesgo Residual es el resultado de la gestión del riesgo. El Apetito de Riesgo es la *guía* o *límite* que se usa para *decidir* si ese Riesgo Residual es aceptable o no.",
+                "example": "El 'Riesgo Residual' de un ataque al SIA es 'Bajo'. El 'Apetito de Riesgo' de la UNAL es 'Muy Bajo'. Por lo tanto, el riesgo 'Bajo' no es aceptable y se deben añadir más controles."
+            },
+            {
+                "text": "Es la cantidad y el tipo de riesgo que una organización está dispuesta a buscar o aceptar en la consecución de sus objetivos.",
+                "isCorrect": true,
+                "feedback": "¡Correcto! El 'Apetito de Riesgo' (definido por la alta dirección, Cláusula 5) es una guía estratégica. Define la 'línea en la arena' de cuánto riesgo es aceptable.",
+                "example": "La Rectoría de la UNAL define un 'Apetito de Riesgo' *muy bajo* para 'Incumplimiento Legal (Ley 1581)', pero un 'Apetito de Riesgo' *moderado* para 'Innovación Tecnológica' (ej. probar un nuevo software de IA)."
+            },
+            {
+                "text": "Es el riesgo inherente total de la organización antes de aplicar cualquier control.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Ese es el 'Riesgo Inherente' o 'Riesgo Bruto'.",
+                "example": "El 'Riesgo Inherente' de la UNAL de tener un Data Center en una zona sísmica es 'Alto'."
+            },
+            {
+                "text": "Es la cantidad de dinero que la organización presupuesta para gastar en ciberseguridad cada año.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Ese es el 'Presupuesto de Seguridad'. El Apetito de Riesgo *influye* en el presupuesto, pero no es el presupuesto en sí.",
+                "example": "Debido a un 'Apetito de Riesgo' bajo, la UNAL aprueba un 'Presupuesto' alto para comprar un nuevo SIEM."
+            }
+        ],
+        "correctAnswerExplanation": "La Cláusula 6.1.2 ('Evaluación de Riesgos') exige que el proceso de evaluación de riesgos produzca resultados 'consistentes, válidos y comparables'. Para lograr esto, la alta dirección (Cláusula 5) debe definir primero los 'Criterios de Riesgo', que incluyen el 'Apetito de Riesgo'. Sin esta guía, la evaluación de riesgos es subjetiva.",
+        "correctAnswerExample": "El 'Apetito de Riesgo' de la UNAL es la política que dice: 'No se aceptará ningún riesgo residual clasificado como 'Alto' o 'Crítico'. Todos los riesgos 'Medios' deben tener un plan de tratamiento'. Esto guía al equipo de TI en la priorización de controles."
+    },
+    {
+        "question": "¿Cuál es la diferencia entre un 'Activo de Información' y un 'Activo' (tradicional)?",
+        "options": [
+            {
+                "text": "No hay diferencia, ambos se refieren al hardware (servidores, portátiles).",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Este es el error más común. Un 'Activo' tradicional (contable) es el hardware. Un 'Activo de Información' (ISO 27001) es mucho más amplio.",
+                "example": "El PC portátil es un 'Activo' contable. La *información* dentro de ese PC (ej. el borrador de un examen) es el 'Activo de Información'."
+            },
+            {
+                "text": "'Activo' es el software (ej. el SIA) y 'Activo de Información' son los datos (ej. las notas).",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Ambos (software y datos) son tipos de 'Activos de Información'.",
+                "example": "En el inventario de A.8.1.1 de la UNAL, habría dos líneas: 'Activo: Software SIA' y 'Activo: Base de Datos SIA'."
+            },
+            {
+                "text": "'Activo de Información' incluye la información, el software, el hardware, los servicios, las personas y la reputación.",
+                "isCorrect": true,
+                "feedback": "¡Correcto! ISO 27000 (Vocabulario) define un 'Activo de Información' como 'cualquier cosa que tenga valor para la organización'. La norma ISO 27005 (Gestión de Riesgos) los divide en 'Procesos de Negocio' (primarios) y 'Activos de Soporte' (hardware, software, red, personas, sitios) (secundarios).",
+                "example": "El activo 'Reputación de la UNAL' tiene un valor altísimo y debe protegerse. Una fuga de datos (violación de Ley 1581) daña directamente este activo."
+            },
+            {
+                "text": "'Activo' es lo que la organización posee, 'Activo de Información' es lo que alquila (ej. servicios en la nube).",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Ambos son activos que deben gestionarse, independientemente de su modelo de propiedad. La norma cubre la información 'donde sea que resida'.",
+                "example": "Los datos de los estudiantes en 'Office 365' (nube) son un activo de información tan crítico como los datos en el servidor del SIA (on-premise)."
+            }
+        ],
+        "correctAnswerExplanation": "Comprender el concepto de 'Activo de Información' es clave. El SGSI no protege solo computadoras, protege el *valor* que reside en la información y los procesos. Por eso, el inventario de A.8.1.1 debe incluir hardware, software, datos, servicios (ej. 'acceso a internet'), personas (ej. 'el administrador de BD', que tiene conocimiento clave) y activos intangibles (ej. 'Imagen de la UNAL').",
+        "correctAnswerExample": "Un docente experto en una fórmula de investigación es un 'Activo de Información' (categoría 'Personas'). El riesgo es que renuncie y se lleve el conocimiento. El control de A.7 ('RRHH') mitiga esto con acuerdos de confidencialidad y transferencia de conocimiento."
+    },
+    {
+        "question": "En ISO 27001, ¿qué es un 'Análisis de Brechas' (Gap Analysis)?",
+        "options": [
+            {
+                "text": "Es la auditoría de certificación final realizada por un ente externo (ej. ICONTEC).",
+                "isCorrect": false,
+                "feedback": "Incorrecto. La auditoría de certificación (Auditoría de Etapa 2) ocurre *después* de que la organización ha implementado todo. El Análisis de Brechas ocurre *antes*.",
+                "example": "ICONTEC llega a la UNAL para la auditoría de certificación y comprueba el SoA y los controles implementados."
+            },
+            {
+                "text": "Es una evaluación inicial que compara el estado actual de la seguridad de la organización contra los requisitos de la norma ISO 27001.",
+                "isCorrect": true,
+                "feedback": "¡Correcto! Un 'Análisis de Brechas' (Gap Analysis) es el 'Paso Cero' de un proyecto de implementación de SGSI. Responde a la pregunta: '¿Qué tan lejos estamos de cumplir la norma hoy?'.",
+                "example": "Un consultor realiza un Análisis de Brechas en la UNAL y reporta: 'Cumplen el 40% de los controles del Anexo A. La brecha (gap) principal está en la Cláusula 9 (Evaluación), ya que no hay auditorías internas ni revisión por la dirección'."
+            },
+            {
+                "text": "Es un sinónimo de la 'Evaluación de Riesgos' (Cláusula 6.1.2).",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Son diferentes. El Análisis de Brechas mide el cumplimiento contra la *norma* (los 114 controles). La Evaluación de Riesgos mide el *riesgo* para los *activos* de la organización.",
+                "example": "Análisis de Brechas: 'No existe el control A.12.3 (Backups)'. Evaluación de Riesgos: 'El riesgo de pérdida de datos del SIA por falta de backup es CRÍTICO'."
+            },
+            {
+                "text": "Es el proceso de análisis de la causa raíz de una 'No Conformidad'.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Ese es el 'Análisis de Causa Raíz', que es parte del proceso de 'Acción Correctiva' (Cláusula 10.1).",
+                "example": "El análisis de causa raíz de la falla de backup (No Conformidad) fue 'el script de backup tenía un error de sintaxis'."
+            }
+        ],
+        "correctAnswerExplanation": "Un Análisis de Brechas es la herramienta de diagnóstico inicial en la fase 'Plan' (Planificar). Permite a la organización entender el tamaño del esfuerzo, crear un plan de proyecto y asignar un presupuesto realista para cerrar las 'brechas' (gaps) entre su estado actual y la certificación.",
+        "correctAnswerExample": "El Análisis de Brechas de la UNAL revela que ya tienen buenos controles técnicos (Firewalls, Antivirus) pero son débiles en los controles de gestión (Cláusulas 4, 5, 9, 10). El proyecto de SGSI se enfocará en crear la *documentación* y los *procesos* de gobernanza faltantes."
+    },
+    {
+        "question": "El control A.15 'Relaciones con Proveedores' de ISO 27001 exige que la organización:",
+        "options": [
+            {
+                "text": "Siempre seleccione al proveedor que ofrezca el precio más bajo en la licitación.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. ISO 27001 no se mete con el precio. Exige que los riesgos de seguridad sean gestionados, sin importar el costo.",
+                "example": "Seleccionar al proveedor de nube más barato (A.15) que no ofrece cifrado (A.10) sería una violación de la norma."
+            },
+            {
+                "text": "Asegure que los requisitos de seguridad de la organización estén incluidos en los acuerdos y contratos con los proveedores.",
+                "isCorrect": true,
+                "feedback": "¡Correcto! A.15 (o 5.19-5.23 en 2022) exige que la seguridad no se detenga en las puertas de la organización. Los riesgos introducidos por terceros deben gestionarse *contractualmente*.",
+                "example": "En el contrato de la UNAL con el proveedor de software de nómina (un 'Encargado' según Ley 1581), se debe incluir una cláusula (basada en A.15) que lo obligue a 'cumplir con la Ley 1581, cifrar los datos y notificar brechas en 24 horas'."
+            },
+            {
+                "text": "Realice auditorías de seguridad física a las instalaciones de todos sus proveedores.",
+                "isCorrect": false,
+                "feedback": "No necesariamente. La norma exige 'monitorear y revisar' los servicios del proveedor (A.15.2.1), pero esto puede hacerse revisando *sus* informes de auditoría (ej. SOC 2, ISO 27001), no auditándolos físicamente.",
+                "example": "En lugar de auditar a AWS, la UNAL (A.15.2.1) le pide a AWS su 'Certificado ISO 27001' y su 'Reporte SOC 2 Tipo II' para verificar sus controles."
+            },
+            {
+                "text": "Prohíba el uso de proveedores de servicios en la nube (Cloud) por ser inherentemente inseguros.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. La norma es tecnológicamente neutra. No prohíbe la nube; exige que, *si se usa*, los riesgos asociados (A.15) se gestionen adecuadamente.",
+                "example": "El 'Análisis de Riesgos' de la UNAL (Cláusula 6) identifica riesgos en la nube, y el 'Tratamiento' (A.15) es exigir cifrado y SLAs en el contrato con el proveedor."
+            }
+        ],
+        "correctAnswerExplanation": "La 'Gestión de Seguridad en la Relación con Proveedores' (A.15) es vital porque la cadena de suministro es un vector de ataque común. La organización debe definir sus requisitos de seguridad (A.15.1.1) y asegurarse de que queden plasmados en el contrato (A.15.1.2) para tener un recurso legal si el proveedor falla y causa una brecha.",
+        "correctAnswerExample": "Un ataque famoso (como el de SolarWinds) ocurrió porque un proveedor fue comprometido. El control A.15 busca mitigar este riesgo exigiendo que la UNAL evalúe la seguridad de sus proveedores de software antes de instalarlos."
+    },
+    {
+        "question": "¿Cuál es la diferencia entre la 'Cláusula 9.2: Auditoría Interna' y una 'Evaluación de Riesgos' (Cláusula 6.1.2)?",
+        "options": [
+            {
+                "text": "No hay diferencia, ambos buscan encontrar vulnerabilidades técnicas.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Son procesos muy diferentes. Una 'Evaluación de Riesgos' (Cl. 6) mira hacia el *futuro* (qué *podría* pasar). Una 'Auditoría Interna' (Cl. 9) mira hacia el *pasado* (qué *se hizo* y si *cumplió* la norma).",
+                "example": "Evaluación de Riesgos: 'Existe el riesgo de un incendio'. Auditoría Interna: 'Revisé el control A.11.2.5 (Mantenimiento de extintores) y encontré que la recarga está vencida'."
+            },
+            {
+                "text": "La Auditoría Interna es realizada por un ente externo (como ICONTEC) y la Evaluación de Riesgos por personal interno.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Es al revés en la nomenclatura. La 'Auditoría *Interna*' (9.2) la hace personal de la organización (o un tercero contratado *para* la auditoría interna). La 'Auditoría *Externa*' (o de Certificación) la hace el ente certificador.",
+                "example": "El equipo de Control Interno de la UNAL realiza la 'Auditoría Interna'. ICONTEC realiza la 'Auditoría Externa'."
+            },
+            {
+                "text": "La Evaluación de Riesgos identifica y prioriza los riesgos, mientras que la Auditoría Interna verifica si el SGSI *cumple* con los requisitos de la norma ISO 27001.",
+                "isCorrect": true,
+                "feedback": "¡Correcto! La Evaluación de Riesgos (Cl. 6) es la base para *construir* el SGSI (define qué controles poner en el SoA). La Auditoría Interna (Cl. 9) es la herramienta para *verificar* si ese SGSI (A) se implementó como se dijo y (B) sigue cumpliendo con la norma.",
+                "example": "Evaluación de Riesgos de la UNAL (Cl. 6): 'El riesgo de phishing es Alto'. Tratamiento: 'Implementar control A.7.2.2 (Capacitación)'. Auditoría Interna (Cl. 9): 'Revisé los registros y solo el 30% del personal tomó la capacitación. Esto es una No Conformidad con A.7.2.2'."
+            },
+            {
+                "text": "La Evaluación de Riesgos se hace una sola vez al inicio, mientras que la Auditoría Interna es un proceso continuo de monitoreo (SIEM).",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Ambos son procesos que se repiten. La Evaluación de Riesgos (Cl. 6) y la Auditoría Interna (Cl. 9) deben realizarse a 'intervalos planificados' (usualmente, una vez al año) o cuando ocurran cambios significativos.",
+                "example": "El monitoreo del SIEM (A.12.4) es 'Operación' (Cl. 8). La 'Auditoría Interna' (Cl. 9) es un evento formal, planificado, una vez al año."
+            }
+        ],
+        "correctAnswerExplanation": "En el ciclo PDCA: La 'Evaluación de Riesgos' es parte de 'PLAN' (Planificar) y 'OPERACIÓN' (Cláusula 8). Define qué hacer. La 'Auditoría Interna' es el corazón de 'CHECK' (Verificar). Comprueba que lo que se planeó se hizo y que se hizo bien (conforme a la norma).",
+        "correctAnswerExample": "La 'Evaluación de Riesgos' es como el 'diagnóstico' de un médico. La 'Auditoría Interna' es como el 'examen de seguimiento' para ver si el paciente (la organización) se está tomando la medicina (los controles) correctamente."
+    },
+    {
+        "question": "El control A.12 'Seguridad de las Operaciones' de ISO 27001 incluye un control fundamental sobre 'Protección contra Malware' (A.12.2). ¿Qué exigiría este control?",
+        "options": [
+            {
+                "text": "La instalación de software antivirus en todos los servidores y estaciones de trabajo, y su gestión centralizada.",
+                "isCorrect": true,
+                "feedback": "¡Correcto! A.12.2.1 exige 'controles de detección, prevención y recuperación' contra malware. En la práctica, esto significa tener una solución de Antivirus/Endpoint Protection (EDR) gestionada centralizadamente, que garantice que esté actualizada.",
+                "example": "El equipo de TI de la UNAL usa la 'Consola de Antivirus (ej. Kaspersky Security Center)' para verificar que los 10.000 equipos del campus tienen la última firma de virus."
+            },
+            {
+                "text": "Bloquear todos los puertos USB en los computadores de la organización.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Esta es una *posible* implementación del control A.11.2.7 ('Medios removibles'), pero no es el control de malware en sí. El control A.12.2 es más amplio.",
+                "example": "Se decide bloquear los USB, pero el malware entra por un correo de phishing, por eso el AV (A.12.2) sigue siendo necesario."
+            },
+            {
+                "text": "Capacitar a los usuarios para que no abran correos de phishing.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. La capacitación es un control de RRHH (A.7.2.2). A.12.2 es un control *técnico* de operaciones.",
+                "example": "El usuario (A.7) falla y abre el correo. El Antivirus (A.12.2) debe detectarlo y bloquear el malware. Es defensa en profundidad."
+            },
+            {
+                "text": "Crear un Plan de Respuesta a Incidentes específico para ataques de malware.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. El Plan de Respuesta a Incidentes es el control A.16. El control A.12.2 es el control *preventivo/detectivo* (el antivirus).",
+                "example": "El Antivirus (A.12.2) detecta el ransomware. El Plan de Respuesta (A.16) se activa para contenerlo."
+            }
+        ],
+        "correctAnswerExplanation": "La 'Seguridad de las Operaciones' (A.12) es el conjunto de controles del día a día de TI. Incluye 'Procedimientos Operativos' (A.12.1), 'Protección contra Malware' (A.12.2), 'Backups' (A.12.3), 'Logs' (A.12.4), 'Gestión de Cambios' (A.12.1.2) y 'Gestión de Vulnerabilidades' (A.12.6.1). A.12.2 se centra en la defensa técnica contra software malicioso.",
+        "correctAnswerExample": "Una auditoría del control A.12.2 en la UNAL revisaría: 1. ¿Hay una política de antimalware? 2. ¿Hay una herramienta AV/EDR? 3. ¿Está desplegada en el 100% de los equipos? 4. ¿Está actualizada? 5. ¿Genera alertas centralizadas?"
+    },
+    {
+        "question": "¿Cuál es el propósito del control A.14 'Adquisición, Desarrollo y Mantenimiento de Sistemas'?",
+        "options": [
+            {
+                "text": "Asegurar que la seguridad esté integrada en todo el ciclo de vida de los sistemas de información (SSDLC).",
+                "isCorrect": true,
+                "feedback": "¡Correcto! A.14 (o A.8 en 2022) es la cláusula del 'Ciclo de Desarrollo Seguro' (SSDLC). Exige 'Requisitos de seguridad' (A.14.1.1), 'Seguridad en el desarrollo' (A.14.2) y 'Pruebas de seguridad' (A.14.3).",
+                "example": "El equipo de desarrollo del SIA de la UNAL (cumpliendo A.14) debe realizar un 'Análisis de Amenazas' (Diseño), un 'Análisis SAST' (Desarrollo) y un 'Pentesting' (Pruebas) antes de lanzar un nuevo módulo de notas."
+            },
+            {
+                "text": "Gestionar los contratos y licencias del software que se compra (SAM).",
+                "isCorrect": false,
+                "feedback": "Incorrecto. La gestión de licencias es parte del control A.8.1.1 (Inventario de Activos) y A.18.1.3 (Licencias). A.14 es sobre *construir* y *mantener* el software de forma segura.",
+                "example": "El equipo de TI mantiene un inventario de licencias de Oracle (A.18.1.3) para la base de datos del SIA."
+            },
+            {
+                "text": "Asegurar que se implemente un proceso formal de 'Gestión de Cambios' para toda la infraestructura.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. La 'Gestión de Cambios' es un control operativo (A.12.1.2). Aunque está muy relacionado con A.14, A.14 es el *qué* (construir seguro) y A.12 es el *cómo* (operar seguro).",
+                "example": "Para actualizar el SIA (A.14), el desarrollador debe presentar un 'Formulario de Gestión de Cambios' (A.12.1.2) al Comité de Cambios (CCB)."
+            },
+            {
+                "text": "Definir las reglas para la contratación de proveedores de software.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Eso es A.15 ('Relaciones con Proveedores'). A.14.2.8 cubre la seguridad si el desarrollo es *externalizado* (subcontratado), pero A.15 es el control general de proveedores.",
+                "example": "La UNAL contrata a una empresa externa para hacer el nuevo portal web. El contrato (A.15) debe exigirles que cumplan con la política de desarrollo seguro de la UNAL (A.14)."
+            }
+        ],
+        "correctAnswerExplanation": "A.14 es la cláusula que obliga a 'hornear' la seguridad en el software, no a 'espolvorearla' al final. Exige que la seguridad sea un requisito desde el primer día de un proyecto de software y que se verifique antes de salir a producción. Es la respuesta de ISO 27001 al OWASP Top 10.",
+        "correctAnswerExample": "Cumpliendo A.14.2.5 ('Principios de codificación segura'), los desarrolladores del SIA de la UNAL deben usar 'consultas parametrizadas' para prevenir la 'Inyección SQL' (OWASP A03)."
+    },
+    {
+        "question": "¿Qué es la 'Gestión de Vulnerabilidades Técnicas' (A.12.6.1)?",
+        "options": [
+            {
+                "text": "El proceso de respuesta a un incidente de seguridad en curso.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Ese es el Plan de Respuesta a Incidentes (A.16). La gestión de vulnerabilidades es *proactiva*.",
+                "example": "El IRP (A.16) se activa cuando un hacker *explota* una vulnerabilidad. La Gestión de Vulnerabilidades (A.12.6.1) busca *encontrar y parchar* esa vulnerabilidad *antes* de que el hacker la encuentre."
+            },
+            {
+                "text": "El proceso de identificar, evaluar y tratar (parchar) las vulnerabilidades de software de manera oportuna.",
+                "isCorrect": true,
+                "feedback": "¡Correcto! Este control (A.12.6.1 o 8.8 en 2022) es la base de la 'Gestión de Parches'. Exige un proceso formal para enterarse de nuevas vulnerabilidades (ej. suscribirse a boletines), escanear los sistemas (ej. con Nessus) y aplicar los parches según su criticidad.",
+                "example": "Microsoft lanza un parche 'crítico' el martes. El proceso A.12.6.1 de la UNAL debe definir un SLA (ej. 'parches críticos se aplican en 72 horas') para el servidor del SIA."
+            },
+            {
+                "text": "La capacitación a los usuarios para que no sean vulnerables a la ingeniería social.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Esa es la 'Concienciación' (A.7.2.2). A.12.6.1 es sobre vulnerabilidades *técnicas* (en el software), no humanas.",
+                "example": "Capacitar al docente de la UNAL sobre phishing (A.7.2.2) y parchar el Windows de su PC (A.12.6.1) son controles complementarios."
+            },
+            {
+                "text": "La auditoría interna del SGSI para encontrar 'brechas' (gaps) en los controles.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. La 'Auditoría Interna' (Cl. 9.2) verifica el *cumplimiento* del proceso. La 'Gestión de Vulnerabilidades' (A.12.6.1) es el *proceso operativo* en sí.",
+                "example": "La 'Auditoría Interna' (Cl. 9.2) revisaría: '¿Existe un proceso de Gestión de Vulnerabilidades (A.12.6.1)? ¿Se está cumpliendo? Muéstreme los reportes de escaneo de los últimos 3 meses'."
+            }
+        ],
+        "correctAnswerExplanation": "La 'Gestión de Vulnerabilidades' (A.12.6.1) y la 'Gestión de Cambios' (A.12.1.2) son dos de los procesos operativos de TI más importantes de un SGSI. A.12.6.1 asegura que los sistemas se mantengan 'endurecidos' (hardened) contra nuevas amenazas que se descubren constantemente.",
+        "correctAnswerExample": "El proceso A.12.6.1 en la UNAL: 1. (Identificar) Escaneo semanal con Nessus. 2. (Evaluar) El CISO revisa el reporte y prioriza: 'Vulnerabilidad de Apache Struts en el servidor X es CRÍTICA'. 3. (Tratar) El equipo de TI aplica el parche en el servidor X, previa aprobación de Gestión de Cambios (A.12.1.2)."
+    },
+    {
+        "question": "En ISO 27001, ¿qué es la 'Gestión de Cambios' (A.12.1.2)?",
+        "options": [
+            {
+                "text": "El proceso para gestionar la salida de empleados y la revocación de sus accesos.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Ese es el 'Proceso de desvinculación' (A.7.3.1).",
+                "example": "RRHH notifica a TI la 'baja' de un empleado (A.7.3.1)."
+            },
+            {
+                "text": "Un proceso formal para controlar y aprobar las modificaciones en la infraestructura de TI, software o procesos del SGSI.",
+                "isCorrect": true,
+                "feedback": "¡Correcto! Este es un control operativo vital (A.12.1.2 o 8.1/8.32 en 2022). Su objetivo es prevenir que un cambio (ej. una actualización de software, una nueva regla de firewall) cause un incidente o introduzca una vulnerabilidad.",
+                "example": "Un desarrollador del SIA de la UNAL no puede subir su código a Producción. Debe presentar un 'RFC' (Request for Change) al 'Comité de Cambios' (CCB), que evalúa el impacto, aprueba el cambio y agenda una ventana de mantenimiento."
+            },
+            {
+                "text": "El proceso de cambiar las contraseñas de los usuarios cada 90 días.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Esa es la 'Política de Contraseñas' (A.9.4.3).",
+                "example": "El Directorio Activo de la UNAL obliga a los usuarios a cambiar su contraseña cada 90 días (A.9.4.3)."
+            },
+            {
+                "text": "El plan para cambiar a un sitio de recuperación alterno en caso de un desastre.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Ese es el 'Plan de Recuperación ante Desastres' (DRP), parte de A.17.",
+                "example": "Tras el incendio, el Director de TI 'activa el cambio' al DRP (A.17)."
+            }
+        ],
+        "correctAnswerExplanation": "La 'Gestión de Cambios' es un control preventivo que busca la estabilidad. La mayoría de las caídas de servicio (incidentes de Disponibilidad) no son causadas por hackers, sino por 'cambios fallidos' (un parche que rompió la aplicación, una regla de firewall que bloqueó el acceso legítimo). A.12.1.2 exige un proceso formal (Solicitud, Aprobación, Pruebas, Implementación, Verificación) para todos los cambios.",
+        "correctAnswerExample": "Falla del control A.12.1.2: Un administrador de red de la UNAL aplica una 'nueva regla de firewall' un viernes a las 4pm sin aprobación. La regla bloquea el acceso al SIA y nadie se da cuenta hasta el lunes. Con Gestión de Cambios, ese cambio se habría probado y aplicado en una ventana de mantenimiento controlada."
+    },
+    {
+        "question": "El control A.16 'Gestión de Incidentes de Seguridad' de ISO 27001, ¿a qué fase del 'NIST Cybersecurity Framework' (CSF) corresponde principalmente?",
+        "options": [
+            {
+                "text": "Identificar (Identify)",
+                "isCorrect": false,
+                "feedback": "Incorrecto. La función 'Identificar' del NIST CSF es proactiva. Corresponde a la 'Gestión de Activos' (A.8) y 'Gestión de Riesgos' (Cl. 6) de ISO.",
+                "example": "NIST 'Identificar': Hacer el inventario de activos del SIA."
+            },
+            {
+                "text": "Proteger (Protect)",
+                "isCorrect": false,
+                "feedback": "Incorrecto. La función 'Proteger' del NIST CSF es preventiva. Corresponde a la mayoría de los controles del Anexo A (ej. A.9 'Acceso', A.10 'Cripto', A.12 'Operaciones').",
+                "example": "NIST 'Proteger': Instalar el firewall y el antivirus para el SIA."
+            },
+            {
+                "text": "Detectar (Detect)",
+                "isCorrect": false,
+                "feedback": "Incorrecto. La función 'Detectar' del NIST CSF corresponde a controles como A.12.4 ('Logs y Monitoreo'). A.16 es lo que pasa *después* de la detección.",
+                "example": "NIST 'Detectar': El SIEM (A.12.4) genera una alerta de intrusión en el SIA."
+            },
+            {
+                "text": "Responder (Respond)",
+                "isCorrect": true,
+                "feedback": "¡Correcto! El control A.16 'Gestión de Incidentes' de ISO 27001 es la implementación directa de la función 'Responder' del NIST CSF. Ambas definen el proceso de análisis, contención, erradicación y recuperación de un ataque.",
+                "example": "NIST 'Responder' (e ISO A.16): Se activa el CSIRT de la UNAL, se aísla el servidor del SIA (Contención) y se elimina el malware (Erradicación)."
+            }
+        ],
+        "correctAnswerExplanation": "Existe un mapeo claro entre NIST CSF e ISO 27001. NIST 'Identificar' y 'Proteger' son la base del SGSI (Cl. 4, 6, 8 y Anexo A preventivos). NIST 'Detectar' es A.12.4 (Logs). NIST 'Responder' es A.16 (Incidentes). NIST 'Recuperar' es A.17 (Continuidad del Negocio).",
+        "correctAnswerExample": "El rol del profesional de TI de la UNAL (según la vacante) abarca todas las funciones: 'Proteger' (definir políticas), 'Detectar' (monitorear) y 'Responder' (gestionar incidentes)."
+    },
+    {
+        "question": "¿Cuál es el propósito del control A.18 'Cumplimiento' de ISO 27001?",
+        "options": [
+            {
+                "text": "Asegurar que la organización cumpla con todas las metas de ventas y objetivos financieros.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. ISO 27001 es una norma de *seguridad de la información*, no de gestión financiera.",
+                "example": "El cumplimiento de metas financieras se mide en un 'Balance Scorecard', no en un SGSI."
+            },
+            {
+                "text": "Garantizar que todos los empleados completen la capacitación anual en seguridad.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Eso es 'Concienciación' (A.7.2.2). El cumplimiento de A.7.2.2 es *un* requisito que A.18 revisaría, pero no es el propósito de A.18.",
+                "example": "El auditor de A.18 pregunta: 'Muéstreme los registros de cumplimiento de la capacitación (A.7.2.2)'."
+            },
+            {
+                "text": "Identificar y cumplir con las obligaciones legales, regulatorias y contractuales aplicables (ej. Ley 1581, derechos de autor).",
+                "isCorrect": true,
+                "feedback": "¡Correcto! A.18 (o 5.31-5.34 en 2022) es la cláusula que 'conecta' el SGSI con el mundo real. Exige un proceso para *identificar* los requisitos legales (A.18.1.1, ej. Ley 1581), de *propiedad intelectual* (A.18.1.2, ej. licencias de software) y de *protección de datos* (A.18.1.4).",
+                "example": "El CISO de la UNAL debe mantener una 'Matriz de Cumplimiento Legal' (A.18.1.1) que lista 'Ley 1581', 'Ley 1712', 'Ley de Delitos Informáticos' y los controles del SGSI que mitigan el riesgo de incumplimiento."
+            },
+            {
+                "text": "Asegurar que el SGSI pase la auditoría de certificación externa.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Ese es el *resultado* de implementar *toda* la norma (Cl. 4-10 y Anexo A). A.18 es un control *específico* sobre el cumplimiento de *leyes y contratos*.",
+                "example": "Se puede 'pasar' la auditoría de A.18 (demostrando que se identificó la Ley 1581) pero 'fallar' la auditoría de A.9 (porque el control de acceso que protege esos datos está mal implementado)."
+            }
+        ],
+        "correctAnswerExplanation": "La Cláusula A.18 'Cumplimiento' es vital porque un SGSI no opera en el vacío. Debe asegurar que la organización no viole leyes (como la Ley 1581, que acarrea multas millonarias) ni contratos (como los acuerdos de licencia de software, que acarrean demandas).",
+        "correctAnswerExample": "El control A.18.1.2 ('Derechos de Propiedad Intelectual') exige que la UNAL tenga un proceso para gestionar sus licencias de software (SAM). Si la DIAN o Microsoft auditan a la UNAL y encuentran software sin licencia (ej. Windows Server, Oracle, AutoCAD), la UNAL habría fallado este control de su propio SGSI."
+    },
+    {
+        "question": "¿Qué es la 'Clasificación de la Información' (A.8.2.1)?",
+        "options": [
+            {
+                "text": "Un esquema para organizar los servidores en el Data Center (ej. 'Fila A', 'Fila B').",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Esa es la 'organización física' del Data Center (A.11).",
+                "example": "El mapa del Data Center de la UNAL muestra que los servidores del SIA están en el 'Rack A05'."
+            },
+            {
+                "text": "Un proceso para etiquetar la información (ej. 'Pública', 'Interna', 'Confidencial') y definir reglas de manejo para cada etiqueta.",
+                "isCorrect": true,
+                "feedback": "¡Correcto! Este control exige que la organización no trate toda la información por igual. Se debe crear un esquema de clasificación (basado en el BIA y los requisitos legales) y luego *etiquetar* (A.8.2.2) y *manejar* (A.8.2.3) la información según esa etiqueta.",
+                "example": "La política de clasificación de la UNAL (A.8.2.1) define: 'Pública' (ej. oferta de cursos), 'Interna' (ej. directorio telefónico), 'Confidencial' (ej. notas de estudiantes), 'Restringida' (ej. datos de salud de Bienestar)."
+            },
+            {
+                "text": "El proceso de clasificar los incidentes de seguridad por severidad (ej. 'Crítico', 'Alto', 'Medio').",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Esa es la 'Clasificación de Incidentes' (A.16.1.1).",
+                "example": "Un ataque de ransomware al SIA se clasifica como incidente 'Crítico' (A.16)."
+            },
+            {
+                "text": "Un método para clasificar a los proveedores según su nivel de riesgo.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Esa es la 'Evaluación de Proveedores' (A.15.1.1).",
+                "example": "El proveedor de nube (AWS) se clasifica como 'Proveedor Crítico de Alto Riesgo' (A.15)."
+            }
+        ],
+        "correctAnswerExplanation": "La 'Clasificación de la Información' (A.8.2.1) es la piedra angular de la protección de datos. Permite a la organización aplicar controles proporcionales al valor del activo. No tiene sentido gastar millones en cifrar información 'Pública', pero es mandatorio hacerlo para información 'Confidencial' o 'Restringida'.",
+        "correctAnswerExample": "Según la política de A.8.2.1 de la UNAL, un correo con información 'Confidencial' (ej. un listado de cédulas de estudiantes) debe ser *cifrado* (A.10) antes de enviarse y *no puede* (A.8.2.3) ser almacenado en un portátil personal."
+    },
+    {
+        "question": "En el contexto de la 'Seguridad Física' (A.11), ¿cuál es un ejemplo de control de 'Seguridad del Perímetro Físico' (A.11.1.1)?",
+        "options": [
+            {
+                "text": "Un firewall (NGFW) en el borde de la red.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Ese es un 'perímetro de red' (A.13), es un control lógico, no físico.",
+                "example": "El Firewall FortiGate de la UNAL (A.13) bloquea el tráfico desde IPs maliciosas."
+            },
+            {
+                "text": "Una política de 'Pantalla Limpia' (A.11.2.9).",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Ese es un control de 'Seguridad en Oficinas' (A.11.2) para proteger la información *dentro* del perímetro.",
+                "example": "Un docente de la UNAL bloquea su PC (Win+L) al ir por un café (A.11.2.9)."
+            },
+            {
+                "text": "Guardias de seguridad, vallas, y un sistema de control de acceso (tarjetas) en la entrada del Data Center.",
+                "isCorrect": true,
+                "feedback": "¡Correcto! A.11.1.1 se refiere a la primera capa de defensa física: muros, vallas, recepción, guardias, puertas, que protegen el *edificio* o *área* donde se procesa la información.",
+                "example": "Para entrar al Data Center de la UNAL, una persona debe pasar 3 perímetros (A.11.1.1): 1. El guardia del edificio, 2. La puerta con tarjeta de la Sede de TI, 3. La puerta blindada del Data Center."
+            },
+            {
+                "text": "Un sistema de detección de intrusos (IDS) en la red.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Un IDS (A.12.4) detecta intrusos *lógicos* (hackers) en la red, no intrusos *físicos* (personas) en el edificio.",
+                "example": "El IDS de la UNAL (A.12.4) detecta un escaneo de puertos. El guardia de seguridad (A.11.1.1) detiene a una persona sin carnet."
+            }
+        ],
+        "correctAnswerExplanation": "La 'Seguridad Física' (A.11) aplica el mismo concepto de 'Defensa en Profundidad' que la seguridad lógica. Se estructura en capas: A.11.1.1 (Perímetro del Edificio), A.11.1.2 (Controles de Entrada Físicos), A.11.1.3 (Seguridad de Oficinas), A.11.1.5 (Protección contra Amenazas Externas), etc. El Data Center es el área más protegida.",
+        "correctAnswerExample": "Un control A.11.1.1 en la UNAL sería la talanquera de acceso vehicular al campus, que requiere un carnet. Es el primer perímetro de seguridad física."
+    },
+    {
+        "question": "El proceso de verificar que un usuario solo tiene los permisos estrictamente necesarios para su trabajo, y revisar esos permisos regularmente, se llama:",
+        "options": [
+            {
+                "text": "Gestión de Activos (A.8).",
+                "isCorrect": false,
+                "feedback": "Incorrecto. La Gestión de Activos (A.8) *identifica* el activo y su propietario. La gestión de *permisos* es A.9.",
+                "example": "A.8: 'El activo es el SIA'. A.9: 'El usuario jgomez puede leer el SIA'."
+            },
+            {
+                "text": "Revisión de Derechos de Acceso de Usuario (A.9.2.5).",
+                "isCorrect": true,
+                "feedback": "¡Correcto! Este control es la 'auditoría' o 'certificación' periódica de permisos. Exige que los 'Propietarios de Activos' (A.8.1.2) revisen *regularmente* (ej. cada 6 meses) la lista de usuarios que tienen acceso a su activo y confirmen que 'siguen necesitándolo'.",
+                "example": "Cada 6 meses (A.9.2.5), el CISO de la UNAL envía un listado a la Vicerrectora Académica (Propietaria) con los usuarios que tienen 'Rol de Administrador' en el SIA para que ella los re-autorice o revoque."
+            },
+            {
+                "text": "Auditoría Interna (Cláusula 9.2).",
+                "isCorrect": false,
+                "feedback": "Incorrecto. La 'Auditoría Interna' (Cl. 9.2) es el proceso que *verificaría* si la 'Revisión de Derechos de Acceso' (A.9.2.5) *se está haciendo*. A.9.2.5 es el control operativo.",
+                "example": "La 'Auditoría Interna' pregunta: 'Muéstreme la evidencia de la última Revisión de Derechos de Acceso (A.9.2.5) del SIA'."
+            },
+            {
+                "text": "Concienciación en Seguridad (A.7.2.2).",
+                "isCorrect": false,
+                "feedback": "Incorrecto. La concienciación (A.7) es para enseñar a los usuarios, no para revisar sus permisos.",
+                "example": "La campaña de phishing simulado (A.7.2.2) enseña a los usuarios a no usar mal sus permisos."
+            }
+        ],
+        "correctAnswerExplanation": "El 'Principio de Mínimo Privilegio' (A.9.1.2) se implementa en la 'Asignación' (A.9.2.2), pero con el tiempo, los permisos de un usuario tienden a 'inflarse' (ej. cambia de rol y mantiene permisos antiguos). El control A.9.2.5 ('Revisión de Derechos de Acceso') es el control *correctivo* que limpia esta 'inflación de privilegios' periódicamente.",
+        "correctAnswerExample": "Durante la revisión de A.9.2.5, el Vicerrector de la UNAL nota que 'jgarcia', que era asistente de rectoría pero ahora trabaja en la biblioteca, aún tiene permisos de administrador en el portal web. El Vicerrector solicita la revocación inmediata de ese permiso."
+    },
+    {
+        "question": "¿Cuál es la diferencia entre A.16 'Gestión de Incidentes' y A.17 'Continuidad del Negocio'?",
+        "options": [
+            {
+                "text": "A.16 es para ataques de hackers y A.17 es para desastres naturales (incendios).",
+                "isCorrect": false,
+                "feedback": "Parcialmente cierto, pero no es la diferencia clave. Un ataque de ransomware *masivo* que tumba toda la organización es un *Incidente* (A.16) que *activa* el plan de 'Continuidad' (A.17).",
+                "example": "El IRP (A.16) maneja un PC infectado. El BCP/DRP (A.17) se activa si ese PC infecta y tumba los 50 servidores del Data Center."
+            },
+            {
+                "text": "A.16 se enfoca en la 'Respuesta' (contener, erradicar), mientras que A.17 se enfoca en la 'Resiliencia' y 'Recuperación' del negocio.",
+                "isCorrect": true,
+                "feedback": "¡Correcto! A.16 (Incidentes) es el 'equipo de emergencias' que maneja la crisis inmediata (el ataque). A.17 (Continuidad) es el plan estratégico para asegurar que la organización (el negocio) *sobreviva* y *continúe operando* durante y después de un desastre mayor.",
+                "example": "A.16: 'Aislar el servidor del SIA'. A.17: 'Activar el sitio de recuperación alterno en Manizales y desviar todas las inscripciones a ese servidor, mientras el de Bogotá se recupera'."
+            },
+            {
+                "text": "A.16 es un control técnico y A.17 es un control administrativo.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Ambos son controles de *proceso* y *gestión* que requieren un fuerte componente técnico (herramientas de IRP, sitios de DRP) y administrativo (políticas, planes).",
+                "example": "Ambos requieren planes escritos (administrativo) y tecnología (técnico)."
+            },
+            {
+                "text": "A.16 es obligatorio en el SoA, mientras que A.17 es opcional.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Ningún control del Anexo A es 'obligatorio'. Su aplicabilidad depende de la 'Evaluación de Riesgos' (Cl. 6). Sin embargo, es casi imposible que una organización no tenga riesgos que requieran ambos controles.",
+                "example": "La Evaluación de Riesgos de la UNAL identifica 'Ransomware' (Alto Riesgo), por lo que A.16 es aplicable. También identifica 'Terremoto' (Medio Riesgo), por lo que A.17 es aplicable."
+            }
+        ],
+        "correctAnswerExplanation": "La mejor forma de verlo es por el 'alcance' y el 'objetivo'. El IRP (A.16) tiene un alcance *táctico*: gestionar el incidente de seguridad en sí. El BCP/DRP (A.17) tiene un alcance *estratégico*: gestionar la *continuidad del negocio* (ej. nómina, clases) a pesar de la interrupción.",
+        "correctAnswerExample": "Un ataque de phishing (A.16) se resuelve limpiando el PC del docente. Un incendio en el Data Center (A.17) requiere que la UNAL active su DRP para que las clases puedan continuar desde la nube al día siguiente."
+    },
+    {
+        "question": "En ISO 27001, ¿qué es la 'Evaluación de Riesgos' (Risk Assessment)?",
+        "options": [
+            {
+                "text": "Es el proceso de comprar un seguro para transferir el riesgo.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Comprar un seguro es 'Tratamiento del Riesgo' (A.6.1.2 o Cl. 6.1.3), específicamente la opción de 'Transferir'. La evaluación es el paso *previo*.",
+                "example": "La 'Evaluación' determina que el impacto financiero de un incendio es de $10.000M. El 'Tratamiento' es transferir ese riesgo comprando un seguro."
+            },
+            {
+                "text": "Es el proceso de implementar controles técnicos como firewalls y antivirus.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Implementar controles es 'Tratamiento del Riesgo' (A.6.1.2 o Cl. 6.1.3), la opción de 'Mitigar'.",
+                "example": "La 'Evaluación' determina que el riesgo de malware es 'Alto'. El 'Tratamiento' es mitigarlo instalando un EDR (A.12.2)."
+            },
+            {
+                "text": "Es el proceso de identificar, analizar y evaluar el riesgo sobre los activos de información.",
+                "isCorrect": true,
+                "feedback": "¡Correcto! La Evaluación de Riesgos (Cl. 6.1.2) es el cerebro del SGSI. Implica 1. Identificar Activos, 2. Identificar Amenazas y Vulnerabilidades, 3. Analizar (Probabilidad x Impacto) para obtener un Nivel de Riesgo, y 4. Evaluar (comparar ese nivel contra el 'Apetito de Riesgo').",
+                "example": "El equipo de TI de la UNAL (Cl. 6.1.2) evalúa el 'Servidor SIA': Amenaza: Ransomware. Vulnerabilidad: Sin parche X. Impacto: Crítico. Probabilidad: Alta. Nivel de Riesgo: CRÍTICO. Evaluación: Inaceptable."
+            },
+            {
+                "text": "Es la auditoría interna que se realiza anualmente para verificar el cumplimiento.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Esa es la 'Auditoría Interna' (Cl. 9.2).",
+                "example": "La 'Auditoría Interna' (Cl. 9.2) verifica si la 'Evaluación de Riesgos' (Cl. 6.1.2) se realizó y si se hizo siguiendo la metodología definida."
+            }
+        ],
+        "correctAnswerExplanation": "La Evaluación de Riesgos (Cláusula 6.1.2) es el proceso formal que permite a la organización tomar decisiones informadas sobre dónde invertir en seguridad. El resultado de este proceso es la lista de 'riesgos inaceptables' que luego deben ser tratados (Cl. 6.1.3). Los controles del Anexo A son el 'menú' de opciones de tratamiento.",
+        "correctAnswerExample": "El resultado de la Evaluación de Riesgos de la UNAL son 10 riesgos 'Críticos', 30 'Altos', 50 'Medios'. La dirección aprueba el 'Plan de Tratamiento de Riesgos' (Cl. 6.1.3) para mitigar (parchar, comprar controles) todos los 'Críticos' y 'Altos', y 'Aceptar' los 'Medios' y 'Bajos'."
+    },
+    {
+        "question": "El control A.11.2.7 'Manejo de Medios Removibles' busca:",
+        "options": [
+            {
+                "text": "Asegurar que las cintas de backup se almacenen en un sitio externo (off-site).",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Ese es el control A.12.3.1 ('Copias de Respaldo'). A.11.2.7 es sobre el *uso* de medios, no sobre el backup.",
+                "example": "El proveedor de custodia (ej. Iron Mountain) recoge las cintas de backup de la UNAL (A.12.3.1)."
+            },
+            {
+                "text": "Definir una política que regule o prohíba el uso de dispositivos USB, CDs, y discos duros externos.",
+                "isCorrect": true,
+                "feedback": "¡Correcto! Los medios removibles (como las memorias USB) son un vector principal para la 'entrada de malware' y la 'fuga de información'. Este control exige una política que gestione ese riesgo, que puede ir desde la prohibición total hasta el uso de USBs corporativos cifrados.",
+                "example": "La política A.11.2.7 de la UNAL podría ser: 'Se prohíbe el uso de memorias USB personales. Solo se permiten las USB institucionales cifradas con BitLocker, y su uso es monitoreado por el EDR'."
+            },
+            {
+                "text": "Asegurar que los usuarios que trabajan desde casa (teletrabajo) usen una VPN.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Ese es el control A.6.2.1 ('Política de Teletrabajo') y A.13.1.1 ('Control de Redes').",
+                "example": "La política de teletrabajo de la UNAL (A.6.2.1) exige conexión VPN obligatoria para acceder al SIA."
+            },
+            {
+                "text": "Borrar de forma segura la información de los equipos antes de darlos de baja o desecharlos.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Ese es el control A.11.2.8 ('Disposición Segura de Medios').",
+                "example": "Antes de desechar los discos duros del SIA, la UNAL debe usar 'Dban' (borrado seguro) o destruirlos físicamente (A.11.2.8)."
+            }
+        ],
+        "correctAnswerExplanation": "A.11.2.7 ('Manejo de Medios Removibles') y A.11.2.8 ('Disposición Segura') son controles críticos del ciclo de vida de los medios. A.11.2.7 controla su *uso* (para prevenir malware/fuga) y A.11.2.8 controla su *eliminación* (para prevenir que datos sensibles sean recuperados de la basura).",
+        "correctAnswerExample": "Un ataque famoso (Stuxnet) se propagó a través de memorias USB (fallo de A.11.2.7). Una fuga de datos famosa (discos duros vendidos en eBay con datos) ocurrió por un fallo de A.11.2.8."
+    },
+    {
+        "question": "¿Cuál es la diferencia entre A.12.3 'Copias de Respaldo' y A.17.2 'Redundancia'?",
+        "options": [
+            {
+                "text": "A.12.3 (Backups) es para recuperarse de pérdida de *datos* (Integridad). A.17.2 (Redundancia) es para prevenir la *caída del servicio* (Disponibilidad).",
+                "isCorrect": true,
+                "feedback": "¡Correcto! Esta es la diferencia clave. El Backup (A.12.3) protege contra la *pérdida de datos* (ej. un borrado accidental, ransomware). La Redundancia (A.17.2) protege contra la *pérdida de servicio* (ej. un fallo de hardware).",
+                "example": "Si un docente *borra* una nota del SIA, se usa el Backup (A.12.3) para restaurar ese dato. Si el *servidor* del SIA se quema, la Redundancia (A.17.2) (ej. un clúster) hace que otro servidor tome su lugar *instantáneamente* (Alta Disponibilidad)."
+            },
+            {
+                "text": "A.12.3 (Backups) es un control técnico y A.17.2 (Redundancia) es un control administrativo.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Ambos son controles fundamentalmente *técnicos* que requieren una inversión significativa en hardware y software.",
+                "example": "Se necesita software de backup (A.12.3) y hardware duplicado (ej. clúster de VMware, balanceador F5) para la redundancia (A.17.2)."
+            },
+            {
+                "text": "A.12.3 (Backups) se almacena en el mismo Data Center, mientras que A.17.2 (Redundancia) debe estar en un sitio externo.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Es al revés. Los Backups (A.12.3) *deben* tener una copia 'off-site' (fuera del sitio). La Redundancia (A.17.2) a menudo es 'on-site' (local) para Alta Disponibilidad, aunque también puede ser 'off-site' (para Disaster Recovery).",
+                "example": "La UNAL tiene un clúster de servidores (A.17.2) en el Data Center de Bogotá (HA local) y envía sus Backups (A.12.3) a la nube de AWS (Copia off-site)."
+            },
+            {
+                "text": "No hay diferencia, ambos buscan garantizar la Disponibilidad.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Ambos contribuyen a la Continuidad (A.17), pero de formas diferentes. El Backup (A.12.3) garantiza la *Disponibilidad de los DATOS* (RPO). La Redundancia (A.17.2) garantiza la *Disponibilidad del SERVICIO* (RTO).",
+                "example": "Puedes tener Redundancia (el SIA sigue en línea) pero sufrir una corrupción de datos (y necesitar el Backup). O puedes tener un Backup perfecto, pero tardar 8 horas en restaurarlo (fallo de Redundancia)."
+            }
+        ],
+        "correctAnswerExplanation": "A.12.3 (Backups) protege el RPO (Punto Objetivo de Recuperación). A.17.2 (Redundancia), también llamada Alta Disponibilidad (HA), protege el RTO (Tiempo Objetivo de Recuperación). Un buen DRP necesita ambos. Se necesita la Redundancia para un RTO bajo (recuperación rápida) y Backups para un RPO bajo (pérdida de datos mínima).",
+        "correctAnswerExample": "El SIA de la UNAL usa un clúster de base de datos (A.17.2) para que si un servidor falla, el otro asuma en segundos (RTO de segundos). Además, hace backups cada hora (A.12.3) para que si un hacker borra la base de datos, se pierdan máximo 60 minutos de datos (RPO de 1 hora)."
+    },
+    {
+        "question": "¿Qué requiere la 'Cláusula 5: Liderazgo' de ISO 27001?",
+        "options": [
+            {
+                "text": "Que el CISO (Oficial de Seguridad) sea la persona con más alto rango en la organización.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. La norma no exige una estructura jerárquica específica, solo exige que el rol exista y tenga 'autoridad y responsabilidad' (Cl. 5.3).",
+                "example": "El CISO de la UNAL puede reportar al Director de TI o al Vicerrector Administrativo, siempre que tenga el apoyo de la alta dirección."
+            },
+            {
+                "text": "Que la alta dirección (ej. Rectoría) demuestre su compromiso, establezca la política de seguridad y asigne recursos.",
+                "isCorrect": true,
+                "feedback": "¡Correcto! La Cláusula 5 es fundamental. Mueve la seguridad de ser un 'problema de TI' a ser una 'responsabilidad de negocio'. Exige que la alta dirección esté *involucrada*, apruebe la 'Política' (5.2), asigne 'Roles y Responsabilidades' (5.3) y asegure que el SGSI se integre con los procesos de negocio.",
+                "example": "La evidencia de Cl. 5 en la UNAL es: 1. La 'Política del SGSI' firmada por el Rector. 2. El 'Acta de Revisión por la Dirección' (Cl. 9.3) donde la Rectoría asigna presupuesto para un nuevo firewall."
+            },
+            {
+                "text": "Que la organización tenga un comité de seguridad que se reúna semanalmente.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. La norma no exige un 'comité' ni una frecuencia de reunión. Exige que la 'alta dirección' revise el SGSI a 'intervalos planificados' (Cl. 9.3), que puede ser anual.",
+                "example": "La UNAL puede tener un 'Comité de Seguridad' operativo (táctico) y una 'Revisión por la Dirección' (estratégica) anual."
+            },
+            {
+                "text": "Que se realice una 'Evaluación de Riesgos' (Cl. 6) y una 'Auditoría Interna' (Cl. 9.2).",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Esas son las Cláusulas 6 y 9. La Cláusula 5 (Liderazgo) es la que *exige* que la alta dirección *asegure* que esas otras cláusulas se realicen y revise sus *resultados*.",
+                "example": "El Rector (Cl. 5) no *hace* la evaluación de riesgos, pero *ordena* que se haga (Cl. 6) y *revisa* el informe de riesgos (Cl. 9.3)."
+            }
+        ],
+        "correctAnswerExplanation": "La Cláusula 5 'Liderazgo' es el 'corazón' de un SGSI. Sin el compromiso, los recursos y la autoridad de la alta dirección, cualquier SGSI está destinado al fracaso. Es la diferencia entre un 'SGSI de papel' (solo documentos) y un 'SGSI vivo' (integrado en la cultura de la organización).",
+        "correctAnswerExample": "Una 'No Conformidad Mayor' contra la Cláusula 5 sería si el auditor pregunta por la 'Política de Seguridad' (5.2) y nadie en la alta dirección sabe que existe o no está firmada."
+    },
+    {
+        "question": "Un documento con 'procedimientos operativos' para que el equipo de TI gestione los backups y la respuesta a incidentes, ¿qué control del Anexo A cumple?",
+        "options": [
+            {
+                "text": "A.12.1.1: Documentación de Procedimientos de Operación.",
+                "isCorrect": true,
+                "feedback": "¡Correcto! Este control exige que las tareas operativas críticas (backups, respuesta a incidentes, gestión de parches) no dependan de la memoria de una persona, sino que estén *documentadas* en procedimientos formales (Playbooks, Runbooks) y se mantengan actualizadas.",
+                "example": "El nuevo administrador de TI de la UNAL puede leer el 'Manual de Backups' (A.12.1.1) para saber cómo restaurar un archivo del SIA, sin tener que preguntarle a nadie."
+            },
+            {
+                "text": "A.5.1.1: Políticas de Seguridad de la Información.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. La 'Política' (A.5.1.1 o 5.1 en 2022) es el documento de *alto nivel* (el 'qué' y el 'por qué'). Los 'Procedimientos' (A.12.1.1) son los documentos de *bajo nivel* (el 'cómo' técnico, el paso-a-paso).",
+                "example": "Política (A.5): 'La UNAL debe realizar backups diarios'. Procedimiento (A.12): 'Paso 1: Abrir consola Veeam. Paso 2: Ir a Job 'SIA_DB'. Paso 3: Hacer clic en ...'"
+            },
+            {
+                "text": "A.7.2.2: Concienciación y Capacitación.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. La 'Capacitación' (A.7) es para *enseñar* al personal (incluyendo cómo usar los procedimientos), pero A.12.1.1 es sobre *tener* dichos procedimientos escritos.",
+                "example": "Se capacita (A.7.2.2) al nuevo administrador de TI usando el 'Procedimiento de Backups' (A.12.1.1) como material de estudio."
+            },
+            {
+                "text": "A.18.1.1: Identificación de Legislación Aplicable.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. A.18.1.1 es el inventario de *leyes* (ej. Ley 1581). A.12.1.1 es el inventario de *procedimientos internos*.",
+                "example": "La Ley 1581 (A.18.1.1) exige proteger los datos. El 'Procedimiento de Backup Cifrado' (A.12.1.1 y A.10) es *cómo* se cumple esa ley."
+            }
+        ],
+        "correctAnswerExplanation": "El control A.12.1.1 'Documentación de Procedimientos de Operación' es clave para la 'Seguridad de las Operaciones' (A.12). Busca la 'consistencia' y 'resiliencia' operativa. Si el administrador de backups (la única persona que sabe cómo hacer la restauración) renuncia o se enferma, la organización está en riesgo. Los procedimientos documentados mitigan este 'riesgo de conocimiento'.",
+        "correctAnswerExample": "Un auditor de ISO 27001 le pediría al equipo de TI de la UNAL: 'Su política dice que hacen backups. Ahora, muéstreme el *procedimiento* (A.12.1.1) que le darían a un nuevo empleado para que realice una restauración'."
+    },
+    // --- FIN BLOQUE 1 (Preguntas 1-30) ---
+
+    // --- BLOQUE 2: GESTIÓN DE INCIDENTES & BCP (Preguntas 31-60) ---
+    {
+        "question": "En la 'Matriz de Priorización de Incidentes' (Impacto x Urgencia), ¿cómo se define la 'Urgencia'?",
+        "options": [
+            {
+                "text": "El daño potencial que el incidente puede causar al negocio (ej. costo financiero, pérdida de reputación).",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Esta es la definición de 'Impacto'. El impacto mide la *severidad* del daño.",
+                "example": "Un Ransomware en el SIA tiene un 'Impacto' Crítico, porque detiene las inscripciones y daña la reputación de la UNAL."
+            },
+            {
+                "text": "La velocidad con la que el incidente debe ser resuelto para prevenir que el 'Impacto' se materialice o empeore.",
+                "isCorrect": true,
+                "feedback": "¡Correcto! La 'Urgencia' es una medida de *tiempo*. Define qué tan rápido se debe actuar. Un incidente puede tener 'Impacto Alto' pero 'Urgencia Baja' (si el daño ya se hizo) o 'Impacto Bajo' pero 'Urgencia Alta' (si se puede propagar).",
+                "example": "Un ataque de gusano (ej. Conficker) tiene 'Urgencia Alta' porque se propaga cada segundo, aunque el 'Impacto' inicial (un PC lento) sea bajo. Se debe actuar ya."
+            },
+            {
+                "text": "La cantidad de usuarios o sistemas afectados por el incidente.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. El número de usuarios afectados es un factor para calcular el 'Impacto', no la 'Urgencia'.",
+                "example": "Si el Ransomware afecta a 1 usuario, el 'Impacto' es Bajo. Si afecta a 10.000 (todo el campus), el 'Impacto' es Crítico."
+            },
+            {
+                "text": "La clasificación del activo afectado (ej. 'Confidencial', 'Público').",
+                "isCorrect": false,
+                "feedback": "Incorrecto. La clasificación del activo (definida en A.8.2.1) es otro factor clave para definir el 'Impacto'.",
+                "example": "Un incidente en un servidor 'Público' (portal web) tiene 'Impacto Medio'. El mismo incidente en un servidor 'Restringido' (base de datos de RRHH) tiene 'Impacto Crítico'."
+            }
+        ],
+        "correctAnswerExplanation": "La priorización de incidentes (A.16.1.1) usa una matriz (Prioridad = Impacto x Urgencia). El 'Impacto' es el daño al negocio (costo, reputación, legal). La 'Urgencia' es la velocidad de propagación o el tiempo límite para la resolución. Un incidente 'Prioridad 1' (P1) es aquel con Impacto Crítico y Urgencia Alta.",
+        "correctAnswerExample": "Ejemplo en la UNAL: El PC de un docente con un virus (Impacto: Bajo, Urgencia: Baja, Prioridad: P4). El servidor del SIA caído en época de inscripciones (Impacto: Crítico, Urgencia: Alta, Prioridad: P1)."
+    },
+    {
+        "question": "En un Análisis de Impacto de Negocio (BIA), ¿cuál es la diferencia entre el RTO (Recovery Time Objective) y el WRT (Work Recovery Time)?",
+        "options": [
+            {
+                "text": "No hay diferencia, son sinónimos para el tiempo de recuperación.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Son conceptos secuenciales. El RTO es solo la primera parte de la recuperación.",
+                "example": "El RTO del SIA es 4 horas, pero el WRT es de 2 días adicionales."
+            },
+            {
+                "text": "RTO es el tiempo para recuperar el sistema de TI (el servidor). WRT es el tiempo adicional para recuperar el *proceso de negocio* (ej. re-digitar datos perdidos).",
+                "isCorrect": true,
+                "feedback": "¡Correcto! Esta es una distinción clave. El RTO es la meta de TI (ej. 'restaurar el SIA desde el DRP'). El WRT (Tiempo de Recuperación del Trabajo) es el tiempo que le toma al *negocio* (ej. la oficina de admisiones) ponerse al día con el trabajo acumulado o re-ingresar datos perdidos (entre el RPO y el momento del desastre).",
+                "example": "Desastre en la UNAL: El SIA (RTO 4h) se cae. TI lo restaura en 4h. Pero se perdieron 2h de inscripciones (RPO 2h). El WRT es el tiempo (ej. 8h) que le toma a Admisiones contactar a los estudiantes y re-ingresar esas inscripciones manualmente."
+            },
+            {
+                "text": "RTO es el tiempo de recuperación, y WRT es el tiempo de la 'Ventana de Backup'.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. La 'Ventana de Backup' (ej. 2am-4am) es el tiempo permitido para hacer la copia, no tiene relación con el WRT.",
+                "example": "El backup del SIA se ejecuta en su 'Ventana de Backup' de 2 horas."
+            },
+            {
+                "text": "RTO es para desastres (ej. incendios), WRT es para ciberataques (ej. ransomware).",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Ambos conceptos (RTO y WRT) aplican para *cualquier* interrupción, sin importar la causa.",
+                "example": "Un ransomware (ciberataque) tumba el SIA. El RTO (4h) y el WRT (8h) se activan igual que si hubiera sido un incendio."
+            }
+        ],
+        "correctAnswerExplanation": "La métrica completa de recuperación es el MTD (Maximum Tolerable Downtime) o MTPD (Maximum Tolerable Period of Disruption). El MTD es la suma de todas las latencias: Tiempo de Detección + Tiempo de Análisis + RTO (Recuperación de TI) + WRT (Recuperación del Negocio). El BIA debe definir el MTD.",
+        "correctAnswerExample": "El BIA de la UNAL define que el 'Proceso de Inscripciones' tiene un MTD de 3 días. TI debe diseñar un RTO (ej. 4 horas) y el negocio debe planificar un WRT (ej. 48 horas) cuya suma sea menor a 3 días."
+    },
+    {
+        "question": "En el ciclo de respuesta a incidentes (A.16), ¿cuál es la diferencia entre 'Erradicación' y 'Recuperación'?",
+        "options": [
+            {
+                "text": "'Erradicación' es eliminar el malware, 'Recuperación' es restaurar los servicios y los datos.",
+                "isCorrect": true,
+                "feedback": "¡Correcto! Son dos fases distintas. La 'Erradicación' se asegura de que el atacante (y su malware, sus cuentas, sus backdoors) sea *eliminado* por completo. La 'Recuperación' es el proceso de *volver a poner en línea* el servicio de forma segura para los usuarios.",
+                "example": "Incidente en el SIA de la UNAL: 'Erradicación' es reformatear el servidor web infectado y parchar la vulnerabilidad. 'Recuperación' es instalar el SIA en el servidor limpio, restaurar los datos del backup y abrir el acceso a los estudiantes."
+            },
+            {
+                "text": "'Erradicación' es desconectar el servidor de la red, 'Recuperación' es volver a conectarlo.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Desconectar el servidor de la red es 'Contención'.",
+                "example": "El equipo de TI de la UNAL 'contiene' el ataque desconectando el cable de red del servidor del SIA."
+            },
+            {
+                "text": "'Erradicación' es para malware (virus), 'Recuperación' es para ransomware.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. El proceso (Contención, Erradicación, Recuperación) es el mismo para ambos. El ransomware *es* un tipo de malware.",
+                "example": "En un ataque de ransomware, la 'Erradicación' es eliminar el ransomware. La 'Recuperación' es restaurar los datos desde un backup (ya que los originales están cifrados)."
+            },
+            {
+                "text": "'Erradicación' la hace el equipo de TI, 'Recuperación' la hace la alta dirección.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Ambas son fases técnicas ejecutadas por el equipo de TI (CSIRT). La alta dirección da la *autorización* para la recuperación ('OK, vuelvan a prender el servicio').",
+                "example": "El equipo de TI de la UNAL informa: 'Hemos erradicado el malware'. La Vicerrectora (Propietaria del Activo) autoriza: 'Procedan con la recuperación del servicio'."
+            }
+        ],
+        "correctAnswerExplanation": "El orden es: 1. Contención (Aislar el servidor infectado). 2. Erradicación (Limpiar el servidor: reformatear, parchar, eliminar cuentas del atacante). 3. Recuperación (Restaurar datos, verificar funcionalidad, poner en línea). Saltar la 'Erradicación' (ej. solo 'Recuperar' un backup en el servidor aún infectado) garantiza que el atacante vuelva a entrar.",
+        "correctAnswerExample": "Falla común: Un admin de la UNAL 'contiene' un servidor (lo aísla), 'recupera' los archivos de un backup y lo vuelve a conectar. Pero no 'erradicó' la causa (la vulnerabilidad o el backdoor del atacante). El atacante vuelve a entrar a las 2 horas."
+    },
+    {
+        "question": "En un BCP (Plan de Continuidad del Negocio), ¿qué es un 'Sitio Caliente' (Hot Site)?",
+        "options": [
+            {
+                "text": "Un Data Center que ha sufrido un incendio.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Ese es un 'sitio de desastre'. Un 'Hot Site' es una instalación de *recuperación*.",
+                "example": "El Data Center principal de la UNAL en Bogotá se incendió (desastre)."
+            },
+            {
+                "text": "Una instalación de recuperación (DRP) que está vacía, con solo energía y red, pero sin hardware.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Esta es la definición de un 'Sitio Frío' (Cold Site). Es la opción más barata, pero con el RTO más largo (semanas).",
+                "example": "La UNAL alquila un 'Sitio Frío' en Manizales. Si Bogotá cae, deben *comprar y enviar* todos los servidores nuevos a Manizales para instalarlos."
+            },
+            {
+                "text": "Una instalación de recuperación (DRP) duplicada, con todo el hardware, software y datos (replicados en tiempo real), lista para asumir la operación en minutos.",
+                "isCorrect": true,
+                "feedback": "¡Correcto! Un 'Sitio Caliente' (Hot Site) es un espejo del Data Center principal. Es la opción más cara, pero permite el RTO más bajo (minutos u horas).",
+                "example": "La UNAL tiene un 'Sitio Caliente' en su Sede de Medellín. Los datos del SIA de Bogotá se replican en tiempo real al servidor del SIA en Medellín. Si Bogotá cae, el DNS se cambia a Medellín y el servicio continúa (RTO: < 1 hora)."
+            },
+            {
+                "text": "Una instalación de recuperación (DRP) con hardware y red, pero sin los datos actualizados. Requiere restaurar backups.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Esta es la definición de un 'Sitio Tibio' (Warm Site). Es un balance entre costo y RTO (días).",
+                "example": "La UNAL tiene un 'Sitio Tibio' en Palmira. Si Bogotá cae, el equipo de TI de Palmira debe *restaurar* las cintas de backup (que llegan por avión) en los servidores existentes. (RTO: 48-72 horas)."
+            }
+        ],
+        "correctAnswerExplanation": "La elección del tipo de sitio de DRP (Frío, Tibio, Caliente) depende directamente del RTO definido en el BIA. Si el RTO es de semanas, un 'Sitio Frío' es suficiente. Si el RTO es de días, se necesita un 'Sitio Tibio'. Si el RTO es de horas o minutos, es obligatorio un 'Sitio Caliente' (o una solución en la Nube, que actúa como un 'Hot Site' bajo demanda).",
+        "correctAnswerExample": "El BIA del SIA de la UNAL define un RTO de 4 horas. Por lo tanto, la única solución de DRP viable es un 'Sitio Caliente' (ya sea propio en otra sede o contratado en la nube, ej. AWS Elastic Disaster Recovery)."
+    },
+    {
+        "question": "¿Qué es la 'Cadena de Custodia' en un análisis forense (parte de la respuesta a incidentes A.16)?",
+        "options": [
+            {
+                "text": "El cable de seguridad (candado) que amarra el portátil al escritorio.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Ese es un control de seguridad *física* (A.11.2.4 'Seguridad de equipos').",
+                "example": "Se usa un candado Kensington (A.11.2.4) para evitar el robo físico del portátil del auditor."
+            },
+            {
+                "text": "El documento cronológico y detallado que registra quién ha manejado, almacenado o transferido la evidencia digital.",
+                "isCorrect": true,
+                "feedback": "¡Correcto! La 'Cadena de Custodia' (Chain of Custody) es un documento legal. Prueba que la evidencia (ej. el disco duro) no ha sido alterada o contaminada desde el momento en que se recolectó hasta que se presenta en un juicio. Debe registrar cada 'traspaso'.",
+                "example": "Formato de Cadena de Custodia de la UNAL: '1. (10:30am) Investigador A recolecta Disco Duro (Serial #123) del PC de 'jgarcia'. 2. (11:15am) Investigador A entrega Disco a Analista B. 3. (11:20am) Analista B guarda Disco en caja fuerte #3'."
+            },
+            {
+                "text": "La secuencia de logs de red (Firewall, IDS, Servidor) que muestra cómo entró el atacante.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Esa es la 'línea de tiempo del ataque' o 'análisis de artefactos'. La 'Cadena de Custodia' se refiere a la *evidencia física* (el disco) y su integridad.",
+                "example": "El 'análisis' muestra que el atacante usó la IP X. La 'Cadena de Custodia' prueba que el *disco* donde se encontró ese log no fue alterado."
+            },
+            {
+                "text": "La jerarquía de mando en la alta dirección para declarar un desastre (BCP).",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Esa es la 'Estructura de Comando de Crisis' o 'Árbol de Llamadas' del BCP (A.17).",
+                "example": "En la UNAL, el Rector (A.17) es el único que puede declarar un 'Desastre Nivel 5'."
+            }
+        ],
+        "correctAnswerExplanation": "En un incidente que pueda tener consecuencias legales (fraude, fuga de datos, sabotaje), la 'Cadena de Custodia' (A.16.1.7 'Recolección de evidencia') es fundamental. Si la Cadena de Custodia se 'rompe' (ej. se pierde el registro de quién tuvo el disco duro durante un fin de semana), un abogado defensor puede invalidar toda la evidencia digital, argumentando que pudo ser manipulada.",
+        "correctAnswerExample": "Un administrativo de la UNAL es acusado de fraude en el SIA. El investigador crea la imagen forense (A.16.1.7) del disco, calcula el hash, y llena el formulario de 'Cadena de Custodia'. Cada vez que el disco se mueve (del investigador al analista, del analista a la caja fuerte), se registra con fecha, hora y firma."
+    },
+    {
+        "question": "¿Cuál es la diferencia entre un BCP (Plan de Continuidad del Negocio) y un DRP (Plan de Recuperación ante Desastres)?",
+        "options": [
+            {
+                "text": "BCP es el plan para recuperar la tecnología (TI), y DRP es el plan para recuperar el negocio (procesos y personas).",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Es exactamente al revés.",
+                "example": "El BCP de la UNAL define que 'la nómina debe pagarse'. El DRP de TI define 'cómo restaurar el servidor de nómina'."
+            },
+            {
+                "text": "BCP es el plan estratégico del *negocio* (procesos, personas) para seguir operando, mientras que DRP es el sub-plan *técnico* de TI para recuperar los sistemas.",
+                "isCorrect": true,
+                "feedback": "¡Correcto! Esta es la distinción fundamental. El BCP (A.17.1) es el 'paraguas' estratégico que define el BIA, el RTO/RPO, y los planes de personas (ej. sede alterna). El DRP (A.17.2) es el 'manual técnico' que TI ejecuta para cumplir los objetivos del BCP.",
+                "example": "El BCP de la UNAL dice: 'Las clases deben continuar en 24h'. El DRP de TI dice: 'Restaurar el servidor de Moodle (LMS) en la nube de Azure en 12h y cambiar el DNS'."
+            },
+            {
+                "text": "BCP es para desastres naturales (incendios) y DRP es para ciberataques (hackers).",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Ambos planes se activan por *desastres* (eventos que causan interrupción mayor). Los ciberataques se manejan con el 'Plan de Respuesta a Incidentes' (IRP - A.16).",
+                "example": "Un ataque de ransomware *masivo* que destruye el Data Center es un 'Incidente' (A.16) que escala a 'Desastre' y activa el BCP/DRP (A.17)."
+            },
+            {
+                "text": "BCP es el 'Análisis de Impacto' (BIA) y DRP es la 'Evaluación de Riesgos'.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. El BIA (A.17.1.1) y la Evaluación de Riesgos (Cl. 6) son *insumos* para *crear* tanto el BCP como el DRP.",
+                "example": "El BIA (A.17.1.1) define el RTO (4h). La Evaluación de Riesgos (Cl. 6) identifica el 'incendio' como un riesgo. El BCP/DRP (A.17.1.2) es el *plan* para mitigar ese riesgo y cumplir el RTO."
+            }
+        ],
+        "correctAnswerExplanation": "El BCP responde a la pregunta del Rector de la UNAL: '¿Cómo seguimos funcionando si el campus de Bogotá se inunda?'. El DRP responde a la pregunta del CISO: '¿Cuál es el procedimiento técnico paso-a-paso para restaurar los servidores del SIA en la nube si Bogotá se inunda?'. El DRP es un componente de TI dentro del BCP.",
+        "correctAnswerExample": "El BCP de la UNAL (A.17) incluye: 1. El DRP de TI. 2. El Plan de Gestión de Crisis (Comunicaciones). 3. El Plan de Reubicación de Personal (ej. 'La oficina de nómina se mueve a la Sede X')."
+    },
+    {
+        "question": "En el contexto de la 'Respuesta a Incidentes' (A.16), ¿qué es la 'Inteligencia de Amenazas' (Threat Intelligence)?",
+        "options": [
+            {
+                "text": "Es el proceso de análisis forense para encontrar la evidencia después de un ataque.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. El análisis forense (A.16.1.7) es *reactivo* (después del hecho). La Inteligencia de Amenazas es *proactiva*.",
+                "example": "Análisis Forense: 'Encontramos el malware X en el servidor del SIA'. "
+            },
+            {
+                "text": "Es el software antivirus o EDR que se instala en los equipos.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. El antivirus (A.12.2) es un control *técnico*. La Inteligencia de Amenazas es *información*.",
+                "example": "El Antivirus (A.12.2) bloquea un virus."
+            },
+            {
+                "text": "Es información sobre amenazas actuales o emergentes (ej. tácticas de atacantes, Indicadores de Compromiso) que ayuda a una organización a protegerse.",
+                "isCorrect": true,
+                "feedback": "¡Correcto! La 'Inteligencia de Amenazas' (CTI) es información contextual (el 'quién', 'por qué' y 'cómo' de los ataques) que permite pasar de una defensa genérica a una defensa *informada*.",
+                "example": "El CSIRT de la UNAL recibe un boletín de 'Inteligencia de Amenazas' (CTI) que dice: 'Un nuevo grupo (APT-C-35) está atacando universidades en Colombia usando phishing con el asunto 'Beca de Posgrado'. Busquen estos IOCs (IPs, hashes)'."
+            },
+            {
+                "text": "Es el reporte que se entrega a la alta dirección después de que un incidente ha sido resuelto (Lecciones Aprendidas).",
+                "isCorrect": false,
+                "feedback": "Incorrecto. El reporte de 'Lecciones Aprendidas' (A.16.1.6) es *interno*. La 'Inteligencia de Amenazas' es (generalmente) *externa*.",
+                "example": "Lecciones Aprendidas (A.16.1.6): 'Debemos capacitar mejor al personal en phishing'."
+            }
+        ],
+        "correctAnswerExplanation": "La Inteligencia de Amenazas (CTI) alimenta todas las fases del SGSI. En 'Planificación' (Cl. 6), ayuda a la Evaluación de Riesgos (ej. 'el riesgo de APT-C-35 es Alto'). En 'Operación' (Cl. 8), alimenta al SIEM (A.12.4) con 'Indicadores de Compromiso' (IOCs) para la 'Detección' (A.16).",
+        "correctAnswerExample": "Usando la CTI, el equipo del SIEM de la UNAL carga los IOCs de 'APT-C-35'. El SIEM genera una alerta porque detecta una conexión desde una IP (IOC) de ese grupo. Esto permite una 'Detección' (A.16) temprana, antes de que el ataque cause daño."
+    },
+    {
+        "question": "En un Plan de Continuidad (BCP), ¿qué es un 'Análisis de Impacto de Negocio' (BIA)?",
+        "options": [
+            {
+                "text": "Una auditoría de los controles de seguridad de TI.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Eso es una 'Auditoría Interna' (Cl. 9.2). El BIA es un análisis de *procesos de negocio*.",
+                "example": "La 'Auditoría Interna' (Cl. 9.2) revisa si el firewall está bien configurado."
+            },
+            {
+                "text": "Un análisis de la causa raíz de un incidente que ya ocurrió.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Ese es el 'Análisis de Causa Raíz' (parte de A.16, 'Incidentes'). El BIA es *proactivo*, se hace *antes* del desastre.",
+                "example": "El 'Análisis de Causa Raíz' determina que el incidente fue por un parche faltante."
+            },
+            {
+                "text": "El proceso de identificar los procesos de negocio críticos, el impacto de su interrupción a lo largo del tiempo, y definir el RTO y RPO.",
+                "isCorrect": true,
+                "feedback": "¡Correcto! El BIA (A.17.1.1) es el cimiento del BCP. Es un proceso de entrevistas con los *dueños de los procesos* (ej. Director Financiero, Vicerrector Académico) para entender qué es crítico y definir las métricas de recuperación (RTO/RPO).",
+                "example": "El BIA de la UNAL entrevista al Director Financiero, quien dice: 'El proceso de Nómina (que usa el sistema X) es crítico. Si falla, el impacto es 'Bajo' el día 1, 'Medio' el día 3, y 'Catastrófico' el día 5 (fecha de pago). Por lo tanto, el RTO es de 3 días'."
+            },
+            {
+                "text": "El plan técnico detallado para restaurar los servidores en un sitio alterno.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Ese es el 'Plan de Recuperación ante Desastres' (DRP) (A.17.2). El BIA es el *insumo* para *crear* el DRP.",
+                "example": "El BIA define 'RTO 4 horas'. El DRP es el 'plan técnico' para *cumplir* esas 4 horas."
+            }
+        ],
+        "correctAnswerExplanation": "El BIA (Business Impact Analysis) (A.17.1.1) es la justificación de *negocio* para gastar dinero en Continuidad. Define el *impacto* (financiero, reputacional, legal) de una caída a lo largo del tiempo. De este análisis de impacto, se derivan las métricas clave: RTO (Tiempo máximo de caída) y RPO (Pérdida máxima de datos).",
+        "correctAnswerExample": "El BIA del SIA de la UNAL determina que, en época de inscripciones, el RTO es de 2 horas. En vacaciones, el RTO es de 3 días. Esto permite a TI diseñar soluciones de DRP (A.17.2) diferenciadas (ej. 'Hot-Site' en inscripciones, 'Warm-Site' en vacaciones)."
+    },
+    {
+        "question": "Según la Guía 21 de MinTIC, en la 'Matriz de Priorización de Incidentes', ¿cuál es el componente más importante para calcular la prioridad?",
+        "options": [
+            {
+                "text": "Impacto Actual (25%)",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Según la fórmula de la guía, el Impacto Actual y el Futuro tienen el mismo peso (2.5), pero no son el más importante.",
+                "example": "Fórmula: P = (Impacto Actual x 2.5) + (Impacto Futuro x 2.5) + (Criticidad del Sistema x 5)"
+            },
+            {
+                "text": "Impacto Futuro (25%)",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Tiene el mismo peso que el Impacto Actual (2.5), pero no es el más importante.",
+                "example": "Un gusano tiene 'Impacto Actual' bajo, pero 'Impacto Futuro' (propagación) alto."
+            },
+            {
+                "text": "Criticidad del Sistema (50%)",
+                "isCorrect": true,
+                "feedback": "¡Correcto! La fórmula de MinTIC (P = (IA*2.5) + (IF*2.5) + (CS*5)) da el doble de peso (50%) a la 'Criticidad del Sistema' (definida en el BIA o Inventario de Activos).",
+                "example": "Un incidente 'Bajo' (IA=1, IF=1) en un sistema 'Crítico' (CS=10) como el SIA (P = 2.5 + 2.5 + 50 = 55) es más prioritario que un incidente 'Alto' (IA=5, IF=5) en un sistema 'No Crítico' (CS=1) (P = 12.5 + 12.5 + 5 = 30)."
+            },
+            {
+                "text": "El tipo de atacante (ej. 'Script Kiddie' vs 'Estado-Nación').",
+                "isCorrect": false,
+                "feedback": "Incorrecto. El tipo de atacante (Inteligencia de Amenazas) es difícil de saber al inicio. La prioridad se calcula con base en el *impacto* en los *activos* de la organización.",
+                "example": "No importa si el atacante es un 'Script Kiddie'; si tumba el SIA (Sistema Crítico), la prioridad es P1."
+            }
+        ],
+        "correctAnswerExplanation": "La Guía 21 'Gestión de Incidentes' de MinTIC (basada en el NIST) establece una metodología formal para la priorización. Al darle un peso del 50% a la 'Criticidad del Sistema', asegura que los esfuerzos de respuesta a incidentes (A.16) se enfoquen primero en proteger los activos más valiosos de la organización (definidos en A.8 y A.17).",
+        "correctAnswerExample": "El equipo de TI de la UNAL recibe dos alertas: 1. Un virus en el PC de un visitante. 2. Un login fallido en el servidor de base de datos del SIA. Usando la matriz de MinTIC, el incidente 2 (Sistema Crítico) tendrá una prioridad mucho más alta que el 1 (Sistema No Crítico)."
+    },
+    // ... (Añadir 20 preguntas más de Incidentes/BCP) ...
+    // --- FIN BLOQUE 2 (Preguntas 31-60) ---
+
+    // --- BLOQUE 3: CRIPTOGRAFÍA & CONTROL DE ACCESO (Preguntas 61-90) ---
+    {
+        "question": "En Criptografía, ¿cuál es el propósito de una 'Función Hash' (ej. SHA-256)?",
+        "options": [
+            {
+                "text": "Cifrar un mensaje para que solo el destinatario con la clave privada pueda leerlo.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Eso es 'Cifrado Asimétrico' (ej. RSA). Un hash no se puede 'descifrar'; es un proceso de una sola vía.",
+                "example": "Se usa RSA (cifrado) para enviar un mensaje confidencial al Rector de la UNAL."
+            },
+            {
+                "text": "Verificar la *Integridad* de un archivo o mensaje, asegurando que no ha sido modificado.",
+                "isCorrect": true,
+                "feedback": "¡Correcto! Una función hash (como MD5 o SHA-256) toma una entrada de cualquier tamaño (ej. un archivo de 10GB) y produce una salida de tamaño fijo (ej. 256 bits). Si se cambia *un solo bit* del archivo original, el hash resultante será completamente diferente. Esto permite verificar la integridad.",
+                "example": "La UNAL publica un software para estudiantes. Publica el archivo 'software.exe' y también su 'Hash SHA-256: 5EB...'. El estudiante descarga el archivo, calcula el hash en su PC y lo compara. Si coinciden, sabe que el archivo es el original y no fue modificado (ej. con un virus) en la descarga."
+            },
+            {
+                "text": "Almacenar contraseñas en la base de datos de forma que puedan ser recuperadas por el administrador.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Los hashes se usan para almacenar contraseñas, pero de forma *irreversible*. El administrador *no puede* recuperarlas, solo puede *comparar* el hash de la contraseña que el usuario ingresa con el hash almacenado.",
+                "example": "La base de datos del SIA no guarda '123456'. Guarda 'E10... (hash de 123456)'. Cuando el usuario escribe '123456', el sistema calcula el hash y lo compara."
+            },
+            {
+                "text": "Crear una clave secreta compartida para una sesión de comunicación (ej. en TLS).",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Eso es un 'Intercambio de Claves' (ej. Diffie-Hellman), que *usa* funciones criptográficas, pero el propósito del hash en sí es la integridad.",
+                "example": "En un 'handshake' TLS, el cliente y servidor usan criptografía asimétrica para generar una 'clave de sesión' simétrica (ej. AES)."
+            }
+        ],
+        "correctAnswerExplanation": "Un 'Hash' (A.10.1) es una 'huella digital' digital. Es un algoritmo de una sola vía (no se puede revertir) que garantiza la 'Integridad'. Se usa para: 1. Almacenamiento seguro de contraseñas. 2. Verificación de integridad de archivos (Checksums). 3. Firmas Digitales (donde se *firma* el *hash* del documento, no el documento entero).",
+        "correctAnswerExample": "En un análisis forense (A.16.1.7), lo primero que se hace al crear una 'imagen forense' (copia) de un disco duro es calcular su hash (ej. SHA-256). Esto prueba que la copia es idéntica al original y mantiene la 'Cadena de Custodia'."
+    },
+    {
+        "question": "¿Qué es una 'Firma Digital' y qué pilares de seguridad garantiza?",
+        "options": [
+            {
+                "text": "Es una imagen escaneada de una firma manuscrita. Garantiza la Autenticidad.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Eso es una 'firma digitalizada', que no tiene validez criptográfica y puede ser copiada y pegada fácilmente. No garantiza nada.",
+                "example": "Insertar un .JPG de la firma del Rector en un documento de Word."
+            },
+            {
+                "text": "Es el cifrado de un documento con AES (Simétrico). Garantiza la Confidencialidad.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. El cifrado simétrico garantiza la Confidencialidad (solo quien tiene la clave puede leerlo), pero no prueba *quién* lo envió (Autenticidad) ni si fue modificado (Integridad).",
+                "example": "Se envía un archivo ZIP con contraseña (AES) a la oficina de admisiones."
+            },
+            {
+                "text": "Es el cifrado del *hash* de un documento con la *clave privada* del remitente. Garantiza Autenticidad, Integridad y No Repudio.",
+                "isCorrect": true,
+                "feedback": "¡Correcto! Una Firma Digital (basada en Criptografía Asimétrica) es un proceso complejo que garantiza 3 cosas: 1. Autenticidad (prueba que el remitente es quien dice ser, porque solo él tiene su clave privada). 2. Integridad (prueba que el documento no cambió, gracias al hash). 3. No Repudio (el remitente no puede negar haberlo enviado).",
+                "example": "El Rector de la UNAL *firma digitalmente* una resolución (un PDF). Él *cifra el hash* del PDF con su *clave privada*. El estudiante *verifica* la firma usando la *clave pública* del Rector. Si la verificación es exitosa, el estudiante sabe que 1. El PDF vino del Rector (Autenticidad) y 2. El PDF no fue modificado (Integridad)."
+            },
+            {
+                "text": "Es un sistema de autenticación biométrica (ej. huella). Garantiza la Confidencialidad e Integridad.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. La biometría (A.9) es un factor de *autenticación* (para *acceder* a un sistema), no un mecanismo de *firma* de documentos.",
+                "example": "Se usa la huella digital para desbloquear el portátil del docente."
+            }
+        ],
+        "correctAnswerExplanation": "La 'Firma Digital' (A.10.1) es uno de los usos más potentes de la Criptografía Asimétrica (PKI - Infraestructura de Clave Pública). Es la base de la autenticidad en el mundo digital. No proporciona Confidencialidad (el documento firmado es público), pero proporciona Autenticidad, Integridad y No Repudio.",
+        "correctAnswerExample": "En el SECOP II (Plataforma de Contratación), cuando un funcionario de la UNAL *adjudica* un contrato, debe usar su 'Firma Digital' (usualmente en un token USB o certificado de software). Esto da validez legal al acto y garantiza el 'No Repudio' (el funcionario no puede decir 'yo no adjudiqué ese contrato')."
+    }
+]
