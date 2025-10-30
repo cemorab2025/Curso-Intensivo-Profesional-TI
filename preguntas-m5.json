@@ -1,0 +1,279 @@
+[
+    {
+        "question": "¿Cuáles son los 6 pilares de un Sistema de Información (SI) según la guía de estudio?",
+        "options": [
+            {
+                "text": "Hardware, Software, Datos, Redes, Personas y Procesos.",
+                "isCorrect": true,
+                "feedback": "¡Correcto! Estos 6 pilares son la base de cualquier SI. Un fallo en cualquiera de ellos (ej. un proceso mal definido) puede hacer que el sistema falle, incluso si la tecnología (hardware/software) es perfecta.",
+                "example": "La UNAL puede tener el mejor servidor (Hardware) para el SIA (Software), pero si el 'Proceso' de inscripción es confuso, el SI fallará en su objetivo."
+            },
+            {
+                "text": "Servidores, Clientes, Nube, Internet, Seguridad y Reportes.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Estos son componentes o características, pero no los pilares fundamentales. 'Servidores' y 'Clientes' son parte de 'Hardware', 'Nube' e 'Internet' son parte de 'Redes'.",
+                "example": "La seguridad es un aspecto transversal que protege a *todos* los pilares, no un pilar en sí mismo en este modelo."
+            },
+            {
+                "text": "TPS, MIS, DSS, ERP, CRM y BI.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Esta es una lista de *tipos* de Sistemas de Información, no los componentes que *forman* un sistema.",
+                "example": "El SIA de la UNAL es un tipo de SI que (como todos) está compuesto por Hardware, Software, Datos, Redes, Personas y Procesos."
+            },
+            {
+                "text": "Planificación, Análisis, Diseño, Desarrollo, Pruebas y Mantenimiento.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Este es el 'Ciclo de Vida del Desarrollo de Software' (SDLC), que es el *proceso* para construir el pilar de 'Software'.",
+                "example": "El equipo de TI de la UNAL usa el SDLC para crear un nuevo módulo (Software) para el SIA."
+            }
+        ],
+        "correctAnswerExplanation": "Según la guía (Parte III, 1.1), los pilares de un SI son: Hardware (lo tangible), Software (las instrucciones), Datos (la información), Redes (la comunicación), Personas (usuarios y administradores) y Procesos (las reglas de negocio).",
+        "correctAnswerExample": "El profesional de TI (Función 1: Brindar soporte) debe entender los 6 pilares. Si el SIA falla, debe diagnosticar: ¿Es el servidor (Hardware)? ¿Un bug (Software)? ¿Datos corruptos (Datos)? ¿La red (Redes)? ¿Error de usuario (Personas)? ¿Un flujo mal definido (Procesos)?"
+    },
+    {
+        "question": "¿Cuál es la diferencia entre un 'Sistema de Procesamiento de Transacciones' (TPS) y un 'Sistema de Soporte a Decisiones' (DSS)?",
+        "options": [
+            {
+                "text": "TPS es para gerentes (táctico) y DSS es para operarios (diario).",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Es exactamente al revés. El TPS es para el nivel operativo (las transacciones diarias).",
+                "example": "Un cajero de banco usa un TPS para registrar un retiro. El presidente del banco usa un DSS para decidir si abrir sucursales en otra ciudad."
+            },
+            {
+                "text": "TPS registra las operaciones diarias (ej. una nota), mientras que DSS analiza datos agregados para decisiones complejas (ej. predicción de deserción).",
+                "isCorrect": true,
+                "feedback": "¡Correcto! El TPS es la base de la pirámide (operativo). El DSS está en la cima (estratégico). El DSS se *alimenta* de los datos que el TPS recolectó durante años.",
+                "example": "El SIA de la UNAL actúa como TPS cuando un docente *ingresa* una nota. Actúa como DSS cuando el Rector usa sus datos históricos para *analizar* la tasa de graduación por facultad."
+            },
+            {
+                "text": "TPS es un software (ej. SIA) y DSS es un hardware (ej. un servidor).",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Ambos son *tipos* de software (Sistemas de Información). El DSS necesita un hardware potente (ej. un servidor de Data Warehouse), pero el DSS en sí es el software de análisis.",
+                "example": "El TPS (SIA) corre en un servidor transaccional (OLTP). El DSS (ej. Power BI) corre en un servidor analítico (OLAP)."
+            },
+            {
+                "text": "TPS es un sistema interno (ERP) y DSS es un sistema externo (CRM).",
+                "isCorrect": false,
+                "feedback": "Incorrecto. La clasificación TPS/MIS/DSS es sobre el *nivel de decisión* que apoyan, no sobre si son internos o externos.",
+                "example": "Un ERP (sistema interno) tiene módulos de TPS (registrar una factura) y módulos de MIS/DSS (generar un informe de rentabilidad)."
+            }
+        ],
+        "correctAnswerExplanation": "La pirámide de SI (Guía, 2.1) es: 1. TPS (Operativo) registra transacciones. 2. MIS (Táctico) genera reportes de resumen para gerentes. 3. DSS (Estratégico) usa modelos analíticos para decisiones no rutinarias de la alta dirección.",
+        "correctAnswerExample": "En la UNAL, el TPS (SIA) registra la inscripción de un estudiante. El MIS (SIA) genera un reporte de 'cupos por asignatura' para el Decano. El DSS (software de BI) usa datos del SIA y del Ministerio para 'simular el impacto de crear una nueva carrera'."
+    },
+    {
+        "question": "¿Cuál es el propósito de la fase de 'Análisis de Requisitos' en el Ciclo de Vida del Desarrollo de Software (SDLC)?",
+        "options": [
+            {
+                "text": "Escribir el código fuente de la aplicación en Java o Python.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Eso ocurre en la fase de 'Desarrollo (Codificación)'.",
+                "example": "Un programador de la UNAL escribe el código (Fase de Desarrollo) basándose en el documento de requisitos (Fase de Análisis)."
+            },
+            {
+                "text": "Instalar el software en el servidor de producción y capacitar a los usuarios.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Eso ocurre en la fase de 'Implementación (Despliegue)'.",
+                "example": "El equipo de TI instala el nuevo módulo del SIA en el servidor 'sia.unal.edu.co' (Implementación)."
+            },
+            {
+                "text": "Definir la arquitectura del sistema, la base de datos y las interfaces.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Eso ocurre en la fase de 'Diseño'. El Análisis define el 'QUÉ' y el Diseño define el 'CÓMO'.",
+                "example": "En la fase de 'Diseño' del SIA, el arquitecto crea el 'Diagrama Entidad-Relación' de la base de datos."
+            },
+            {
+                "text": "Entender y documentar en detalle *qué* debe hacer el software, desde la perspectiva del usuario y del negocio.",
+                "isCorrect": true,
+                "feedback": "¡Correcto! Esta es la fase más crítica (Guía, 1.2). Si esta fase falla, se construirá un software que no le sirve a nadie. Se recopilan 'Requisitos Funcionales' (ej. 'el sistema debe permitir inscribir materias') y 'No Funcionales' (ej. 'el sistema debe responder en menos de 3 segundos').",
+                "example": "El analista de TI de la UNAL se reúne con la Oficina de Registro (el 'usuario') para documentar *exactamente* cómo funciona el proceso de 'adición y cancelación' de materias. Ese documento es el 'Análisis de Requisitos'."
+            }
+        ],
+        "correctAnswerExplanation": "El SDLC (Guía, 1.2) es la secuencia: 1. Planificación (idea), 2. Análisis (el 'qué'), 3. Diseño (el 'cómo' técnico), 4. Desarrollo (codificar), 5. Pruebas (verificar), 6. Implementación (desplegar), 7. Mantenimiento (operar y corregir).",
+        "correctAnswerExample": "Un error en la fase de 'Análisis' (ej. olvidar el requisito 'un estudiante no puede inscribir materias con cruce de horario') llevará a un error costoso en 'Producción', demostrando la importancia de esta fase."
+    },
+    {
+        "question": "En arquitecturas de software, ¿cuál es la principal *desventaja* de una arquitectura Monolítica?",
+        "options": [
+            {
+                "text": "Es muy compleja de desplegar al inicio y requiere muchas herramientas de orquestación.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Esta es la principal desventaja de los *Microservicios*. Un Monolito es, al inicio, mucho *más simple* de desplegar (es un solo archivo, ej. un .WAR).",
+                "example": "Para desplegar un Monolito (ej. el SIA antiguo), solo se copia el archivo 'sia.war' al servidor Tomcat. Para Microservicios, se necesita Kubernetes (orquestación)."
+            },
+            {
+                "text": "Es difícil de mantener, escalar y actualizar a medida que crece; un pequeño cambio requiere redesplegar todo.",
+                "isCorrect": true,
+                "feedback": "¡Correcto! Esta es la desventaja clásica (Guía, 1.3). El sistema se vuelve un 'Big Ball of Mud' (gran bola de lodo). Si se quiere cambiar solo el 'módulo de notas', hay que probar y redesplegar *toda* la aplicación (notas, inscripciones, pagos), arriesgando el sistema completo.",
+                "example": "El equipo del SIA de la UNAL quiere arreglar un bug en el 'módulo de pagos'. Con un Monolito, deben apagar todo el SIA (incluyendo inscripciones) el domingo a las 2am para desplegar la nueva versión."
+            },
+            {
+                "text": "La comunicación entre componentes (módulos) es muy lenta porque se hace a través de la red (APIs HTTP).",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Esta es una característica de los *Microservicios*. En un Monolito, la comunicación es *extremadamente rápida* porque es una llamada a una función dentro de la misma memoria.",
+                "example": "En un Monolito, el 'módulo de inscripción' llama al 'módulo de notas' (una función interna). En Microservicios, el 'servicio de inscripción' hace una llamada de red (API REST) al 'servicio de notas'."
+            },
+            {
+                "text": "Fomenta la flexibilidad tecnológica, permitiendo que cada módulo esté en un lenguaje diferente.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Esta es la *ventaja* de los *Microservicios*. Un Monolito está 'atado' a una sola pila tecnológica (ej. todo en Java, o todo en .NET).",
+                "example": "En Microservicios, el 'servicio de notas' de la UNAL puede estar en Java (rápido) y el 'servicio de reportes' en Python (bueno para análisis)."
+            }
+        ],
+        "correctAnswerExplanation": "La arquitectura Monolítica (Guía, 1.3) construye la aplicación como una sola unidad. Es simple al inicio, pero sufre a largo plazo por: 1. Escalabilidad (se debe escalar todo o nada), 2. Mantenimiento (difícil de entender y riesgoso de cambiar), 3. Fragilidad (un fallo en un módulo puede tumbar todo).",
+        "correctAnswerExample": "El SIA de la UNAL es un Monolito. En época de inscripciones, el 'módulo de inscripción' consume el 90% del servidor. Se debe escalar *toda* la aplicación (comprar un servidor el doble de grande), aunque el 'módulo de pagos' no esté siendo usado."
+    },
+    {
+        "question": "¿Qué arquitectura de software descompone una aplicación en servicios pequeños e independientes, cada uno enfocado en una capacidad de negocio?",
+        "options": [
+            {
+                "text": "Arquitectura Monolítica",
+                "isCorrect": false,
+                "feedback": "Incorrecto. La arquitectura monolítica hace lo opuesto: agrupa toda la funcionalidad en una sola unidad.",
+                "example": "El SIA de la UNAL (versión monolítica) es un solo archivo 'sia.war' que contiene los módulos de notas, inscripciones, pagos, etc."
+            },
+            {
+                "text": "Arquitectura Cliente-Servidor",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Este es un modelo de red (ej. un PC cliente conectándose a un servidor de base de datos), no una arquitectura de *aplicación* per se.",
+                "example": "Un aplicativo de escritorio de la UNAL que se conecta a la base de datos de Oracle es Cliente-Servidor."
+            },
+            {
+                "text": "Arquitectura de Microservicios",
+                "isCorrect": true,
+                "feedback": "¡Correcto! (Guía, 1.3). Esta es la definición de Microservicios. La aplicación se divide en servicios independientes (ej. 'servicio-notas', 'servicio-pagos') que se comunican por APIs.",
+                "example": "Una versión moderna del SIA de la UNAL en Microservicios tendría: 'Servicio de Estudiantes' (API), 'Servicio de Cursos' (API), 'Servicio de Inscripciones' (API). Cada uno puede ser desarrollado y desplegado independientemente."
+            },
+            {
+                "text": "Arquitectura TOGAF",
+                "isCorrect": false,
+                "feedback": "Incorrecto. TOGAF (Guía, 1.4) no es una arquitectura de *software*, es un *marco de Arquitectura Empresarial* (un proceso de gestión) para alinear TI con el negocio.",
+                "example": "El equipo de Arquitectura de la UNAL usa TOGAF para *decidir* qué sistemas (ej. un ERP) y qué arquitecturas (ej. Microservicios) se deben usar para cumplir la estrategia 2030."
+            }
+        ],
+        "correctAnswerExplanation": "La arquitectura de Microservicios (Guía, 1.3) es un enfoque moderno que busca la agilidad y la escalabilidad. Descompone un gran monolito en servicios pequeños, cada uno con su propia base de código y (a veces) su propia base de datos.",
+        "correctAnswerExample": "Ventaja en la UNAL: Con Microservicios, el 'servicio de inscripción' recibe 1000 solicitudes/segundo y se escala automáticamente (ej. 50 instancias en la nube), mientras el 'servicio de pagos' (10 solicitudes/segundo) sigue con 2 instancias. Esto ahorra costos (escalabilidad flexible)."
+    },
+    {
+        "question": "¿Qué es TOGAF (The Open Group Architecture Framework)?",
+        "options": [
+            {
+                "text": "Un tipo de base de datos relacional de código abierto.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Estás pensando en PostgreSQL o MySQL. TOGAF no es un software.",
+                "example": "El SIA de la UNAL podría usar una base de datos PostgreSQL."
+            },
+            {
+                "text": "Un lenguaje de programación para crear microservicios.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Estás pensando en Go, Python o Java (Spring Boot). TOGAF no es un lenguaje de programación.",
+                "example": "El equipo de TI de la UNAL desarrolla los nuevos microservicios en Java Spring Boot."
+            },
+            {
+                "text": "Un sistema de gestión de servicios de TI (ITSM) enfocado en la mesa de ayuda.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Ese es el marco ITIL (Guía, 3.1). TOGAF es sobre arquitectura, ITIL es sobre servicios.",
+                "example": "El equipo de soporte de la UNAL (Función 1) usa los procesos de ITIL (Gestión de Incidentes) para resolver tickets."
+            },
+            {
+                "text": "Un marco de Arquitectura Empresarial (AE) para alinear la estrategia de TI con la estrategia del negocio.",
+                "isCorrect": true,
+                "feedback": "¡Correcto! (Guía, 1.4). TOGAF es una metodología (un 'proceso') que usan los arquitectos empresariales para planificar la evolución de la tecnología de la organización.",
+                "example": "La Rectoría de la UNAL (Negocio) define la 'Estrategia 2030: Virtualización Total'. El equipo de Arquitectura usa TOGAF para crear el 'plan de migración a la nube' (TI) que soporte esa estrategia."
+            }
+        ],
+        "correctAnswerExplanation": "TOGAF (Guía, 1.4) es un marco de gobernanza de TI. Su núcleo es el 'Método de Desarrollo de Arquitectura' (ADM), un ciclo iterativo que define 4 arquitecturas: 1. Negocio (procesos), 2. Datos (información), 3. Aplicaciones (software, ej. SIA) y 4. Tecnología (hardware, red).",
+        "correctAnswerExample": "Usando TOGAF, el arquitecto de la UNAL mapea el 'Proceso de Negocio' (Inscripción) a la 'Aplicación' (SIA) y a la 'Tecnología' (Servidor Oracle en Data Center Bogotá). Esto permite planificar cambios (ej. 'mover SIA a la nube')."
+    },
+    {
+        "question": "En la tipología de SI, ¿qué tipo de sistema es un ERP (Enterprise Resource Planning)?",
+        "options": [
+            {
+                "text": "Un sistema de bajo nivel que solo procesa transacciones (TPS).",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Un ERP *contiene* módulos de TPS, pero es mucho más que eso, ya que integra todas las áreas.",
+                "example": "El módulo de contabilidad de un ERP es un TPS (registra la factura), pero el ERP completo también es MIS/DSS (genera el balance general)."
+            },
+            {
+                "text": "Un sistema de software integrado que gestiona y automatiza los procesos de negocio centrales (Finanzas, RRHH, Compras).",
+                "isCorrect": true,
+                "feedback": "¡Correcto! (Guía, 2.2). Un ERP (como SAP o SARA en la UNAL) es la 'columna vertebral' administrativa de la organización. Su característica clave es una *base de datos centralizada* que da una 'única fuente de la verdad'.",
+                "example": "En la UNAL, el sistema SARA (si fuera un ERP completo) manejaría: 1. RRHH (contratación de un docente), 2. Finanzas (pago de nómina a ese docente), 3. Compras (compra del portátil para ese docente)."
+            },
+            {
+                "text": "Un sistema especializado únicamente en la gestión de la relación con clientes (Ventas y Marketing).",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Ese es un CRM (Customer Relationship Management). Un ERP puede *incluir* un módulo de CRM, pero su foco es interno (Finanzas, RRHH).",
+                "example": "La oficina de admisiones de la UNAL podría usar un CRM para gestionar 'prospectos' (estudiantes interesados)."
+            },
+            {
+                "text": "Un sistema de análisis de datos para la alta dirección (DSS).",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Un ERP *genera* los datos para un DSS, pero no es el DSS en sí. El DSS (o BI) es la capa de análisis que se pone *encima* del ERP.",
+                "example": "El ERP (SARA) registra todos los gastos. El DSS (Power BI) toma esos datos y crea un 'tablero de control de ejecución presupuestal' para el Rector."
+            }
+        ],
+        "correctAnswerExplanation": "Un ERP (Guía, 2.2) busca integrar todos los procesos administrativos (no misionales/académicos) en un solo sistema con una base de datos única. Esto elimina los 'silos de información' (ej. RRHH y Finanzas usando Excels diferentes).",
+        "correctAnswerExample": "El profesional de TI (Función 1: Soporte) debe soportar tanto el SIA (misional/académico) como el ERP/SARA (administrativo), entendiendo cómo se integran (ej. el SIA le dice al ERP/SARA 'este estudiante se inscribió, genérele una factura')."
+    },
+    {
+        "question": "En SQL, ¿qué comando pertenece al DML (Data Manipulation Language)?",
+        "options": [
+            {
+                "text": "CREATE TABLE",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Este comando pertenece al DDL (Data Definition Language) porque *define la estructura* de la base de datos (crea una nueva tabla).",
+                "example": "El DBA de la UNAL usa `CREATE TABLE Estudiantes (...)` (DDL) para crear la tabla en la base de datos del SIA."
+            },
+            {
+                "text": "ALTER TABLE",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Este comando pertenece al DDL (Data Definition Language) porque *modifica la estructura* de la tabla (ej. añade una columna).",
+                "example": "El DBA usa `ALTER TABLE Estudiantes ADD (email VARCHAR(100))` (DDL) para añadir la columna de email."
+            },
+            {
+                "text": "SELECT",
+                "isCorrect": true,
+                "feedback": "¡Correcto! (Guía, 2.3). El DML (Lenguaje de Manipulación de Datos) gestiona los *datos dentro* de las tablas. Incluye: SELECT (leer), INSERT (añadir), UPDATE (modificar) y DELETE (borrar).",
+                "example": "Un docente usa el SIA, y por debajo, el sistema ejecuta `SELECT nombre, nota FROM Estudiantes WHERE id_curso = 101` (DML) para mostrar la lista del curso."
+            },
+            {
+                "text": "DROP TABLE",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Este comando pertenece al DDL (Data Definition Language) porque *elimina la estructura* completa de la tabla.",
+                "example": "El DBA usa `DROP TABLE Cursos_Antiguos` (DDL) para eliminar una tabla obsoleta."
+            }
+        ],
+        "correctAnswerExplanation": "SQL (Guía, 2.3) se divide en: 1. DDL (Definición): CREATE, ALTER, DROP (afectan la *estructura*). 2. DML (Manipulación): SELECT, INSERT, UPDATE, DELETE (afectan los *datos* dentro de la estructura). 3. DCL (Control): GRANT, REVOKE (gestionan *permisos*).",
+        "correctAnswerExample": "El profesional de TI (Función 1: Soporte) usa DML (`SELECT`) para diagnosticar un problema (ej. `SELECT * FROM Logs WHERE error_code = 500`). El DBA (Administrador) usa DDL (`ALTER`) para arreglar la estructura de la base de datos."
+    },
+    {
+        "question": "En SQL, ¿qué comando usaría para *modificar* la nota de un estudiante que ya existe en la tabla 'Calificaciones'?",
+        "options": [
+            {
+                "text": "INSERT INTO Calificaciones SET nota = 5.0 WHERE id_estudiante = 123;",
+                "isCorrect": false,
+                "feedback": "Incorrecto. 'INSERT' se usa para crear *nuevas* filas (nuevos registros), no para modificar las existentes. La sintaxis 'INSERT... SET' es inválida.",
+                "example": "Se usa `INSERT INTO Calificaciones (...) VALUES (123, 101, 4.5)` para registrar la *primera* nota de un estudiante."
+            },
+            {
+                "text": "SELECT nota = 5.0 FROM Calificaciones WHERE id_estudiante = 123;",
+                "isCorrect": false,
+                "feedback": "Incorrecto. 'SELECT' se usa solo para *leer* o *consultar* datos, nunca para modificarlos.",
+                "example": "Se usa `SELECT nota FROM Calificaciones WHERE id_estudiante = 123` para *ver* la nota actual del estudiante."
+            },
+            {
+                "text": "ALTER TABLE Calificaciones SET nota = 5.0 WHERE id_estudiante = 123;",
+                "isCorrect": false,
+                "feedback": "Incorrecto. 'ALTER TABLE' (DDL) se usa para cambiar la *estructura* de la tabla (ej. cambiar el *tipo* de la columna 'nota'), no el *dato* de una fila específica.",
+                "example": "Se usa `ALTER TABLE Calificaciones MODIFY (nota NUMBER(2,1))` para cambiar la definición de la columna 'nota'."
+            },
+            {
+                "text": "UPDATE Calificaciones SET nota = 5.0 WHERE id_estudiante = 123;",
+                "isCorrect": true,
+                "feedback": "¡Correcto! (Guía, 2.3). El comando 'UPDATE' (DML) es el comando estándar de SQL para modificar datos en filas que ya existen, usando 'SET' para asignar el nuevo valor y 'WHERE' para especificar *cuál* fila cambiar.",
+                "example": "Un docente en el SIA cambia una nota de 4.5 a 5.0. El sistema ejecuta: `UPDATE Calificaciones SET nota = 5.0 WHERE id_estudiante = 123 AND id_curso = 101`."
+            }
+        ],
+        "correctAnswerExplanation": "Los 4 comandos básicos de DML (Guía, 2.3) son: 1. `INSERT`: Crear. 2. `SELECT`: Leer. 3. `UPDATE`: Modificar. 4. `DELETE`: Borrar. Para modificar un registro existente, siempre se usa `UPDATE... SET... WHERE...`.",
+        "correctAnswerExample": "¡Cuidado! Si el profesional de TI (Funci...
