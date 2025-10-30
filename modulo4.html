@@ -379,11 +379,21 @@
             try {
                 // 1. Cargar el archivo JSON externo
                 // ***** CAMBIO CLAVE *****
-                const response = await fetch('./preguntas-m4.json'); 
+                // Se actualiza la URL para apuntar al repositorio público en GitHub (versión raw)
+                const response = await fetch('https://raw.githubusercontent.com/cemorab2025/Curso-Intensivo-Profesional-TI/main/preguntas-m4.json'); 
                 if (!response.ok) {
                     throw new Error(`Error HTTP! estado: ${response.status}`);
                 }
-                allQuestions = await response.json(); 
+                
+                // ***** INICIO DE LA CORRECCIÓN *****
+                // El error 'Unexpected token /' es porque JSON.parse() (usado por .json()) no soporta comentarios.
+                // Vamos a leerlo como texto, limpiar los comentarios y luego 'parsear' (interpretar) el JSON.
+                const rawText = await response.text();
+                // Esta línea usa una expresión regular para eliminar todos los comentarios (ej. // ...)
+                const jsonText = rawText.replace(/\/\/[^\n]*/g, '');
+                
+                allQuestions = JSON.parse(jsonText); // Interpretar el texto limpio
+                // ***** FIN DE LA CORRECCIÓN *****
 
                 // 2. Una vez cargados los datos, iniciar la lógica del quiz
                 loadQuestionBank();
@@ -407,3 +417,5 @@
     </script>
 </body>
 </html>
+
+
