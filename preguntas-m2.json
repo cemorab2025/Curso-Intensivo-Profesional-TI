@@ -1053,9 +1053,7 @@
         "correctAnswerExplanation": "El control A.12.1.1 'Documentación de Procedimientos de Operación' es clave para la 'Seguridad de las Operaciones' (A.12). Busca la 'consistencia' y 'resiliencia' operativa. Si el administrador de backups (la única persona que sabe cómo hacer la restauración) renuncia o se enferma, la organización está en riesgo. Los procedimientos documentados mitigan este 'riesgo de conocimiento'.",
         "correctAnswerExample": "Un auditor de ISO 27001 le pediría al equipo de TI de la UNAL: 'Su política dice que hacen backups. Ahora, muéstreme el *procedimiento* (A.12.1.1) que le darían a un nuevo empleado para que realice una restauración'."
     },
-    // --- FIN BLOQUE 1 (Preguntas 1-30) ---
 
-    // --- BLOQUE 2: GESTIÓN DE INCIDENTES & BCP (Preguntas 31-60) ---
     {
         "question": "En la 'Matriz de Priorización de Incidentes' (Impacto x Urgencia), ¿cómo se define la 'Urgencia'?",
         "options": [
@@ -1335,10 +1333,7 @@
         "correctAnswerExplanation": "La Guía 21 'Gestión de Incidentes' de MinTIC (basada en el NIST) establece una metodología formal para la priorización. Al darle un peso del 50% a la 'Criticidad del Sistema', asegura que los esfuerzos de respuesta a incidentes (A.16) se enfoquen primero en proteger los activos más valiosos de la organización (definidos en A.8 y A.17).",
         "correctAnswerExample": "El equipo de TI de la UNAL recibe dos alertas: 1. Un virus en el PC de un visitante. 2. Un login fallido en el servidor de base de datos del SIA. Usando la matriz de MinTIC, el incidente 2 (Sistema Crítico) tendrá una prioridad mucho más alta que el 1 (Sistema No Crítico)."
     },
-    // ... (Añadir 20 preguntas más de Incidentes/BCP) ...
-    // --- FIN BLOQUE 2 (Preguntas 31-60) ---
 
-    // --- BLOQUE 3: CRIPTOGRAFÍA & CONTROL DE ACCESO (Preguntas 61-90) ---
     {
         "question": "En Criptografía, ¿cuál es el propósito de una 'Función Hash' (ej. SHA-256)?",
         "options": [
