@@ -379,7 +379,9 @@
             try {
                 // 1. Cargar el archivo JSON externo desde la ruta absoluta de GitHub
                 // ***** CAMBIO CLAVE *****
-                const response = await fetch('https://raw.githubusercontent.com/cemorab2025/Curso-Intensivo-Profesional-TI/main/preguntas-m6.json'); 
+                // Se cambia a una ruta relativa (./) para evitar errores de CORS (Cross-Origin)
+                // ya que el JSON está en el mismo repositorio de GitHub Pages que la página.
+                const response = await fetch('./preguntas-m6.json'); 
                 if (!response.ok) {
                     throw new Error(`Error HTTP! estado: ${response.status}`);
                 }
@@ -405,8 +407,8 @@
                 quizContainerEl.innerHTML = `
                     <div class="text-center p-10 bg-red-900 border border-red-700 rounded-lg">
                         <h2 class="text-3xl font-bold text-white mb-4">Error Crítico</h2>
-                        <p class="text-xl text-gray-200 mb-6">No se pudo cargar el banco de preguntas desde GitHub.</p>
-                        <p class="text-lg text-gray-300">Por favor, verifica tu conexión a internet y que la URL del archivo <strong>preguntas-m6.json</strong> sea correcta y pública en el repositorio.</p>
+                        <p class="text-xl text-gray-200 mb-6">No se pudo cargar el banco de preguntas.</p>
+                        <p class="text-lg text-gray-300">Por favor, verifica tu conexión a internet y que el archivo <strong>preguntas-m6.json</strong> se encuentre en el mismo directorio que este archivo HTML.</p>
                         <p class="text-sm text-gray-400 mt-4">Error: ${error.message}</p>
                     </div>
                 `;
@@ -418,3 +420,4 @@
     </script>
 </body>
 </html>
+
