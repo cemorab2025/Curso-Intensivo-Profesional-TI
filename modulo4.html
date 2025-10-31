@@ -380,7 +380,7 @@
                 // 1. Cargar el archivo JSON externo
                 // ***** CAMBIO CLAVE *****
                 // Se actualiza la URL para apuntar al repositorio público en GitHub (versión raw)
-                const response = await fetch('https://raw.githubusercontent.com/cemorab2025/Curso-Intensivo-Profesional-TI/main/preguntas-m4.json'); 
+                 const response = await fetch('./preguntas-m4.json');; 
                 if (!response.ok) {
                     throw new Error(`Error HTTP! estado: ${response.status}`);
                 }
