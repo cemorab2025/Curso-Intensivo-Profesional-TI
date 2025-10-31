@@ -1,0 +1,467 @@
+[
+    {
+        "question": "¿Cuál es el objetivo principal del proceso de 'Gestión de Incidentes' según ITIL?",
+        "options": [
+            {
+                "text": "Investigar la causa raíz de una o más interrupciones del servicio.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Ese es el objetivo de la 'Gestión de Problemas'. La Gestión de Incidentes se enfoca en la velocidad de restauración.",
+                "example": "Si el SIA se cae cada viernes (incidente recurrente), la 'Gestión de Problemas' investiga *por qué* (causa raíz), mientras que la 'Gestión de Incidentes' solo se encarga de levantarlo cada vez que se cae."
+            },
+            {
+                "text": "Restaurar la operación normal del servicio lo más rápido posible, minimizando el impacto en el negocio.",
+                "isCorrect": true,
+                "feedback": "¡Correcto! Esta es la definición de Gestión de Incidentes (Función 1 de la vacante). La prioridad es la velocidad y la restauración (ej. un 'workaround'), no la solución definitiva.",
+                "example": "Un docente no puede ingresar al SIA (incidente). El objetivo de la mesa de ayuda de la UNAL (Nivel 1) es que el docente entre *ya* (ej. reiniciando su clave), no investigar la causa raíz de por qué se bloqueó."
+            },
+            {
+                "text": "Aprobar, planificar y desplegar un nuevo módulo de software en el entorno de producción.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Ese es el objetivo de la 'Gestión de Cambios'. Los incidentes son *no planificados*, los cambios son *planificados*.",
+                "example": "El equipo de desarrollo solicita desplegar el nuevo módulo de notas del SIA. Esto es un 'Cambio', no un 'Incidente'."
+            },
+            {
+                "text": "Asegurar que se cumplan las métricas de disponibilidad pactadas en el SLA.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Ese es el objetivo de la 'Gestión de Niveles de Servicio' (SLM). La Gestión de Incidentes *contribuye* a cumplir el SLA, pero su objetivo es la restauración.",
+                "example": "El SLA (acuerdo) del SIA de la UNAL puede ser '99.9% de disponibilidad'. El proceso de 'Gestión de Incidentes' (acción) es el que corre para cumplir esa meta."
+            }
+        ],
+        "correctAnswerExplanation": "Según ITIL, un 'Incidente' es una interrupción no planificada de un servicio. La 'Gestión de Incidentes' es el proceso reactivo (Función 1: 'brindar soporte') enfocado 100% en la velocidad de restauración para que el usuario (docente, estudiante) pueda seguir trabajando.",
+        "correctAnswerExample": "Función 1 (Soporte) en la UNAL: Un estudiante llama porque el SIA le da error 500. El equipo de soporte (Gestión de Incidentes) aplica un 'workaround' (ej. reiniciar el servidor de aplicación) para restaurar el servicio en 5 minutos. Luego, escalan el tiquete a 'Gestión de Problemas' para que investiguen la *causa raíz* de ese error 500."
+    },
+    {
+        "question": "En ITIL, ¿cuál es la diferencia clave entre un 'Incidente' y un 'Problema'?",
+        "options": [
+            {
+                "text": "Un 'Incidente' es reportado por un usuario, mientras que un 'Problema' es detectado por el equipo de TI.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Ambos pueden ser reportados por usuarios o detectados por monitoreo de TI. La diferencia no es *quién* lo reporta, sino *qué* es.",
+                "example": "El monitoreo automático del SIA (Función 3) puede detectar un 'Incidente' (caída del servicio) y también puede detectar un 'Problema' (el disco se está llenando)."
+            },
+            {
+                "text": "Un 'Incidente' es una interrupción del servicio, mientras que un 'Problema' es la *causa raíz* desconocida de uno o más incidentes.",
+                "isCorrect": true,
+                "feedback": "¡Correcto! Esta es la distinción más importante en ITIL. El Incidente es el *síntoma* (lo que ve el usuario, ej. 'el SIA está lento'). El Problema es la *enfermedad* (la causa raíz, ej. 'una consulta SQL ineficiente que satura la base de datos').",
+                "example": "El SIA se cae 5 veces (5 Incidentes). La Gestión de Incidentes los resuelve (reiniciando el servidor). La Gestión de Problemas abre una investigación (1 Problema) para encontrar la *causa raíz* de las 5 caídas."
+            },
+            {
+                "text": "Un 'Incidente' afecta a un solo usuario, mientras que un 'Problema' afecta a múltiples usuarios.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Un incidente puede ser masivo (ej. 'Caída total del SIA', afectando a 50.000 usuarios). La escala define la *prioridad* del incidente, no la diferencia con un problema.",
+                "example": "La caída del SIA es un 'Incidente P1' (Prioridad 1) porque afecta a todos. Un 'Problema' es la investigación de por qué ocurrió."
+            },
+            {
+                "text": "Un 'Incidente' es una falla de hardware, mientras que un 'Problema' es una falla de software.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. La causa (hardware o software) es irrelevante para la definición. Ambos pueden causar incidentes.",
+                "example": "Un disco dañado (hardware) y un bug (software) en el SIA son ambos 'Causas Raíz' que generan 'Incidentes'."
+            }
+        ],
+        "correctAnswerExplanation": "La Gestión de Incidentes (reactiva) busca restaurar el servicio rápido (workaround). La Gestión de Problemas (proactiva/reactiva) busca encontrar la causa raíz para que el incidente no vuelva a ocurrir (solución definitiva o 'Known Error').",
+        "correctAnswerExample": "Función 2 (Seguimiento) en la UNAL: El profesional de TI nota que el Incidente 'SIA Lento' ocurre todos los días a las 10:00 AM. Cierra los tiquetes de incidente, pero abre un tiquete de 'Problema' y lo escala a Nivel 3 (Desarrollo) para que investiguen la *causa raíz* de esa lentitud recurrente."
+    },
+    {
+        "question": "¿Qué es una 'Solución Temporal' (Workaround) en el contexto de la Gestión de Incidentes y Problemas de ITIL?",
+        "options": [
+            {
+                "text": "Es la solución definitiva (parche de software) que elimina la causa raíz del problema.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Esa es la 'Solución Permanente' o 'Definitiva', que es el objetivo de la Gestión de Problemas.",
+                "example": "El equipo de desarrollo de la UNAL corrige el bug en el código del SIA. Esta es la 'Solución Permanente' al Problema."
+            },
+            {
+                "text": "Es una acción temporal que restaura el servicio al usuario, aunque no corrija la causa raíz subyacente.",
+                "isCorrect": true,
+                "feedback": "¡Correcto! Un 'Workaround' (o 'Solución Temporal') es la herramienta principal de la Gestión de Incidentes. Su objetivo es la velocidad de restauración para que el usuario siga trabajando.",
+                "example": "Incidente en la UNAL: 'La impresora no imprime'. Workaround: 'Apague y prenda la impresora'. El servicio se restaura (el usuario imprime), pero la *causa raíz* (ej. un driver defectuoso) no se ha solucionado."
+            },
+            {
+                "text": "Es un documento que explica al usuario cómo usar una nueva funcionalidad del sistema.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Ese es un 'Manual de Usuario' o 'Guía Rápida'.",
+                "example": "El equipo de TI de la UNAL publica una guía sobre 'Cómo usar el nuevo módulo de notas del SIA'."
+            },
+            {
+                "text": "Es el proceso de documentar un 'Error Conocido' (Known Error) en la base de datos de problemas.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. El 'Workaround' es la *solución* que se documenta *dentro* del registro del 'Error Conocido' (KEDB).",
+                "example": "Problema: 'El SIA se cae al generar reportes de más de 1000 estudiantes (Causa Raíz)'. Se crea un 'Error Conocido' con el Workaround: 'Genere el reporte en dos partes de 500 estudiantes'."
+            }
+        ],
+        "correctAnswerExplanation": "La Gestión de Incidentes (Función 1: Soporte) vive de los 'Workarounds'. El objetivo es tener una Base de Conocimiento (KEDB) llena de workarounds para que el Nivel 1 pueda resolver el 80% de los incidentes en la primera llamada, sin necesidad de escalar.",
+        "correctAnswerExample": "Función 1 (Soporte) en la UNAL: El docente no puede ver sus cursos en el SIA. El Nivel 1 consulta la KEDB y encuentra el Workaround: 'Pedir al usuario que borre la caché del navegador e intente de nuevo'. El incidente se resuelve en 5 minutos."
+    },
+    {
+        "question": "Un desarrollador del SIA de la UNAL necesita aplicar un parche de seguridad crítico en el servidor de producción. ¿Qué proceso de ITIL debe gestionar esta actividad?",
+        "options": [
+            {
+                "text": "Gestión de Incidentes",
+                "isCorrect": false,
+                "feedback": "Incorrecto. La Gestión de Incidentes maneja interrupciones *no planificadas*. Aplicar un parche es una actividad *planificada* para *prevenir* un incidente.",
+                "example": "Si un hacker *explota* la vulnerabilidad antes de ser parchada, *eso* sería un Incidente. Aplicar el parche antes es un Cambio."
+            },
+            {
+                "text": "Gestión de Problemas",
+                "isCorrect": false,
+                "feedback": "Incorrecto. La Gestión de Problemas investiga la *causa raíz* de incidentes que *ya ocurrieron*. Aplicar un parche es una acción preventiva.",
+                "example": "Un parche puede ser la 'Solución Permanente' a un 'Problema', pero el *proceso* de aplicar ese parche en producción es la Gestión de Cambios."
+            },
+            {
+                "text": "Gestión de Cambios (o Habilitación de Cambios)",
+                "isCorrect": true,
+                "feedback": "¡Correcto! Cualquier modificación a un servicio o componente de TI en producción (hardware, software, red, base de datos) debe ser controlada por la 'Gestión de Cambios'. Su objetivo es minimizar el riesgo de que el *cambio* cause un *incidente*.",
+                "example": "El desarrollador del SIA de la UNAL debe llenar un 'RFC' (Request for Change), que es evaluado por el 'CCB' (Comité de Cambios). El CCB aprueba el parche y lo agenda para la 'ventana de mantenimiento' (ej. domingo 2am)."
+            },
+            {
+                "text": "Gestión de Despliegue y Liberación",
+                "isCorrect": false,
+                "feedback": "Cercano, pero incorrecto. La 'Gestión de Despliegue' es el proceso *técnico* de mover el parche (ej. el 'cómo'). La 'Gestión de Cambios' es el proceso de *gobernanza* (el 'qué', 'por qué' y 'cuándo') que *autoriza* el despliegue.",
+                "example": "Gestión de Cambios (Gobierno): 'Aprobado el RFC-101'. Gestión de Despliegue (Técnico): 'Iniciando despliegue de RFC-101 en el servidor SIA-PROD-01'."
+            }
+        ],
+        "correctAnswerExplanation": "Esta es una función clave (Función 8: 'Contribuir y hacer seguimiento a la contratación de recursos...') que se aplica también a los cambios internos. El profesional de TI debe entender que no se puede 'tocar' un sistema en producción (como el SIA) sin un 'RFC' aprobado por la 'Gestión de Cambios' (ITIL).",
+        "correctAnswerExample": "Un desarrollador de la UNAL sube un parche al SIA un viernes a las 4pm sin un RFC aprobado (violando la Gestión de Cambios). El parche rompe el módulo de inscripciones. Esto *causa* un 'Incidente P1', demostrando por qué el control de cambios es vital."
+    },
+    {
+        "question": "En el marco de gobernanza COBIT, ¿cuál es la diferencia fundamental entre 'Gobernanza' y 'Gestión'?",
+        "options": [
+            {
+                "text": "La 'Gobernanza' la realiza el equipo de TI y la 'Gestión' la realizan los directivos (Rectoría).",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Es exactamente al revés. La Gobernanza es responsabilidad de la alta dirección (Junta Directiva, Rectoría).",
+                "example": "La Rectoría de la UNAL (Gobernanza) *define* la estrategia. El Director de TI (Gestión) *ejecuta* esa estrategia."
+            },
+            {
+                "text": "'Gobernanza' (Dominio EDM) se enfoca en 'Evaluar, Dirigir y Monitorear', mientras que 'Gestión' (Dominios APO, BAI, DSS, MEA) se enfoca en 'Planificar, Construir, Ejecutar y Monitorear'.",
+                "isCorrect": true,
+                "feedback": "¡Correcto! Esta es la distinción central de COBIT. La 'Gobernanza' (EDM) define el *qué* y el *por qué* (la estrategia y la evaluación). La 'Gestión' (APO, BAI, DSS, MEA) es el *cómo* (la ejecución de esa estrategia).",
+                "example": "Gobernanza (EDM) en la UNAL: La Rectoría 'Evalúa' los riesgos y 'Dirige' que 'la seguridad (Ley 1581) es prioridad'. Gestión (APO, BAI): El CISO 'Planifica' (APO) y 'Construye' (BAI) el SGSI para cumplir esa directriz."
+            },
+            {
+                "text": "'Gobernanza' se enfoca en la seguridad (ISO 27001) y 'Gestión' se enfoca en los servicios (ITIL).",
+                "isCorrect": false,
+                "feedback": "Incorrecto. COBIT es el marco 'paraguas' que integra a ambos. La 'Gobernanza' (EDM) dirige la estrategia de seguridad y servicios, y la 'Gestión' (APO, BAI, DSS) usa ITIL e ISO 27001 como marcos de 'buenas prácticas' para la ejecución.",
+                "example": "COBIT (Gobernanza) es el 'Director de Orquesta'. ITIL (Gestión de Servicios) e ISO 27001 (Gestión de Seguridad) son los 'músicos' (procesos) que COBIT dirige."
+            },
+            {
+                "text": "'Gobernanza' es para proyectos nuevos (BAI), mientras que 'Gestión' es para soporte diario (DSS).",
+                "isCorrect": false,
+                "feedback": "Incorrecto. 'BAI' (Construir, Adquirir, Implementar) y 'DSS' (Entregar, Servir, Soportar) son ambos dominios de *Gestión*.",
+                "example": "El Director de TI de la UNAL usa el dominio BAI para *gestionar* el proyecto del nuevo SIA y el dominio DSS para *gestionar* el soporte (mesa de ayuda) del SIA actual."
+            }
+        ],
+        "correctAnswerExplanation": "COBIT (Control Objectives for Information and Related Technology) es un marco de *Gobernanza* (Función 7 y 9 de la vacante). Su principio clave es separar 'Gobernanza' (el cuerpo directivo que define la estrategia y monitorea) de 'Gestión' (la administración que ejecuta la estrategia).",
+        "correctAnswerExample": "Función 9 (Definir políticas): El profesional de TI de la UNAL ayuda a la 'Gobernanza' (Rectoría) a 'Evaluar' (EDM) los riesgos de la plataforma tecnológica. Función 1 (Soporte): El profesional 'Ejecuta' (DSS) el soporte diario, alineado con esa directriz."
+    },
+    {
+        "question": "Un usuario de la UNAL solicita la instalación de un software estadístico (ej. 'R') en su computador. ¿Qué proceso de ITIL gestiona esta solicitud?",
+        "options": [
+            {
+                "text": "Gestión de Incidentes",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Un incidente es una *falla* (ej. 'el software R no funciona'). Una solicitud de *instalación* es un servicio pre-aprobado.",
+                "example": "El usuario llama porque 'R' se cerró inesperadamente. *Eso* es un Incidente."
+            },
+            {
+                "text": "Gestión de Cambios",
+                "isCorrect": false,
+                "feedback": "Incorrecto. La Gestión de Cambios es para modificaciones en la *infraestructura* o *servicios* (ej. 'actualizar el servidor de R'). Una instalación en el PC de un solo usuario no requiere un RFC.",
+                "example": "El administrador de TI quiere actualizar la versión de 'R' en el *servidor* de licencias. *Eso* es un Cambio."
+            },
+            {
+                "text": "Gestión de Solicitudes (Request Fulfillment)",
+                "isCorrect": true,
+                "feedback": "¡Correcto! Esto es una 'Solicitud de Servicio' estándar. Es un servicio pre-aprobado, de bajo riesgo y alta frecuencia, que la mesa de ayuda gestiona a través de un catálogo de servicios.",
+                "example": "El Catálogo de Servicios de la UNAL (ITIL) tiene el ítem: 'Instalación de Software Estadístico'. El usuario lo pide (Solicitud) y el Nivel 1 la ejecuta (Cumplimiento)."
+            },
+            {
+                "text": "Gestión de Problemas",
+                "isCorrect": false,
+                "feedback": "Incorrecto. La Gestión de Problemas investiga la *causa raíz* de los incidentes, no gestiona solicitudes de servicio.",
+                "example": "Si *todos* los usuarios que piden 'R' reportan que falla, la Gestión de Problemas investigaría la *causa raíz* de esa falla de instalación."
+            }
+        ],
+        "correctAnswerExplanation": "ITIL diferencia claramente un 'Incidente' (algo se rompió) de una 'Solicitud de Servicio' (quiero algo nuevo). La Función 1 ('brindar soporte') de la vacante incluye gestionar ambos, pero a través de procesos diferentes. Los Incidentes se enfocan en restaurar. Las Solicitudes se enfocan en proveer.",
+        "correctAnswerExample": "Función 1 (Soporte) en la UNAL: El profesional de TI recibe un tiquete de 'Solicitud' (instalar R) y lo ejecuta. Luego recibe un tiquete de 'Incidente' (el SIA se cayó) y lo escala con 'Prioridad 1'. Debe saber diferenciar ambos flujos."
+    },
+    {
+        "question": "En COBIT, el dominio 'Entregar, Servir y Soportar' (DSS) se enfoca en:",
+        "options": [
+            {
+                "text": "La planificación y organización de la estrategia de TI (APO).",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Ese es el dominio 'Alinear, Planificar y Organizar' (APO).",
+                "example": "El CISO de la UNAL, usando APO01, define el 'Marco de Gestión de TI' (ej. 'Usaremos ITIL y COBIT')."
+            },
+            {
+                "text": "La construcción, adquisición e implementación de nuevas soluciones (BAI).",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Ese es el dominio 'Construir, Adquirir e Implementar' (BAI).",
+                "example": "El Gerente de Proyectos de la UNAL, usando BAI01, gestiona el 'Proyecto de implementación del nuevo SIA'."
+            },
+            {
+                "text": "La operación diaria de los servicios de TI, incluyendo la mesa de ayuda y la gestión de incidentes (ITIL).",
+                "isCorrect": true,
+                "feedback": "¡Correcto! El dominio DSS es donde 'las llantas tocan el asfalto'. Es la operación diaria de TI. Los procesos de ITIL de 'Operación del Servicio' (Incidentes, Solicitudes, Problemas) son la implementación práctica de los objetivos de gestión de DSS.",
+                "example": "El equipo de Soporte Nivel 1 de la UNAL (Función 1 de la vacante) opera bajo el dominio DSS02 ('Gestionar Solicitudes e Incidentes') y DSS03 ('Gestionar Problemas')."
+            },
+            {
+                "text": "La evaluación y monitoreo del desempeño de TI para asegurar la gobernanza (MEA).",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Ese es el dominio 'Monitorear, Evaluar y Valorar' (MEA).",
+                "example": "El auditor interno de la UNAL, usando MEA02, 'Monitorea el Control Interno' del proceso de soporte del SIA."
+            }
+        ],
+        "correctAnswerExplanation": "Los 4 dominios de *Gestión* de COBIT son: APO (Planificar), BAI (Construir), DSS (Ejecutar/Operar) y MEA (Monitorear). La Función 1 ('Brindar soporte') y la Función 3 ('Monitorear la ejecución') de la vacante están 100% contenidas en el dominio DSS.",
+        "correctAnswerExample": "Función 1 (Soporte) es DSS02/DSS03. Función 3 (Monitorear desempeño de aplicaciones) es DSS01 ('Gestionar Operaciones') y DSS05 ('Gestionar Servicios de Seguridad'). El profesional de TI es un ejecutor clave del dominio DSS."
+    },
+    {
+        "question": "¿Qué es la 'Cascada de Metas' (Goals Cascade) en COBIT?",
+        "options": [
+            {
+                "text": "Un modelo de arquitectura de red donde los firewalls están en serie.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Eso es una 'arquitectura en cascada' o 'en línea', un término de diseño de red.",
+                "example": "La red de la UNAL tiene un firewall perimetral en cascada con un firewall de aplicaciones web (WAF)."
+            },
+            {
+                "text": "El proceso de descomponer las necesidades de las 'Partes Interesadas' (ej. Rectoría) en 'Metas de TI' (ej. habilitar el SIA) y luego en 'Objetivos de Proceso' (ej. cumplir el SLA de incidentes).",
+                "isCorrect": true,
+                "feedback": "¡Correcto! La Cascada de Metas es el mecanismo central de COBIT para lograr la 'Alineación TI-Negocio'. Traduce lo que el negocio quiere (ej. 'ser líder en educación virtual') en acciones concretas que TI debe ejecutar (ej. 'implementar Moodle con 99.99% de uptime').",
+                "example": "Cascada en la UNAL: Meta de Negocio: 'Mejorar la experiencia del estudiante'. -> Meta de TI: 'Habilitar acceso móvil al SIA'. -> Objetivo de Proceso (BAI03): 'Construir una PWA del SIA'."
+            },
+            {
+                "text": "Un sinónimo de la metodología de desarrollo en 'Cascada' (Waterfall).",
+                "isCorrect": false,
+                "feedback": "Incorrecto. El modelo 'Waterfall' (SDLC) es una metodología de gestión de proyectos. La 'Cascada de Metas' de COBIT es un mecanismo de *gobernanza* estratégica.",
+                "example": "El equipo de la UNAL puede usar 'Waterfall' (Metodología) para construir el SIA, y usar COBIT (Gobernanza) para asegurar que ese proyecto esté alineado con las metas."
+            },
+            {
+                "text": "El proceso de escalamiento de un incidente de Nivel 1 a Nivel 2 y Nivel 3.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Ese es el 'Escalamiento Funcional' de la Gestión de Incidentes (ITIL).",
+                "example": "Nivel 1 (Mesa de Ayuda UNAL) no puede resolver el bug del SIA y lo 'escala' (escalamiento funcional) a Nivel 3 (Desarrollo)."
+            }
+        ],
+        "correctAnswerExplanation": "La 'Cascada de Metas' (Principio 1 de COBIT 5, parte del sistema en COBIT 2019) es la respuesta a la pregunta '¿Cómo me aseguro de que mi equipo de TI está trabajando en lo que realmente le importa al negocio?'. Conecta la estrategia (Rectoría) con la operación (Soporte TI).",
+        "correctAnswerExample": "Función 7 (Formular planes): El profesional de TI de la UNAL usa la 'Cascada de Metas' de COBIT para justificar su proyecto de 'Nuevo Firewall' (Objetivo de Proceso) conectándolo a la 'Meta de TI' (Proteger los datos) y a la 'Meta de Negocio' (Cumplir con Ley 1581)."
+    },
+    {
+        "question": "¿Qué es una 'Base de Conocimiento de Errores Conocidos' (KEDB) en ITIL?",
+        "options": [
+            {
+                "text": "Un inventario de todos los activos de hardware y software (CI) y sus relaciones.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Ese es el 'Sistema de Gestión de la Configuración' (CMS) o 'Base de Datos de Configuración' (CMDB).",
+                "example": "La CMDB de la UNAL muestra que el 'Servidor SIA-PROD-01' (CI) está conectado al 'Switch-CORE-01' (CI)."
+            },
+            {
+                "text": "Una base de datos que contiene todos los tiquetes de incidentes reportados por los usuarios.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Ese es el 'Sistema de Tiquetes' o 'Herramienta de ITSM' (ej. SARA, si se usa para esto). La KEDB es una base de datos de *soluciones*, no de tiquetes.",
+                "example": "El sistema SARA de la UNAL tiene 10.000 tiquetes de 'Incidentes' cerrados."
+            },
+            {
+                "text": "Una base de datos creada por la 'Gestión de Problemas' que documenta la *causa raíz* de un problema y su *workaround* (solución temporal).",
+                "isCorrect": true,
+                "feedback": "¡Correcto! Cuando la Gestión de Problemas encuentra la causa raíz (el 'Problema') pero la solución definitiva (el 'parche') aún no está lista, documenta esto como un 'Error Conocido' (Known Error) en la KEDB. Esto incluye el *workaround*.",
+                "example": "Problema: 'Bug en el SIA'. El equipo de Problemas lo documenta en la KEDB: 'Error #105: El SIA se cae al exportar a PDF. Causa Raíz: Fuga de memoria. Workaround: Usar 'Imprimir como PDF' del navegador'."
+            },
+            {
+                "text": "El catálogo de todos los servicios que TI ofrece a los usuarios.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Ese es el 'Catálogo de Servicios'.",
+                "example": "El 'Catálogo de Servicios' de la UNAL ofrece: 'Instalación de Software', 'Creación de Cuenta', 'Soporte a SIA'."
+            }
+        ],
+        "correctAnswerExplanation": "La KEDB (Known Error Database) es el puente entre la 'Gestión de Problemas' y la 'Gestión de Incidentes'. 'Problemas' alimenta la KEDB con workarounds, y 'Incidentes' (Soporte Nivel 1) la consume para resolver incidentes recurrentes mucho más rápido, sin tener que re-investigar la causa.",
+        "correctAnswerExample": "Función 1 (Soporte) en la UNAL: Un docente llama porque el SIA se cayó al exportar a PDF. El Nivel 1 busca 'SIA PDF' en la KEDB, encuentra el 'Error Conocido #105' y le da al docente el 'Workaround' (usar la impresora PDF del navegador). El incidente se resuelve en 2 minutos."
+    },
+    {
+        "question": "¿Cuál es la diferencia entre un 'Acuerdo de Nivel de Servicio' (SLA), un 'Acuerdo de Nivel Operativo' (OLA) y un 'Contrato de Respaldo' (UC)?",
+        "options": [
+            {
+                "text": "SLA es el contrato con el proveedor, OLA es el contrato con el usuario y UC es el contrato interno.",
+                "isCorrect": false,
+                "feedback": "Casi. SLA es con el usuario (cliente), OLA es interno y UC es con el proveedor externo.",
+                "example": "El SLA es la promesa al 'Docente'. El OLA es el acuerdo con el 'Equipo de Redes'. El UC es el contrato con 'Claro' (proveedor de internet)."
+            },
+            {
+                "text": "SLA es el acuerdo entre TI y el cliente (ej. Facultad). OLA es un acuerdo *interno* de TI (ej. Redes con Servidores). UC es el contrato con un *proveedor externo* (ej. Microsoft).",
+                "isCorrect": true,
+                "feedback": "¡Correcto! Esta es la jerarquía. El SLA es la promesa *externa* al cliente. Para *cumplir* ese SLA, TI necesita OLA (acuerdos internos) y UC (contratos con proveedores) que lo respalden.",
+                "example": "El SLA de la UNAL con la Facultad de Derecho para el SIA es '99.9% uptime'. Para lograrlo, el OLA entre 'Soporte SIA' y el 'Equipo de Redes' es '99.99% uptime de red'. Y el UC con el proveedor de nube (AWS) es '99.99% uptime de VMs'."
+            },
+            {
+                "text": "SLA es para Incidentes, OLA es para Problemas y UC es para Cambios.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Los SLA/OLA/UC definen métricas (como tiempos de resolución) para *todos* los procesos (Incidentes, Cambios, Solicitudes).",
+                "example": "El SLA del SIA de la UNAL define: 'Tiempo de Resolución de Incidentes P1: 4 horas', 'Tiempo de Implementación de Cambios Estándar: 2 días'."
+            },
+            {
+                "text": "SLA es el objetivo (ej. 99%), OLA es la métrica (ej. MTTR) y UC es la penalización (ej. 5% de descuento).",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Los tres (SLA, OLA, UC) son *acuerdos* y los tres contienen *métricas* y (a veces) *penalizaciones*.",
+                "example": "El SLA (con el cliente) tiene una métrica (MTTR 4h). El UC (con el proveedor) también tiene una métrica (MTTR 2h) y una penalización si falla."
+            }
+        ],
+        "correctAnswerExplanation": "La 'Gestión de Niveles de Servicio' (SLM) de ITIL es clave. El SLA (Service Level Agreement) es el acuerdo con el cliente. El OLA (Operational Level Agreement) es el acuerdo entre dos equipos *internos* de TI. El UC (Underpinning Contract) es el contrato con un proveedor *externo*.",
+        "correctAnswerExample": "Función 8 ('Hacer seguimiento a la contratación'): El profesional de TI de la UNAL debe asegurar que el 'UC' (Contrato de Respaldo) que firma con el proveedor de nube (ej. Azure) sea *más estricto* que el 'SLA' que TI le promete a la Facultad (cliente), para tener un margen de operación."
+    },
+    {
+        "question": "En COBIT, ¿qué dominio de *Gestión* se enfoca en 'Construir, Adquirir e Implementar' nuevas soluciones y gestionar los proyectos de TI?",
+        "options": [
+            {
+                "text": "APO (Alinear, Planificar y Organizar)",
+                "isCorrect": false,
+                "feedback": "Incorrecto. APO es el dominio de la *planificación* y la *estrategia* de TI (el 'qué' queremos hacer).",
+                "example": "El CISO de la UNAL, usando APO13 (Gestionar Seguridad), 'planifica' el presupuesto del nuevo firewall."
+            },
+            {
+                "text": "BAI (Construir, Adquirir e Implementar)",
+                "isCorrect": true,
+                "feedback": "¡Correcto! El dominio BAI es el dominio de los *proyectos*. Se encarga de convertir las 'ideas' (planificadas en APO) en 'soluciones' (construidas e implementadas).",
+                "example": "El Gerente de Proyectos de la UNAL, usando BAI02 (Gestionar Requisitos) y BAI11 (Gestionar Proyectos), 'construye' el nuevo módulo de notas del SIA."
+            },
+            {
+                "text": "DSS (Entregar, Servir y Soportar)",
+                "isCorrect": false,
+                "feedback": "Incorrecto. DSS es el dominio de la *operación* diaria y el *soporte* (la mesa de ayuda) de los servicios que ya existen.",
+                "example": "El equipo de Nivel 1 de la UNAL, usando DSS02, 'atiende' un incidente en el módulo de notas del SIA que BAI implementó."
+            },
+            {
+                "text": "MEA (Monitorear, Evaluar y Valorar)",
+                "isCorrect": false,
+                "feedback": "Incorrecto. MEA es el dominio de la *auditoría* y el *monitoreo* del desempeño, para asegurar que todo lo demás (APO, BAI, DSS) funciona bien.",
+                "example": "El auditor de Control Interno de la UNAL, usando MEA02, 'monitorea' si el proyecto del SIA (BAI) cumplió con los objetivos de negocio (APO)."
+            }
+        ],
+        "correctAnswerExplanation": "Los dominios de Gestión de COBIT siguen un ciclo lógico: APO (Planifica la estrategia) -> BAI (Construye los proyectos/soluciones) -> DSS (Opera y da soporte a esas soluciones) -> MEA (Monitorea el desempeño de todo el ciclo).",
+        "correctAnswerExample": "Función 8 (Contribuir a la contratación): Este es un proceso clave de COBIT, 'BAI09 - Gestionar Activos'. El profesional de TI de la UNAL (Función 8) usa este proceso para 'construir' (en este caso, 'adquirir') los nuevos servidores, alineado con el plan de APO."
+    },
+    {
+        "question": "En la Gestión de Proyectos, ¿cuál es la diferencia principal entre la metodología 'Waterfall' (Cascada) y 'Agile' (Ágil)?",
+        "options": [
+            {
+                "text": "Waterfall se usa para software y Agile se usa para hardware.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Ambas se usan predominantemente para software. Waterfall es más común en proyectos con requisitos físicos (como construcción), pero ambas son metodologías de gestión.",
+                "example": "El proyecto del nuevo edificio de la UNAL usa 'Waterfall'. El proyecto de la nueva app móvil del SIA usa 'Agile'."
+            },
+            {
+                "text": "Waterfall define todos los requisitos al *inicio* y entrega el producto al *final*. Agile define requisitos *sobre la marcha* y entrega valor en *iteraciones* (Sprints).",
+                "isCorrect": true,
+                "feedback": "¡Correcto! Esta es la diferencia fundamental. Waterfall (PMBOK) es predictivo (ej. un proyecto de 1 año con 1 entrega). Agile (Scrum, Kanban) es adaptativo (ej. un proyecto de 1 año con 12 entregas mensuales de valor).",
+                "example": "Proyecto SIA (Waterfall): El equipo de la UNAL pasa 6 meses en 'Análisis' y 'Diseño' sin escribir código. El usuario no ve nada hasta 1 año después. Proyecto SIA (Agile): El equipo entrega el 'módulo de login' funcional en las primeras 2 semanas (Sprint 1)."
+            },
+            {
+                "text": "Waterfall requiere un 'Project Manager', mientras que Agile no tiene líder de proyecto.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Agile tiene roles de liderazgo claros, pero diferentes: el 'Product Owner' (define el 'qué') y el 'Scrum Master' (facilita el 'cómo').",
+                "example": "En el proyecto SIA (Agile), el 'Product Owner' (Vicerrector Académico de la UNAL) prioriza las funcionalidades. El 'Scrum Master' (Jefe de TI) elimina los impedimentos del equipo de desarrollo."
+            },
+            {
+                "text": "Waterfall se enfoca en la calidad, mientras que Agile se enfoca en la velocidad (rapidez).",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Es un mito común. Agile busca entregar *valor* (no solo velocidad) más rápido. La calidad es un pilar de Agile (ej. 'Definición de Hecho', pruebas integradas), mientras que en Waterfall la calidad es una *fase* al final (Pruebas).",
+                "example": "En Agile, cada 'Sprint' en el SIA debe incluir pruebas unitarias y de integración (calidad continua). En Waterfall, las pruebas se hacen en el mes 11."
+            }
+        ],
+        "correctAnswerExplanation": "La Gestión de Proyectos (PMBOK para Waterfall, Scrum/Kanban para Agile) es clave para el dominio BAI de COBIT. Waterfall funciona bien si los requisitos son 100% claros (ej. construir un puente). Agile funciona mejor si los requisitos son inciertos o cambiantes (ej. desarrollar una nueva app).",
+        "correctAnswerExample": "El profesional de TI de la UNAL (Función 8) contrata un 'servicio de soporte' (un servicio continuo), que se gestiona con ITIL (DSS). También contrata un 'proyecto de desarrollo' (un esfuerzo temporal), que se gestiona con PMBOK o Agile (BAI)."
+    },
+    {
+        "question": "En el marco de Gobernanza COBIT, ¿qué es la 'CMDB' (Base de Datos de Gestión de la Configuración)?",
+        "options": [
+            {
+                "text": "Una base de datos de 'Errores Conocidos' y sus 'Workarounds' (KEDB).",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Esa es la KEDB (Known Error Database), que es parte de la Gestión de Problemas (ITIL).",
+                "example": "La CMDB no guarda 'workarounds', guarda 'activos'."
+            },
+            {
+                "text": "Una base de datos que almacena información sobre todos los 'Elementos de Configuración' (CI) y sus *relaciones*.",
+                "isCorrect": true,
+                "feedback": "¡Correcto! La CMDB (proceso BAI10 en COBIT, Gestión de Activos y Configuración en ITIL) es el 'mapa' de TI. No es solo un 'inventario' (lista de activos), sino que registra las *relaciones* entre ellos.",
+                "example": "La CMDB de la UNAL no solo dice 'Tenemos un Servidor SIA' y 'Tenemos una Base de Datos'. Dice: 'El *Servicio* SIA (CI) *depende de* la *Aplicación* SIA (CI), que *corre en* el *Servidor* SIA-PROD-01 (CI), que *usa* la *Base de Datos* SIA-DB (CI)'."
+            },
+            {
+                "text": "El repositorio de código fuente de las aplicaciones (ej. Git).",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Ese es un 'Repositorio de Código' o SCM (Source Code Management).",
+                "example": "El código del SIA de la UNAL está en GitHub. La *información* sobre ese repositorio (dónde está, quién es el dueño) está en la CMDB."
+            },
+            {
+                "text": "El 'Catálogo de Servicios' que se ofrece a los usuarios.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. El 'Catálogo de Servicios' (ITIL) es la 'vista de negocio' (lo que pide el usuario). La CMDB es la 'vista técnica' (los 'ladrillos' que construyen ese servicio).",
+                "example": "Catálogo de Servicios: 'Servicio de Correo Electrónico'. CMDB: 'Servidores Exchange-01, Exchange-02, Red, Almacenamiento' (todo lo que hace funcionar ese servicio)."
+            }
+        ],
+        "correctAnswerExplanation": "La CMDB es vital para la Gestión de Cambios y de Incidentes. Si un 'Incidente' reporta 'SIA caído', TI consulta la CMDB para ver todos los CIs (servidor, BD, red) de los que depende el SIA. Si un 'Cambio' (RFC) planea 'actualizar un Switch', la CMDB le dice qué servicios (ej. SIA, Moodle) dependen de ese switch (análisis de impacto).",
+        "correctAnswerExample": "Función 2 (Seguimiento): El profesional de TI de la UNAL usa la CMDB para entender las dependencias del SIA. Al 'monitorear el desempeño' (Función 3), no solo monitorea el servidor SIA, sino todos los CIs de los que depende (la BD, la red, la SAN)."
+    },
+    {
+        "question": "¿Cuál de las siguientes es una métrica clave de la 'Gestión de Incidentes' (ITIL)?",
+        "options": [
+            {
+                "text": "RTO (Recovery Time Objective - Tiempo Objetivo de Recuperación)",
+                "isCorrect": false,
+                "feedback": "Incorrecto. El RTO es una métrica de *alto nivel* definida por la 'Gestión de la Continuidad del Negocio' (BCP), no una métrica operativa de incidentes.",
+                "example": "El BCP de la UNAL define el RTO del SIA (ej. 4 horas). El MTTR de incidentes debe ser *mucho menor* (ej. 30 min) para no violar el RTO."
+            },
+            {
+                "text": "MTTR (Mean Time To Restore - Tiempo Medio de Restauración)",
+                "isCorrect": true,
+                "feedback": "¡Correcto! El MTTR (o MTRS) es el KPI (Indicador Clave de Desempeño) fundamental de la Gestión de Incidentes. Mide el tiempo promedio desde que el incidente es detectado hasta que el servicio es restaurado (usando un workaround).",
+                "example": "El equipo de soporte de la UNAL (Función 1) tiene una meta (SLA) de 'MTTR para incidentes P1 del SIA < 30 minutos'."
+            },
+            {
+                "text": "Número de 'Errores Conocidos' (Known Errors) documentados.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Esta es una métrica de la 'Gestión de Problemas'.",
+                "example": "El equipo de Nivel 3 (Gestión de Problemas) de la UNAL tiene una meta de 'documentar 5 nuevos Errores Conocidos por mes'."
+            },
+            {
+                "text": "Porcentaje de Cambios Exitosos.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Esta es la métrica clave de la 'Gestión de Cambios'.",
+                "example": "El Comité de Cambios (CCB) de la UNAL tiene una meta de '> 98% de cambios implementados sin causar un incidente'."
+            }
+        ],
+        "correctAnswerExplanation": "La 'Gestión de Incidentes' (Función 1: Soporte) se mide por su *velocidad*. El MTTR (Tiempo Medio de Restauración) es el indicador principal. Otros indicadores son 'Tasa de resolución en Nivel 1', 'Número de escalamientos', etc.",
+        "correctAnswerExample": "Función 2 (Seguimiento): El profesional de TI de la UNAL revisa el 'Dashboard de Soporte' (COBIT MEA) y nota que el 'MTTR del SIA' subió de 30 a 50 minutos el último mes. Inicia una investigación (Gestión de Problemas) para saber por qué."
+    },
+    {
+        "question": "En COBIT, el dominio 'Monitorear, Evaluar y Valorar' (MEA) es crucial para:",
+        "options": [
+            {
+                "text": "Construir nuevas aplicaciones de software para la universidad.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Ese es el dominio 'Construir, Adquirir e Implementar' (BAI).",
+                "example": "El equipo de la UNAL usa 'BAI' para construir el nuevo módulo del SIA."
+            },
+            {
+                "text": "Asegurar que el desempeño de TI se alinea con las metas de gobernanza (lo que la Rectoría pidió) y que los controles internos son efectivos.",
+                "isCorrect": true,
+                "feedback": "¡Correcto! MEA es el dominio de la *auditoría* y la *evaluación del desempeño*. Es el 'Check' y 'Act' del PDCA a nivel de gestión. Responde: '¿Estamos haciendo lo que dijimos que haríamos? ¿Y lo estamos haciendo bien?'.",
+                "example": "La oficina de Control Interno de la UNAL (Función MEA) realiza una auditoría (MEA02) al proceso de 'Gestión de Incidentes' (DSS02) para verificar si están cumpliendo el SLA (definido en APO09)."
+            },
+            {
+                "text": "Definir la estrategia de TI y el presupuesto anual.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Ese es el dominio 'Alinear, Planificar y Organizar' (APO).",
+                "example": "La Dirección de TI de la UNAL usa 'APO' para definir el plan estratégico 2026."
+            },
+            {
+                "text": "Dar soporte Nivel 1 (Mesa de Ayuda) a los usuarios.",
+                "isCorrect": false,
+                "feedback": "Incorrecto. Ese es el dominio 'Entregar, Servir y Soportar' (DSS).",
+                "example": "La Mesa de Ayuda de la UNAL (DSS) atiende una llamada sobre el SIA."
+            }
+        ],
+        "correctAnswerExplanation": "MEA (Monitorear, Evaluar y Valorar) es el dominio que cierra el ciclo de COBIT. Provee la retroalimentación a la 'Gobernanza' (EDM) sobre el desempeño de la 'Gestión' (APO, BAI, DSS). Es la base de la 'Mejora Continua' (ITIL).",
+        "correctAnswerExample": "Función 2 (Seguimiento periódico al desempeño): Esta función de la vacante es una actividad pura del dominio MEA (específicamente MEA01 'Monitorear Desempeño y Conformidad'). El profesional debe revisar los KPIs del SIA (Disponibilidad, MTTR) e 'informar' (Función 10) a la dirección."
+    }
+]
