@@ -3,11 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Título del Módulo -->
-    <title>Módulo 4: Supervisión de Contratos TI (Clave)</title>
-    <!-- Carga de Tailwind CSS -->
+    <title>Módulo 4: Gestión de Riesgos y Respuesta a Incidentes</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Carga de la fuente Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
@@ -49,17 +46,14 @@
 </head>
 <body class="bg-gray-900 text-gray-200 antialiased">
 
-    <!-- Header -->
     <header class="bg-gray-800 shadow-lg sticky top-0 z-50">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
             <div>
-                <!-- Título del Módulo -->
                 <a href="index.html" class="text-xl md:text-2xl font-bold text-white">
-                    <span class="text-blue-400">Módulo 4:</span> Supervisión de Contratos TI (Clave)
+                    <span class="text-blue-400">Módulo 4:</span> Gestión de Riesgos y Respuesta a Incidentes
                 </a>
             </div>
             <div>
-                <!-- Enlace al portal principal -->
                 <a href="https://cemorab2025.github.io/Curso-Intensivo-Profesional-TI/" class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
                     &larr; Volver al Portal
                 </a>
@@ -67,12 +61,9 @@
         </nav>
     </header>
 
-    <!-- Contenedor del Cuestionario -->
     <main class="container mx-auto px-6 py-12 md:py-16">
 
-        <!-- Contenedor del Quiz -->
         <div id="quiz-container" class="max-w-4xl mx-auto bg-gray-800 p-6 md:p-10 rounded-xl shadow-2xl">
-            <!-- Barra de Progreso y Puntaje -->
             <div class="flex justify-between items-center mb-6">
                 <div>
                     <span id="progress-text" class="text-lg font-semibold text-blue-400">Pregunta 1 de 30</span>
@@ -84,36 +75,28 @@
                 </div>
             </div>
             
-            <!-- Progreso Visual -->
             <div class="w-full bg-gray-700 rounded-full h-2.5 mb-8">
                 <div id="progress-bar" class="bg-blue-600 h-2.5 rounded-full" style="width: 0%"></div>
             </div>
 
-            <!-- Pregunta -->
             <h2 id="question-text" class="text-2xl md:text-3xl font-bold text-white mb-8" style="min-height: 100px;">
                 Cargando pregunta...
             </h2>
 
-            <!-- Opciones -->
             <div id="options-container" class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <!-- Opciones se generan dinámicamente -->
-            </div>
+                </div>
 
-            <!-- Botón de Siguiente -->
             <button id="next-btn" class="w-full mt-8 px-6 py-4 bg-blue-600 text-white text-lg font-semibold rounded-lg hover:bg-blue-700 transition-colors hidden">
                 Siguiente Pregunta
             </button>
             
-            <!-- Contenedor de Feedback (Estructura detallada) -->
             <div id="feedback-container" class="mt-6 p-6 rounded-lg hidden">
                 <h3 id="feedback-title" class="text-2xl font-bold mb-4"></h3>
                 
-                <!-- Feedback para la opción seleccionada por el usuario -->
                 <h4 class="text-xl font-semibold text-blue-300 mb-2">Retroalimentación de tu respuesta:</h4>
                 <p id="feedback-text" class="text-base mb-2"></p>
                 <p id="feedback-example-text" class="text-base italic bg-gray-900 p-3 rounded-md"></p>
                 
-                <!-- Explicación de la respuesta correcta (se muestra si el usuario se equivoca) -->
                 <div id="correct-answer-container" class="mt-4 pt-4 border-t border-gray-600 hidden">
                     <h4 class="text-xl font-semibold text-green-300 mb-2">Explicación de la Respuesta Correcta</h4>
                     <p id="correct-answer-text" class="text-base mb-2"></p>
@@ -122,20 +105,18 @@
             </div>
         </div>
 
-        <!-- Contenedor de Resultados -->
         <div id="results-container" class="max-w-3xl mx-auto bg-gray-800 p-10 rounded-xl shadow-2xl text-center hidden">
             <h2 class="text-4xl font-extrabold text-white mb-4">¡Cuestionario Completo!</h2>
             <p class="text-xl text-gray-300 mb-6" id="results-attempt-text">Resultados de tu Intento 1</p>
             <div class="bg-gray-900 rounded-lg p-8 my-8">
                 <p class="text-lg text-blue-400">Tu puntaje final es:</p>
-                <p id="score-final" class="text-7xl font-bold text-green-400 my-4">25 / 30</p>
+                <p id="score-final" class="text-7xl font-bold text-green-400 my-4">0 / 0</p>
                 <p id="results-message" class="text-lg text-gray-200">¡Excelente trabajo! Has dominado los fundamentos.</p>
             </div>
             <div class="flex flex-col md:flex-row justify-center gap-4">
                 <button id="retry-btn" class="w-full md:w-auto px-8 py-3 bg-blue-600 text-white text-lg font-semibold rounded-lg hover:bg-blue-700 transition-transform transform hover:scale-105">
                     Siguiente Intento
                 </button>
-                <!-- Enlace al portal principal -->
                 <a href="https://cemorab2025.github.io/Curso-Intensivo-Profesional-TI/" class="w-full md:w-auto block px-8 py-3 bg-gray-700 text-white text-lg font-semibold rounded-lg hover:bg-gray-600 transition-colors">
                     Volver al Portal
                 </a>
@@ -144,7 +125,6 @@
 
     </main>
 
-    <!-- Footer -->
     <footer class="bg-gray-900 border-t border-gray-700 py-8 mt-16">
         <div class="container mx-auto px-6 text-center">
             <p class="text-gray-400">
@@ -202,38 +182,23 @@
 
         // 1. Cargar el banco de preguntas según el intento (Lógica MODIFICADA)
         function loadQuestionBank() {
-            // Usar una clave de localStorage específica para el Módulo 4
-            // ***** CAMBIO CLAVE *****
+            // ***** CAMBIO CLAVE M4 *****
             attemptNumber = parseInt(localStorage.getItem('quizAttempt_M4') || '1');
             attemptTextEl.textContent = `Intento: ${attemptNumber}`;
             
-            const totalQuestionsInBank = allQuestions.length; // 150
+            const totalQuestionsInBank = allQuestions.length; 
             const questionsPerAttempt = 30; // Mostrar 30 preguntas por intento
 
-            if (totalQuestionsInBank < 150) {
-                console.warn(`El banco de preguntas solo tiene ${totalQuestionsInBank} preguntas. Se mostrarán 30 aleatorias.`);
-                questionsForThisAttempt = shuffle([...allQuestions]).slice(0, questionsPerAttempt);
-                return;
-            }
+            const maxAttempts = Math.ceil(totalQuestionsInBank / questionsPerAttempt);
 
-            if (attemptNumber === 1) {
-                // Intento 1: Preguntas 1-30 (Índices 0-29)
-                questionsForThisAttempt = allQuestions.slice(0, 30);
-            } else if (attemptNumber === 2) {
-                // Intento 2: Preguntas 31-60 (Índices 30-59)
-                questionsForThisAttempt = allQuestions.slice(30, 60);
-            } else if (attemptNumber === 3) {
-                // Intento 3: Preguntas 61-90 (Índices 60-89)
-                questionsForThisAttempt = allQuestions.slice(60, 90);
-            } else if (attemptNumber === 4) {
-                // Intento 4: Preguntas 91-120 (Índices 90-119)
-                questionsForThisAttempt = allQuestions.slice(90, 120);
-            } else if (attemptNumber === 5) {
-                // Intento 5: Preguntas 121-150 (Índices 120-149)
-                questionsForThisAttempt = allQuestions.slice(120, 150);
+            if (attemptNumber <= maxAttempts && totalQuestionsInBank >= questionsPerAttempt) {
+                const startIndex = (attemptNumber - 1) * questionsPerAttempt;
+                const endIndex = attemptNumber * questionsPerAttempt;
+                questionsForThisAttempt = allQuestions.slice(startIndex, endIndex);
             } else {
-                // Intento 6 en adelante: 30 preguntas aleatorias de todo el banco
-                attemptTextEl.textContent = `Intento: ${attemptNumber} (Modo Aleatorio)`;
+                 if (attemptNumber > 1) { 
+                   attemptTextEl.textContent = `Intento: ${attemptNumber} (Modo Aleatorio)`;
+                }
                 questionsForThisAttempt = shuffle([...allQuestions]).slice(0, questionsPerAttempt);
             }
         }
@@ -247,8 +212,7 @@
             optionsContainerEl.innerHTML = ''; 
 
             if (questionsForThisAttempt.length === 0) {
-                 // Esto puede pasar si el fetch falló y allQuestions está vacío
-                questionTextEl.textContent = 'No se pudieron cargar las preguntas. Verifique que el archivo preguntas-m4.json exista.';
+                questionTextEl.textContent = 'No se pudieron cargar las preguntas. Verifique que el archivo modulo4_questions.json exista.';
                 return;
             }
 
@@ -258,10 +222,8 @@
             }
 
             const question = questionsForThisAttempt[currentQuestionIndex];
-            // Manejo de error si la pregunta no está bien formada
             if (!question || !question.options) {
                 console.error("Pregunta mal formada:", question);
-                // Saltar a la siguiente pregunta
                 currentQuestionIndex++;
                 displayQuestion();
                 return;
@@ -270,41 +232,48 @@
             const questionNumber = currentQuestionIndex + 1;
             const totalQuestions = questionsForThisAttempt.length;
 
-            // Actualizar textos y progreso
             questionTextEl.textContent = question.question;
             progressTextEl.textContent = `Pregunta ${questionNumber} de ${totalQuestions}`;
             progressBarEl.style.width = `${(questionNumber / totalQuestions) * 100}%`;
 
-            // Crear botones de opción (barajados)
-            const shuffledOptions = shuffle([...question.options]);
-            shuffledOptions.forEach(option => {
+            // *** LÓGICA DE OPCIONES (basada en modulo8.html) ***
+            // La estructura de M4 es { "A": "...", "B": "..." }
+            const options = question.options;
+            const shuffledOptionKeys = shuffle(Object.keys(options)); // Baraja [A, B, C, D]
+
+            shuffledOptionKeys.forEach(key => {
+                const optionText = options[key];
                 const button = document.createElement('button');
-                button.innerHTML = option.text; 
+                button.innerHTML = optionText; // Usar innerHTML
                 button.classList.add('option-btn', 'w-full', 'p-5', 'text-left', 'text-lg', 'bg-gray-700', 'rounded-lg', 'border-2', 'border-gray-600');
                 
-                button.onclick = (event) => selectAnswer(event, option, question);
+                const selectedOption = {
+                    key: key,
+                    text: optionText,
+                    isCorrect: key === question.correct,
+                    feedback: question.feedback[key], 
+                    example: question.example[key] 
+                };
+
+                button.onclick = (event) => selectAnswer(event, selectedOption, question);
                 optionsContainerEl.appendChild(button);
             });
         }
 
-        // 3. Manejar la selección de respuesta
+        // 3. Manejar la selección de respuesta (Lógica de modulo8.html)
         function selectAnswer(event, selectedOption, question) {
-            // Deshabilitar todos los botones
             Array.from(optionsContainerEl.children).forEach(btn => {
                 btn.disabled = true;
                 btn.classList.add('opacity-50');
             });
 
-            // Mostrar feedback
             feedbackContainerEl.classList.remove('hidden');
             
-            // 1. Mostrar feedback de la opción seleccionada
             feedbackTextEl.textContent = selectedOption.feedback;
             feedbackExampleTextEl.textContent = `Ejemplo: ${selectedOption.example}`;
 
 
             if (selectedOption.isCorrect) {
-                // --- Respuesta Correcta ---
                 score++;
                 scoreTextEl.textContent = score;
                 feedbackTitleEl.textContent = "¡Correcto!";
@@ -313,28 +282,26 @@
                 event.target.classList.add('correct');
 
             } else {
-                // --- Respuesta Incorrecta ---
                 feedbackTitleEl.textContent = "Respuesta Incorrecta";
                 feedbackContainerEl.classList.remove('bg-green-900', 'border-green-700');
                 feedbackContainerEl.classList.add('bg-red-900', 'border', 'border-red-700');
                 event.target.classList.add('incorrect');
 
-                // 2. Resaltar la correcta
-                const correctOptionData = question.options.find(opt => opt.isCorrect);
+                const correctOptionKey = question.correct;
+                const correctOptionText = question.options[correctOptionKey];
+                
                 Array.from(optionsContainerEl.children).forEach(btn => {
-                    if (btn.innerHTML === correctOptionData.text) {
+                    if (btn.innerHTML === correctOptionText) {
                         btn.classList.add('correct');
                         btn.classList.remove('opacity-50');
                     }
                 });
 
-                // 3. Mostrar la explicación de la respuesta correcta
                 correctAnswerContainerEl.classList.remove('hidden');
-                correctAnswerTextEl.textContent = question.correctAnswerExplanation;
-                correctAnswerExampleTextEl.textContent = `Ejemplo: ${question.correctAnswerExample}`;
+                correctAnswerTextEl.textContent = question.feedback[correctOptionKey];
+                correctAnswerExampleTextEl.textContent = `Ejemplo: ${question.example[correctOptionKey]}`;
             }
 
-            // Mostrar botón de siguiente
             nextBtnEl.classList.remove('hidden');
         }
 
@@ -354,7 +321,6 @@
             resultsAttemptTextEl.textContent = `Resultados de tu Intento ${attemptNumber}`;
             retryBtnEl.textContent = "Siguiente Intento"; 
 
-            // Mensaje de resultado
             const percentage = (score / totalQuestions) * 100;
             if (percentage >= 90) {
                 resultsMessageEl.textContent = "¡Excelente! Dominio total del módulo. ¡Estás listo!";
@@ -364,8 +330,7 @@
                 resultsMessageEl.textContent = "Buen esfuerzo. Sigue practicando. La retroalimentación es clave. ¡Inténtalo de nuevo!";
             }
 
-            // Preparar el siguiente intento
-            // ***** CAMBIO CLAVE *****
+            // ***** CAMBIO CLAVE M4 *****
             localStorage.setItem('quizAttempt_M4', (attemptNumber + 1).toString());
         }
 
@@ -377,36 +342,26 @@
         // --- INICIALIZACIÓN ---
         document.addEventListener('DOMContentLoaded', async () => {
             try {
-                // 1. Cargar el archivo JSON externo
-                // ***** CAMBIO CLAVE *****
-                // Se actualiza la URL para apuntar al repositorio público en GitHub (versión raw)
-                 const response = await fetch('./preguntas-m4.json');; 
+                // ***** CAMBIO CLAVE M4 *****
+                const response = await fetch('./modulo4_questions.json'); 
                 if (!response.ok) {
                     throw new Error(`Error HTTP! estado: ${response.status}`);
                 }
-                
-                // ***** INICIO DE LA CORRECCIÓN *****
-                // El error 'Unexpected token /' es porque JSON.parse() (usado por .json()) no soporta comentarios.
-                // Vamos a leerlo como texto, limpiar los comentarios y luego 'parsear' (interpretar) el JSON.
-                const rawText = await response.text();
-                // Esta línea usa una expresión regular para eliminar todos los comentarios (ej. // ...)
-                const jsonText = rawText.replace(/\/\/[^\n]*/g, '');
-                
-                allQuestions = JSON.parse(jsonText); // Interpretar el texto limpio
-                // ***** FIN DE LA CORRECCIÓN *****
+                const data = await response.json();
+                // ***** CAMBIO CLAVE M4 *****
+                // El JSON del Módulo 4 está dentro de un objeto, en la clave "questions"
+                allQuestions = data.questions; 
 
-                // 2. Una vez cargados los datos, iniciar la lógica del quiz
                 loadQuestionBank();
                 displayQuestion();
 
             } catch (error) {
-                // Manejar errores de carga
                 console.error("Error fatal al cargar las preguntas:", error);
                 quizContainerEl.innerHTML = `
                     <div class="text-center p-10 bg-red-900 border border-red-700 rounded-lg">
                         <h2 class="text-3xl font-bold text-white mb-4">Error Crítico</h2>
                         <p class="text-xl text-gray-200 mb-6">No se pudo cargar el banco de preguntas.</p>
-                        <p class="text-lg text-gray-300">Por favor, asegúrate de que el archivo <strong>preguntas-m4.json</strong> se encuentre en el mismo directorio que este archivo HTML.</p>
+                        <p class="text-lg text-gray-300">Por favor, asegúrate de que el archivo <strong>modulo4_questions.json</strong> se encuentre en el mismo directorio que este archivo HTML.</p>
                     </div>
                 `;
             }
@@ -417,5 +372,3 @@
     </script>
 </body>
 </html>
-
-
