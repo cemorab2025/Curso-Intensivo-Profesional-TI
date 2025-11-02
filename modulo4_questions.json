@@ -1,5 +1,4 @@
-{
-  "questions": [
+[
     {
       "id": 1,
       "question": "En el contexto del SIA (Sistema de Información Académica) de la UNAL, ¿qué se considera un 'Activo'?",
@@ -1250,5 +1249,4 @@
       "topic": "Continuidad del Negocio",
       "difficulty": "Intermedio"
     }
-  ]
-}
+]
